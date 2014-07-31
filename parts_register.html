@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Porter - Vehicle Parts Store</title>
+
+		<!-- CSS Link -->
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+
+		<!-- Javascript Link -->
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+
+	</head>
+
+	<body>
+		<div id="header">
+			<div class="wrapper">
+				<a href="index.html"><img id="title_img" src="img/Porter Title.png" alt="Porter - Vehicle parts Store" /></a>
+                <div id="user-menu">
+                    <a href="login.html">로그인</a>
+                    <a href="signup.html">회원가입</a>
+                </div>
+			</div>
+		</div>
+
+		<div id="main"> <!-- MAIN -->
+			<div class="wrapper">
+				<div id="content">
+					<div id="page_title">
+						<span class="title">상품 등록</span>
+						<span class="subtitle">Parts Registration</span>
+					</div> <!-- End Page Title -->
+
+                    <div id="parts-regist">
+                        <form action="" method="get">
+                            <div id="category-select">
+                                <a>카테고리</a><br>
+                                <div class="category-body">
+                                    <select id="category-large" name="categorylist-large" onchange="categorySelect(value)">
+                                        <option value="1000">외장부품</option>
+                                        <option value="2000">실내부품</option>
+                                        <option value="3000">엔진/미션/배기</option>
+                                        <option value="4000">휠/타이어</option>
+                                        <option value="5000">브레이크/서스펜션</option>
+                                        <option value="6000">튜닝부품</option>
+                                        <option value="9000">기타</option>
+                                    </select>
+
+                                    <select id="category-middle" name="categorylist-middle">
+                                        <option value="test">Test List</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div id="car-select">
+                                <a>차량 정보</a>
+                                <div class="car-body">
+                                    <select id="car-maker" name="car-maker">
+                                        <option value="001">BMW</option>
+                                        <option value="002">Audi</option>
+                                        <option value="003">Benz</option>
+                                    </select>
+                                    <select id="car-name" name="car-name">
+                                        <option value="0010101">Z4</option>
+                                        <option value="0020101">R8</option>
+                                        <option value="0030101">SL 63</option>
+                                    </select>
+                                    <select id="car-year" name="car-year">
+                                        <option value="2010">2010</option>
+                                        <option value="2011">2011</option>
+                                        <option value="2012">2012</option>
+                                        <option value="2013">2013</option>
+                                        <option value="2014">2014</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div id="photo-upload">
+                                <a>사진</a>
+                                <div class="photo-body">
+                                    <div class="photo-set">
+                                        <div id="photo-image1"></div>
+                                        <input id="photo-load1" name="fileData" type="file" onchange="previewImage(this, 'photo-image1')" />
+                                    </div>
+                                    <div class="photo-set">
+                                        <div id="photo-image2"></div>
+                                        <input id="photo-load2" name="fileData" type="file" onchange="previewImage(this, 'photo-image2')" />
+                                    </div>
+                                    <div class="photo-set">
+                                        <div id="photo-image3"></div>
+                                        <input id="photo-load3" name="fileData" type="file" onchange="previewImage(this, 'photo-image3')" />
+                                    </div>
+                                    <div class="photo-set">
+                                        <div id="photo-image4"></div>
+                                        <input id="photo-load4" name="fileData" type="file" onchange="previewImage(this, 'photo-image4')" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="parts-name">
+                                <a>제목</a><br>
+                                <input id="name-text" name="name-text" type=text/>
+                            </div>
+
+                            <div id="parts-price">
+                                <a>판매 가격</a><br>
+                                <input id="price-text" name="price-text" type=number/><a>원</a>
+                            </div>
+
+                            <div id="parts-quantity">
+                                <a>판매 수량</a><br>
+                                <input id="quantity-text" name="quantity-text" type=number/>
+                            </div>
+
+                            <div id="parts-state">
+                                <a>상태</a><br>
+                                <input id="state-text" name="state-text" type=text/>
+                            </div>
+
+                            <div id="parts-content">
+                                <a>상세 설명</a><br>
+                                <input id="content-text" name="content-text" type=text/>
+                            </div>
+
+                            <button id="parts-submit" type="submit">등록하기</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Porter - Vehicle Parts Store</title>
+
+		<!-- CSS Link -->
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+
+		<!-- Javascript Link -->
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+
+	</head>
+
+	<body>
+		<div id="header">
+			<div class="wrapper">
+				<a href="index.html"><img id="title_img" src="img/Porter Title.png" alt="Porter - Vehicle parts Store" /></a>
+				<a href=""><img id="user_menu" onClick="Init();"/></a>
+			</div>
+		</div>
+
+		<div id="main">
+			<div class="wrapper">
+				<div id="member-title">
+					<a class="title">회원가입</a>
+				</div>
+
+                <div id="member-body">
+                    <form action="" method="post">
+                        <a>아이디(닉네임)</a><br><input class="signup-input" type="text" name="id" /><br>
+                        <a>이메일</a><br><input class="signup-input" type="email" name="email" /><br>
+                        <a>비밀번호</a><br><input class="signup-input" type="password" name="password" /><br>
+                        <a>비밀번호 확인</a><br><input class="signup-input" type="password" name="password-confirm" /><br>
+                        <button id="signup-submit" type="submit">가입하기</button>
+                    </form>
+                </div>
+			</div>
+		</div>
+	</body>
+</html>
