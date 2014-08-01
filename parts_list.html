@@ -2,16 +2,17 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Porter - Vehicl Parts Store</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Porter - Vehicle Parts Store</title>
 
 		<!-- CSS Link -->
 		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
-        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen" />
 
 		<!-- Javascript Link -->
 		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
 		<script type="text/javascript" src="js/script.js"></script>
-        <script type="text/javascript" src="js/jquery.twbsPagination.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
 	</head>
 
@@ -19,15 +20,18 @@
 		<div id="header">
 			<div class="wrapper">
 				<a href="index.html"><img id="title_img" src="img/Porter Title.png" alt="Porter - vehicle parts Store" /></a>
+<!-- User Menu -->
                 <div id="user-menu">
                     <a href="parts_register.html">상품 등록</a>
                     <a href="login.html">로그인</a>
                     <a href="signup.html">회원가입</a>
                 </div>
+<!-- User Menu End -->
 			</div>
 		</div>
 
-		<div id="menu"> <!-- Parts Category List Menu -->
+<!-- Category List Menu -->
+		<div id="menu">
 			<div id="menu-holder">
 				<div class="wrapper">
 					<ul id="menu-navi" class="category_list">
@@ -193,10 +197,11 @@
 					</ul><!-- End Navigation -->
 				</div><!-- Wrapper Menu -->
 			</div><!-- End Menu Holder -->
-		</div> <!-- End Menu -->
+		</div>
+<!-- Category List Menu End -->
 
-
-		<div id="main"> <!-- MAIN -->
+<!-- MAIN -->
+		<div id="main">
 			<div class="wrapper">
 				<div id="content">
 					<div id="page_title">
@@ -204,154 +209,120 @@
 						<span class="subtitle">parts list view</span>
 					</div> <!-- End Page Title -->
 
-                    <!-- Parts Detail -->
-                    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                            <h3 id="myModalLabel">모달 제목</h3>
-                        </div>
-                        <div class="modal-body">
-                            <p>한 멋진 본문…</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button class="btn" data-dismiss="modal" aria-hidden="false">닫기</button>
-                            <button class="btn btn-primary">변경사항 저장</button>
-                        </div>
-                    </div> <!-- Parts Detail End -->
+<!-- Parts Detail -->
+<div class="modal fade" id="detail-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Parts Detail End -->
 
-                    <!-- Parts List -->
+<!-- Parts List -->
 					<div id="parts_list">
-                        <div class="parts" href="#myModal" data-toggle="modal">
-                            <div class="img">
-                                <a title="Test Parts 1" href="">
-                                    <img src="img/160x160_1.jpg" width="160" id="p1" alt="Test Parts 1"/>
-                                </a>
+                        <div class="parts">
+                            <div class="img" data-target="#detail-modal" data-toggle="modal">
+                                <img src="img/160x160_1.jpg" width="160" alt="Test Parts 1"/>
                             </div>
-                            <div class="info">
-                                <div class="name"><a href="" title="Test Parts1">N Test Parts1</a></div>
+                            <div class="info" data-target="#detail-modal" data-toggle="modal">
+                                <div class="name"><a title="Test Parts1">N Test Parts1ADFBCFDF</a></div>
                                 <div class="price">$ 4.99</div>
+                                <div class="car">Audi A6</div>
+                            </div>
+                        </div> <!-- Single Parts End -->
+
+                        <div class="parts">
+                            <div class="img" data-target="#detail-modal" data-toggle="modal">
+                                <img src="img/160x160_2.jpg" width="160" alt="Test Parts 1"/>
+                            </div>
+                            <div class="info" data-target="#detail-modal" data-toggle="modal">
+                                <div class="name"><a title="Test Parts1">N Test Parts2</a></div>
+                                <div class="price">$ 12.99</div>
+                                <div class="car">Audi R8</div>
+                            </div>
+                        </div> <!-- Single Parts End -->
+
+                        <div class="parts">
+                            <div class="img" data-target="#detail-modal" data-toggle="modal">
+                                <img src="img/160x160_3.jpg" width="160" alt="Test Parts 1"/>
+                            </div>
+                            <div class="info" data-target="#detail-modal" data-toggle="modal">
+                                <div class="name"><a title="Test Parts1">N Test Parts3</a></div>
+                                <div class="price">$ 123.99</div>
+                                <div class="car">BMW Z4</div>
+                            </div>
+                        </div> <!-- Single Parts End -->
+
+                        <div class="parts">
+                            <div class="img" data-target="#detail-modal" data-toggle="modal">
+                                <img src="img/160x160_4.jpg" width="160" alt="Test Parts 1"/>
+                            </div>
+                            <div class="info" data-target="#detail-modal" data-toggle="modal">
+                                <div class="name"><a title="Test Parts1">N Test Parts4</a></div>
+                                <div class="price">$ 1234.99</div>
+                                <div class="car">BMW M3</div>
+                            </div>
+                        </div> <!-- Single Parts End -->
+
+                        <div class="parts">
+                            <div class="img" data-target="#detail-modal" data-toggle="modal">
+                                <img src="img/160x160_5.jpg" width="160" alt="Test Parts 1"/>
+                            </div>
+                            <div class="info" data-target="#detail-modal" data-toggle="modal">
+                                <div class="name"><a title="Test Parts1">테스트 부품 1</a></div>
+                                <div class="price">₩ 3,000</div>
                                 <div class="car">A6</div>
                             </div>
                         </div> <!-- Single Parts End -->
 
                         <div class="parts">
-                            <div class="img">
-                                <a title="Test Parts 1" href="">
-                                    <img src="img/160x160_2.jpg" width="160" id="p2" alt="Test Parts 2"/>
-                                </a>
+                            <div class="img" data-target="#detail-modal" data-toggle="modal">
+                                <img src="img/160x160_6.jpg" width="160" alt="Test Parts 1"/>
                             </div>
-                            <div class="info">
-                                <div class="name"><a href="" title="Test Parts1">N Test Parts2</a></div>
-                                <div class="price">$ 4.99</div>
+                            <div class="info" data-target="#detail-modal" data-toggle="modal">
+                                <div class="name"><a title="Test Parts1">테스트 부품 2</a></div>
+                                <div class="price">₩ 82,000</div>
                                 <div class="car">A6</div>
                             </div>
                         </div> <!-- Single Parts End -->
 
                         <div class="parts">
-                            <div class="img">
-                                <a title="Test Parts 1" href="">
-                                    <img src="img/160x160_3.jpg" width="160" id="p3" alt="Test Parts 3"/>
-                                </a>
+                            <div class="img" data-target="#detail-modal" data-toggle="modal">
+                                <img src="img/160x160_7.jpg" width="160" alt="Test Parts 1"/>
                             </div>
-                            <div class="info">
-                                <div class="name"><a href="" title="Test Parts1">N Test Parts3</a></div>
-                                <div class="price">$ 4.99</div>
+                            <div class="info" data-target="#detail-modal" data-toggle="modal">
+                                <div class="name"><a title="Test Parts1">테스트 부품 3</a></div>
+                                <div class="price">₩ 270,000</div>
                                 <div class="car">A6</div>
                             </div>
                         </div> <!-- Single Parts End -->
 
                         <div class="parts">
-                            <div class="img">
-                                <a title="Test Parts 1" href="">
-                                    <img src="img/160x160_4.jpg" width="160" id="p4" alt="Test Parts 4"/>
-                                </a>
+                            <div class="img" data-target="#detail-modal" data-toggle="modal">
+                                <img src="img/160x160_8.jpg" width="160" alt="Test Parts 1"/>
                             </div>
-                            <div class="info">
-                                <div class="name"><a href="" title="Test Parts1">N Test Parts4</a></div>
-                                <div class="price">$ 4.99</div>
+                            <div class="info" data-target="#detail-modal" data-toggle="modal">
+                                <div class="name"><a title="Test Parts1">테스트 부품 4</a></div>
+                                <div class="price">₩ 1,200,000</div>
                                 <div class="car">A6</div>
                             </div>
                         </div> <!-- Single Parts End -->
 
-                        <div class="parts">
-                            <div class="img">
-                                <a title="Test Parts 1" href="">
-                                    <img src="img/160x160_5.jpg" width="160" id="p5" alt="Test Parts 5"/>
-                                </a>
-                            </div>
-                            <div class="info">
-                                <div class="name"><a href="" title="Test Parts1">N Test Parts5</a></div>
-                                <div class="price">$ 4.99</div>
-                                <div class="car">A6</div>
-                            </div>
-                        </div> <!-- Single Parts End -->
-                        <div class="parts">
-                            <div class="img">
-                                <a title="Test Parts 1" href="">
-                                    <img src="img/160x160_6.jpg" width="160" id="p6" alt="Test Parts 6"/>
-                                </a>
-                            </div>
-                            <div class="info">
-                                <div class="name"><a href="" title="Test Parts1">테스트 부품 1</a></div>
-                                <div class="price">$ 4.99</div>
-                                <div class="car">A6</div>
-                            </div>
-                        </div> <!-- Single Parts End -->
+					</div>
+<!-- Parts List End -->
 
-                        <div class="parts">
-                            <div class="img">
-                                <a title="Test Parts 1" href="">
-                                    <img src="img/160x160_7.jpg" width="160" id="p7" alt="Test Parts 7"/>
-                                </a>
-                            </div>
-                            <div class="info">
-                                <div class="name"><a href="" title="Test Parts1">테스트 부품 2</a></div>
-                                <div class="price">$ 4.99</div>
-                                <div class="car">A6</div>
-                            </div>
-                        </div> <!-- Single Parts End -->
-
-                        <div class="parts">
-                            <div class="img">
-                                <a title="Test Parts 1" href="">
-                                    <img src="img/160x160_8.jpg" width="160" id="p8" alt="Test Parts 8"/>
-                                </a>
-                            </div>
-                            <div class="info">
-                                <div class="name"><a href="" title="Test Parts1">테스트 부품 3</a></div>
-                                <div class="price">$ 4.99</div>
-                                <div class="car">A6</div>
-                            </div>
-                        </div> <!-- Single Parts End -->
-
-                        <div class="parts">
-                            <div class="img">
-                                <a title="Test Parts 1" href="">
-                                    <img src="img/160x160_9.jpg" width="160" id="p9" alt="Test Parts 9"/>
-                                </a>
-                            </div>
-                            <div class="info">
-                                <div class="name"><a href="" title="Test Parts1">테스트 부품 4</a></div>
-                                <div class="price">$ 4.99</div>
-                                <div class="car">A6</div>
-                            </div>
-                        </div> <!-- Single Parts End -->
-
-                        <div class="parts">
-                            <div class="img">
-                                <a title="Test Parts 1" href="">
-                                    <img src="img/160x160_10.jpg" width="160" id="p10" alt="Test Parts 10"/>
-                                </a>
-                            </div>
-                            <div class="info">
-                                <div class="name"><a href="" title="Test Parts1">테스트 부품 5</a></div>
-                                <div class="price">$ 4.99</div>
-                                <div class="car">A6</div>
-                            </div>
-                        </div> <!-- Single Parts End -->
-					</div> <!-- Parts List End -->
-
-                    <div id="pager-holder">
+<!-- Pager -->      <div id="pager-holder">
                         <div class="wrapper">
                             <ul id="pager">
                                 <li class="first-page"><a href=""><<</a></li>
@@ -360,8 +331,10 @@
                             </ul>
                         </div>
                     </div>
-				</div> <!-- End Content -->
+<!-- Pager End -->
+				</div>
 			</div>
-		</div> <!-- End MAIN -->
+		</div>
+<!-- End MAIN -->
 	</body>
 </html>
