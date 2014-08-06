@@ -21,10 +21,6 @@ window.onload = function() {
     setPagerWidth();
 }
 
-function Init() {
-    alert("SDFAF");
-}
-
 // search clearance
 function defaultInput(target){
 	if((target).value == 'Search...'){(target).value=''}
