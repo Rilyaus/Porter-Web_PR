@@ -302,9 +302,14 @@ body {
     padding: 10px;
 }
 
+#detail-parts .detail-pInfo .tab-main {
+    padding: 0px 10px;
+    height: 420px;
+}
+
 #pInfo-key {
     position: absolute;
-    width: 100px;
+    width: 85px;
     max-height: 480px;
     font-size: 100%;
     text-align: right;
@@ -318,7 +323,7 @@ body {
 
 #pInfo-value {
     position: absolute;
-    margin-left: 120px;
+    margin-left: 105px;
     width: 270px;
     max-height: 480px;
     height: 100%;

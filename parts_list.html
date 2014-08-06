@@ -217,7 +217,7 @@
                                     <button type="button" class="close" data-dismiss="modal">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
-                                    <h4 class="modal-title" id="myModalLabel">Parts Name</h4>
+                                    <h4 class="modal-title" id="myModalLabel">Porter 테스트 부품142352523</h4>
                                 </div>
                                 <div class="modal-body">
                                     <div id="detail-parts">
@@ -237,27 +237,50 @@
                                             </div>
                                         </div>
                                         <div class="detail-pInfo">
-                                            <div id="pInfo-key">
-                                                <span>부품 종류 :</span>
-                                                <span>차량 정보 :</span>
-                                                <span>상태 :</span>
-                                                <span>가격 :</span>
-                                                <span>수량 :</span>
-                                            </div>
-                                            <div id="pInfo-value">
-                                                <span class="value-category">외장부품 > 램프(전조등)</span>
-                                                <span class="value-car">혼다 > 어코드 > 2012</span>
-                                                <span class="value-state">중고 A급</span>
-                                                <span class="value-price">150,000 원</span>
-                                                <span class="value-quantity">1</span>
+                                            <div class="tabbable"> <!-- 왼쪽과 오른쪽 탭에만 필요 -->
+                                                <ul class="nav nav-tabs">
+                                                    <li class="active"><a href="#tab1" data-toggle="tab">상품 정보</a></li>
+                                                    <li><a href="#tab2" data-toggle="tab">판매자 정보</a></li>
+                                                    <li><a href="#tab3" data-toggle="tab">상품 Q&A</a></li>
+                                                </ul>
+                                                <div class="tab-content">
+                                                    <div class="tab-pane active" id="tab1">
+                                                        <div class="tab-main">
+                                                            <div id="pInfo-key">
+                                                                <span>부품 종류 :</span>
+                                                                <span>차량 정보 :</span>
+                                                                <span>상태 :</span>
+                                                                <span>가격 :</span>
+                                                                <span>수량 :</span>
+                                                            </div>
+                                                            <div id="pInfo-value">
+                                                                <span class="value-category">외장부품 > 램프(전조등)</span>
+                                                                <span class="value-car">혼다 > 어코드 > 2012</span>
+                                                                <span class="value-state">중고 A급</span>
+                                                                <span class="value-price">150,000 원</span>
+                                                                <span class="value-quantity">1</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane" id="tab2">
+                                                        <div class="tab-main">
+                                                            <p>판매자 정보 탭</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane" id="tab3">
+                                                        <div class="tab-main">
+                                                            <p>상품 Q&A탭</p>
+                                                        </div>
+                                                    </div>
+                                              </div>
                                             </div>
                                         </div>
                                     </div>
                                     <hr>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" onclick="location.href='parts_purchase.html?partsNum=100'";>Purchase</button>
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary" onclick="location.href='parts_purchase.html?partsNum=100'";>구매하기</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
                                 </div>
                             </div>
                         </div>
