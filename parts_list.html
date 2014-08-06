@@ -210,32 +210,67 @@
 					</div> <!-- End Page Title -->
 
 <!-- Parts Detail -->
-<div class="modal fade" id="detail-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
+                    <div class="modal fade" id="detail-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" onshow="initImage()">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h4 class="modal-title" id="myModalLabel">Parts Name</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div id="detail-parts">
+                                        <div class="detail-pImage">
+                                            <div class="pImage-large">
+                                                <div id="pImage-prev"><img src="img/prev-arrow.png" onclick="prevImage()"/></div>
+                                                <div id="pImage-next"><img src="img/next-arrow.png" onclick="nextImage()"/></div>
+                                                <img id="pImage-main" src="img/car/parts10.jpg" height="350"/>
+                                            </div>
+                                            <div class="pImage-small">
+                                                <ul id="pImage-list">
+                                                    <li><img src="img/car/parts2.jpg" height="90" onclick="changeImage(this)"/></li>
+                                                    <li><img src="img/car/parts3.jpg" height="90" onclick="changeImage(this)"/></li>
+                                                    <li><img src="img/car/parts4.jpg" height="90" onclick="changeImage(this)"/></li>
+                                                    <li><img src="img/car/parts5.jpg" height="90" onclick="changeImage(this)"/></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="detail-pInfo">
+                                            <div id="pInfo-key">
+                                                <span>부품 종류 :</span>
+                                                <span>차량 정보 :</span>
+                                                <span>상태 :</span>
+                                                <span>가격 :</span>
+                                                <span>수량 :</span>
+                                            </div>
+                                            <div id="pInfo-value">
+                                                <span class="value-category">외장부품 > 램프(전조등)</span>
+                                                <span class="value-car">혼다 > 어코드 > 2012</span>
+                                                <span class="value-state">중고 A급</span>
+                                                <span class="value-price">150,000 원</span>
+                                                <span class="value-quantity">1</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" onclick="location.href='parts_purchase.html?partsNum=100'";>Purchase</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 <!-- Parts Detail End -->
 
 <!-- Parts List -->
 					<div id="parts_list">
                         <div class="parts">
-                            <div class="img" data-target="#detail-modal" data-toggle="modal">
-                                <img src="img/160x160_1.jpg" width="160" alt="Test Parts 1"/>
+                            <div class="img" data-target="#detail-modal" data-toggle="modal" onclick="initDetailModal(this)">
+                                <img src="img/car/parts9.jpg" width="180" alt="Test Parts 1"/>
                             </div>
-                            <div class="info" data-target="#detail-modal" data-toggle="modal">
+                            <div class="info" data-target="#detail-modal" data-toggle="modal" onclick="initDetailModal(this)">
                                 <div class="name"><a title="Test Parts1">N Test Parts1ADFBCFDF</a></div>
                                 <div class="price">$ 4.99</div>
                                 <div class="car">Audi A6</div>
@@ -244,7 +279,7 @@
 
                         <div class="parts">
                             <div class="img" data-target="#detail-modal" data-toggle="modal">
-                                <img src="img/160x160_2.jpg" width="160" alt="Test Parts 1"/>
+                                <img src="img/car/parts2.jpg" width="180" alt="Test Parts 1"/>
                             </div>
                             <div class="info" data-target="#detail-modal" data-toggle="modal">
                                 <div class="name"><a title="Test Parts1">N Test Parts2</a></div>
@@ -255,7 +290,7 @@
 
                         <div class="parts">
                             <div class="img" data-target="#detail-modal" data-toggle="modal">
-                                <img src="img/160x160_3.jpg" width="160" alt="Test Parts 1"/>
+                                <img src="img/car/parts3.jpg" width="180" alt="Test Parts 1"/>
                             </div>
                             <div class="info" data-target="#detail-modal" data-toggle="modal">
                                 <div class="name"><a title="Test Parts1">N Test Parts3</a></div>
@@ -266,7 +301,7 @@
 
                         <div class="parts">
                             <div class="img" data-target="#detail-modal" data-toggle="modal">
-                                <img src="img/160x160_4.jpg" width="160" alt="Test Parts 1"/>
+                                <img src="img/car/parts4.jpg" width="180" alt="Test Parts 1"/>
                             </div>
                             <div class="info" data-target="#detail-modal" data-toggle="modal">
                                 <div class="name"><a title="Test Parts1">N Test Parts4</a></div>
@@ -277,7 +312,7 @@
 
                         <div class="parts">
                             <div class="img" data-target="#detail-modal" data-toggle="modal">
-                                <img src="img/160x160_5.jpg" width="160" alt="Test Parts 1"/>
+                                <img src="img/car/parts5.jpg" width="180" alt="Test Parts 1"/>
                             </div>
                             <div class="info" data-target="#detail-modal" data-toggle="modal">
                                 <div class="name"><a title="Test Parts1">테스트 부품 1</a></div>
@@ -288,7 +323,7 @@
 
                         <div class="parts">
                             <div class="img" data-target="#detail-modal" data-toggle="modal">
-                                <img src="img/160x160_6.jpg" width="160" alt="Test Parts 1"/>
+                                <img src="img/car/parts6.jpg" width="180" alt="Test Parts 1"/>
                             </div>
                             <div class="info" data-target="#detail-modal" data-toggle="modal">
                                 <div class="name"><a title="Test Parts1">테스트 부품 2</a></div>
@@ -299,7 +334,7 @@
 
                         <div class="parts">
                             <div class="img" data-target="#detail-modal" data-toggle="modal">
-                                <img src="img/160x160_7.jpg" width="160" alt="Test Parts 1"/>
+                                <img src="img/car/parts7.jpg" width="180" alt="Test Parts 1"/>
                             </div>
                             <div class="info" data-target="#detail-modal" data-toggle="modal">
                                 <div class="name"><a title="Test Parts1">테스트 부품 3</a></div>
@@ -310,7 +345,7 @@
 
                         <div class="parts">
                             <div class="img" data-target="#detail-modal" data-toggle="modal">
-                                <img src="img/160x160_8.jpg" width="160" alt="Test Parts 1"/>
+                                <img src="img/car/parts8.jpg" width="180" alt="Test Parts 1"/>
                             </div>
                             <div class="info" data-target="#detail-modal" data-toggle="modal">
                                 <div class="name"><a title="Test Parts1">테스트 부품 4</a></div>

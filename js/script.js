@@ -3,26 +3,26 @@ var pageCount = 2;
 var startP = 0;
 var current_href = "?page=2222";
 
+var winHeight = 0;
+
+
 // Jquery with no conflict
 $(document).ready(function() {
 });
 
+/*$(window).resize(function () {
+    winHeight = $(window).height();
+
+    setModalHeight();
+});*/
+
 window.onload = function() {
+    winHeight = $(window).height();
     setPagerWidth();
+}
 
-    $('#pager').twbsPagination({
-        totalPages: pageCount,
-        visiblePages: 7,
-        startPages: 2,
-        first: "<<",
-        prev: "<",
-        next: ">",
-        last: ">>",
-        href: "?page=2",
-        onPageClick: function(event, page) {
-
-        }
-    });
+function Init() {
+    alert("SDFAF");
 }
 
 // search clearance
@@ -34,9 +34,50 @@ function clearInput(target){
 	if((target).value == ''){(target).value='Search...'}
 }
 
-function Init(value) {
-    alert(value);
+function setModalHeight() {
+    var modalHeight = $("#detail-modal .modal-body").height();
+    $("#detail-modal .modal-body").css({'height':(winHeight-modalHeight-250)+'px'});
 }
+
+/* Parts Detail Initialization */
+function initDetailModal(parts) {
+
+}
+
+function changeImage(img) {
+    $('#pImage-list li').removeAttr("class");
+    img.parentNode.className = "pImage-active";
+    $("#pImage-main").attr("src", img.src);
+}
+
+function initImage() {
+    $('#pImage-list li').removeAttr("class");
+
+    var init = $('#pImage-list').children().first().children().attr("src");
+    $('#pImage-list').children().first().addClass('pImage-active');
+    $("#pImage-main").attr("src", init);
+}
+
+function prevImage() {
+    if( $('#pImage-list li').first().attr("class") !== "pImage-active" ) {
+        var imgSrc = $('#pImage-list .pImage-active').prev().children().attr("src");
+        var obj = $('#pImage-list .pImage-active').prev();
+        $('#pImage-list .pImage-active').removeAttr("class");
+        obj.attr("class", "pImage-active");
+        $("#pImage-main").attr("src", imgSrc);
+    }
+}
+
+function nextImage() {
+    if( $('#pImage-list li').last().attr("class") !== "pImage-active" ) {
+        var imgSrc = $('#pImage-list .pImage-active').next().children().attr("src");
+        var obj = $('#pImage-list .pImage-active').next();
+        $('#pImage-list .pImage-active').removeAttr("class");
+        obj.attr("class", "pImage-active");
+        $("#pImage-main").attr("src", imgSrc);
+    }
+}
+/* --------------------------------- */
 
 function categorySelect(code) {
     $("#category-middle option").remove();
@@ -50,15 +91,7 @@ function categorySelect(code) {
 }
 
 function changeClassName() {
-    alert("A");
     jQuery(this).attr("class", "SSS");
-    alert(jQuery(this));
-}
-
-function add() {
-	var div = document.createElement("div");
-
-	document.getElementById("parts").appendChild(div);
 }
 
 function setPagerWidth() {
@@ -66,10 +99,11 @@ function setPagerWidth() {
     if( pageCount > 7 ) {
         obj.style.width = 11*32+"px";
     } else {
-        obj.style.width  = (pageCount + 4) * 32 + "px";
+        obj.style.width  = (pageCount + 3) * 34 + "px";
     }
 }
 
+/* 상품 등록 이미지 미리보기 */
 function previewImage(targetObj, previewId) {
     var preview = document.getElementById(previewId); //div id
     var ua = window.navigator.userAgent;

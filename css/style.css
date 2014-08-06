@@ -215,13 +215,120 @@ body {
 
 /* ---------- PARTS DETAIL ---------- */
 
-.modal-body > div {
-    max-height: 900px;
+#detail-parts {
+    width: 885px;
+    height: 500px;
+    margin-left: -15px;
 }
 
-#detal-modal {
-    position: relative;
-    outline: none;
+#detail-parts .detail-pImage {
+    float: left;
+    height: 100%;
+    width: 55%;
+    border-right: 1px #ccc solid;
+    padding: 10px 0px;
+}
+
+#detail-parts .detail-pImage .pImage-large {
+    max-width: 100%;
+    max-height: 350px;
+    margin-bottom: 25px;
+}
+
+#pImage-prev {
+    position: absolute;
+    height: 350px;
+    width: 70px;
+}
+
+#pImage-prev > img {
+    padding: 25px;
+    margin-top: 135px;
+    cursor: pointer;
+}
+
+#pImage-next {
+    position: absolute;
+    height: 350px;
+    width: 70px;
+    left: 415px;
+}
+
+#pImage-next > img {
+    padding: 25px;
+    margin-top: 135px;
+    cursor: pointer;
+}
+
+#pImage-main {
+    margin-left: 14%;
+    max-width: 350px;
+    padding: 1px;
+    border: 2px #fff solid;
+}
+
+#pImage-main:hover {
+    cursor: pointer;
+    border: 2px #A7A7A7 solid;
+}
+
+#detail-parts .detail-pImage .pImage-small {
+    position: absolute;
+    width: 480px;
+}
+
+#detail-parts .detail-pImage .pImage-small > ul {
+}
+
+#detail-parts .detail-pImage .pImage-small > ul > li {
+    padding: 1px;
+    display: block;
+    float: left;
+    margin: 5px;
+    border: 1px #fff solid;
+}
+
+#detail-parts .detail-pImage .pImage-small > ul > li:hover {
+    border: 1px #A7A7A7 solid;
+    cursor: pointer;
+}
+
+#detail-parts .detail-pInfo {
+    margin-left: 55%;
+    width: 45%;
+    height: 100%;
+    max-height: 100%;
+    max-width: 45%;
+    padding: 10px;
+}
+
+#pInfo-key {
+    position: absolute;
+    width: 100px;
+    max-height: 480px;
+    font-size: 100%;
+    text-align: right;
+}
+
+#pInfo-key > span {
+    display: block;
+    height: 22px;
+    margin: 5px 0px 15px 0px;
+}
+
+#pInfo-value {
+    position: absolute;
+    margin-left: 120px;
+    width: 270px;
+    max-height: 480px;
+    height: 100%;
+    font-size: 100%;
+}
+
+#pInfo-value > span {
+    display: block;
+    height: 22px;
+    margin: 5px 0px 15px 0px;
 }
 
 /* ---------- PARTS ---------- */
@@ -252,18 +359,18 @@ body {
 
 #parts_list .parts .img {
     margin: 0 auto;
-    margin-top: 8px;
-    height: 160px;
-    width: 160px;
+    height: 180px;
+    width: 180px;
 /*    border-radius: 5px;*/
 }
 
 #parts_list .img>img {
-/*    border-radius: 7px;*/
+    height: 178px;
+    width: 178px;
 }
 
 #parts_list .parts .info {
-    height: 100px;
+    height: 90px;
     width: 180px;
     padding: 10px 15px;
 }
@@ -271,28 +378,26 @@ body {
 #parts_list .parts .info .name {
     color: #0042ED;
     overflow: hidden;
-    height: 25px;
     font-family: NanumGothic, Dotum, sans-serif;
-    font-size: 130%;
+    font-size: 13px;
 }
 
 #parts_list .parts .info .price {
     margin-top: 5px;
-    height: 25px;
+    height: 20px;
     overflow: hidden;
     font-family: NanumGothic, Dotum, sans-serif;
     font-weight: bold;
-    font-size: 110%;
+    font-size: 13px;
 }
 
 #parts_list .parts .info .car {
     color: #000000;
-    height: 25px;
     overflow: hidden;
-    margin: 0px;
+    margin-top: 5px;
     font-family: NanumGothic, Dotum, sans-serif;
     font-weight: bold;
-    font-size: 120%;
+    font-size: 13px;
 }
 
 /* ---------- PAGER ---------- */
@@ -303,6 +408,7 @@ body {
     clear:left;
     width:100%;
     margin-bottom: 50px;
+    margin-top: 10px;
     font-size: 13px;
 }
 
@@ -503,7 +609,6 @@ body {
     background: #00509d;
     cursor: pointer;
 }
-
 
 /* ---------- LOGIN & SIGN UP ---------- */
 

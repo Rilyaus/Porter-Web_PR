@@ -5402,10 +5402,12 @@ button.close {
 }
 .modal-dialog {
   position: relative;
-  width: auto;
+    width: auto;
   margin: 10px;
 }
 .modal-content {
+    width: 900px;
+    margin-left: -155px;
   position: relative;
   background-color: #fff;
   -webkit-background-clip: padding-box;
@@ -5452,7 +5454,7 @@ button.close {
 }
 .modal-footer {
   padding: 15px;
-  text-align: right;
+  text-align: left;
   border-top: 1px solid #e5e5e5;
 }
 .modal-footer .btn + .btn {
