@@ -44,11 +44,11 @@
                         <span>주문 상품 확인</span>
                         <div class="purchase-partslist">
                             <div class="purchase-parts-head">
-                                <div class="partsImage"><a>상품 사진</a></div>
-                                <div class="partsName"><a>상품 정보</a></div>
-                                <div class="partsCount"><a>수량</a></div>
-                                <div class="partsSeller"><a>판매자</a></div>
-                                <div class="partsPrice"><a>가격</a></div>
+                                <div class="partsImage"><span>상품 사진</span></div>
+                                <div class="partsName"><span>상품 정보</span></div>
+                                <div class="partsCount"><span>수량</span></div>
+                                <div class="partsSeller"><span>판매자</span></div>
+                                <div class="partsPrice"><span>가격</span></div>
                             </div>
                             <hr>
                             <div class="purchase-parts">
@@ -115,13 +115,13 @@
                         <span>결제 정보</span>
                         <div class="purchase-paymentInfo">
                             <div id="purchase-paymentList">
-                                <input class="bank" type="radio" name="pay"/><span>무통장입금</span>
+                                <input class="bank" type="radio" name="pay" onclick="setPurchaseBank()"/><span>무통장입금</span>
                                 <input class="card" type="radio" name="pay" disabled="true"  /><span>신용카드</span>
                                 <input class="phone" type="radio" name="pay" disabled="true"/><span>휴대폰결제</span>
                             </div>
                             <hr>
 
-                            <div class="paymentPage-bank">
+                            <div id="paymentPage-bank">
                                 <div class="bank-value">
                                     <select id="purchase-selectBank">
                                         <option value="01">농협</option>
@@ -131,14 +131,18 @@
                                         <option value="05">우리은행</option>
                                         <option value="06">기업은행</option>
                                     </select>
+
+                                    <span id="selectBank-account">0124-1245-1234421</span>
+                                    <span>예금주 :</span>
+                                    <span id="selectBank-name">Porter</span>
                                 </div>
 
                                 <div class="bank-key">
                                     <span>은행 선택</span>
                                     <span>결제 안내</span>
                                 </div>
-                            </div>
                             <hr>
+                            </div>
                             <div class="purchase-paymentPrice">
                                 <span>결제 금액</span>
                                 <span id="purchase-totalPrice">87,000원</span>

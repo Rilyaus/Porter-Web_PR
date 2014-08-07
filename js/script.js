@@ -86,6 +86,10 @@ function categorySelect(code) {
 //    alert($("#category-middle option").length);
 }
 
+function setPurchaseBank() {
+    $('#paymentPage-bank').css("display", "block");
+}
+
 function changeClassName() {
     jQuery(this).attr("class", "SSS");
 }
