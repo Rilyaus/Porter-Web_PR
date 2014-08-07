@@ -511,6 +511,9 @@ body {
 #parts-purchase .purchase-partslist .purchase-parts-head .partsSeller {
     width: 140px;
 }
+#parts-purchase .purchase-partslist .purchase-parts-head .partsPrice {
+    width: 110px;
+}
 
 #parts-purchase .purchase-partslist .purchase-parts {
     margin: 15px 0px;
@@ -558,6 +561,12 @@ body {
     padding: 0px 10px;
     width: 140px;
     max-width: 140px;
+}
+
+#parts-purchase .purchase-partslist .purchase-parts .partsPrice > a {
+    padding: 0px 10px;
+    width: 110px;
+    max-width: 110px;
 }
 
 #parts-purchase .purchase-userInfo {
@@ -641,6 +650,97 @@ body {
 #purchase-userMessage {
     margin: 4px 0px;
     width: 400px;
+}
+
+.purchase-paymentInfo {
+}
+
+#purchase-paymentList {
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+#purchase-paymentList > input {
+    margin-right: 5px;
+}
+
+#purchase-paymentList > span {
+    margin-right: 15px;
+}
+
+.purchase-paymentInfo .paymentPage-bank {
+    width: 500px;
+    min-width: 500px;
+    max-width: 500px;
+    margin-bottom: 20px;
+}
+
+.purchase-paymentInfo .paymentPage-bank .bank-key {
+    margin-top: 2px;
+    margin-left: 10px;
+    font-size: 12px;
+    width: 80px;
+    max-width: 80px;
+    min-width: 80px;
+}
+
+.purchase-paymentInfo .paymentPage-bank .bank-key > span {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.purchase-paymentInfo .paymentPage-bank .bank-value {
+    position: absolute;
+    margin-left: 100px;
+    font-size: 12px;
+    width: 100px;
+    max-width: 100px;
+    min-width: 100px;
+}
+
+.purchase-paymentInfo .purchase-paymentPrice {
+    margin-bottom: 20px;
+    margin-left: 10px;
+    height: 50px;
+}
+
+.purchase-paymentInfo .purchase-paymentPrice > span:nth-child(1) {
+    position: absolute;
+    display: table-cell;
+    font-size: 20px;
+    margin-top: 12px;
+}
+
+#purchase-totalPrice {
+    position: absolute;
+    display: block;
+    margin-left: 140px;
+    font-size: 230%;
+    color: #FF0000;
+    width: 300px;
+    max-width: 300px;
+    overflow: hidden;
+}
+
+#purchase-paymentButton {
+    float: right;
+    margin-top: 5px;
+    margin-right: 20px;
+    width: 120px;
+    height: 40px;
+    font-size: 16px;
+    font-family: NanumGothic, Dotum;
+    text-decoration: none;
+    color: #ffffff;
+    border: 0px;
+    border-radius: 3px;
+    background: -webkit-gradient(linear,left top,left bottom,from(#0079bc),to(#00509d));
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+#purchase-paymentButton:hover {
+    background: #00509d;
+    cursor: pointer;
 }
 
 /* ---------- PARTS REGISTRATION ---------- */

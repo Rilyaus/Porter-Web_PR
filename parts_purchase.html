@@ -48,6 +48,7 @@
                                 <div class="partsName"><a>상품 정보</a></div>
                                 <div class="partsCount"><a>수량</a></div>
                                 <div class="partsSeller"><a>판매자</a></div>
+                                <div class="partsPrice"><a>가격</a></div>
                             </div>
                             <hr>
                             <div class="purchase-parts">
@@ -55,6 +56,7 @@
                                 <div class="partsName"><a>N Test Parts1 asdfaefasdfasdfasdfadfasdfasdfasfasdfasdf</a></div>
                                 <div class="partsCount"><a>1</a></div>
                                 <div class="partsSeller"><a>Tester1</a></div>
+                                <div class="partsPrice"><a>49,000원</a></div>
                             </div>
                             <hr>
                             <div class="purchase-parts">
@@ -62,6 +64,7 @@
                                 <div class="partsName"><a>N Test Parts2</a></div>
                                 <div class="partsCount"><a>1</a></div>
                                 <div class="partsSeller"><a>Seller1</a></div>
+                                <div class="partsPrice"><a>38,000원</a></div>
                             </div>
                         </div>
                         <span>구매자 확인 및 배송지 정보</span>
@@ -105,7 +108,36 @@
                         </div>
                         <span>결제 정보</span>
                         <div class="purchase-paymentInfo">
+                            <div id="purchase-paymentList">
+                                <input class="bank" type="radio" name="pay"/><span>무통장입금</span>
+                                <input class="card" type="radio" name="pay" disabled="true"  /><span>신용카드</span>
+                                <input class="phone" type="radio" name="pay" disabled="true"/><span>휴대폰결제</span>
+                            </div>
+                            <hr>
 
+                            <div class="paymentPage-bank">
+                                <div class="bank-value">
+                                    <select id="purchase-selectBank">
+                                        <option value="01">농협</option>
+                                        <option value="02">국민은행</option>
+                                        <option value="03">신한은행</option>
+                                        <option value="04">하나은행</option>
+                                        <option value="05">우리은행</option>
+                                        <option value="06">기업은행</option>
+                                    </select>
+                                </div>
+
+                                <div class="bank-key">
+                                    <span>은행 선택</span>
+                                    <span>결제 안내</span>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="purchase-paymentPrice">
+                                <span>결제 금액</span>
+                                <span id="purchase-totalPrice">87,000원</span>
+                                <button id="purchase-paymentButton">결제하기</button>
+                            </div>
                         </div>
                     </div>
 <!-- End Parts Purchase -->
