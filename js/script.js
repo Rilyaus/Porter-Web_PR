@@ -1,5 +1,5 @@
 var partsCount = 0;
-var pageCount = 2;
+var pageCount = 1;
 var startP = 0;
 var current_href = "?page=2222";
 
@@ -93,9 +93,9 @@ function changeClassName() {
 function setPagerWidth() {
     var obj = document.getElementById('pager');
     if( pageCount > 7 ) {
-        obj.style.width = 11*32+"px";
+        obj.style.width = 11*34+"px";
     } else {
-        obj.style.width  = (pageCount + 3) * 34 + "px";
+        obj.style.width  = (pageCount + 4) * 34 + "px";
     }
 }
 

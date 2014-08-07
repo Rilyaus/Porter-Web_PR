@@ -51,14 +51,14 @@
                             </div>
                             <hr>
                             <div class="purchase-parts">
-                                <div class="partsImage"><img src="img/car/parts7.jpg" height=130 width=130/></div>
+                                <div class="partsImage"><img src="img/car/parts7.jpg" height=110 width=110/></div>
                                 <div class="partsName"><a>N Test Parts1 asdfaefasdfasdfasdfadfasdfasdfasfasdfasdf</a></div>
                                 <div class="partsCount"><a>1</a></div>
                                 <div class="partsSeller"><a>Tester1</a></div>
                             </div>
                             <hr>
                             <div class="purchase-parts">
-                                <div class="partsImage"><img src="img/car/parts11.jpg" height=130 width=130/></div>
+                                <div class="partsImage"><img src="img/car/parts11.jpg" height=110 width=110/></div>
                                 <div class="partsName"><a>N Test Parts2</a></div>
                                 <div class="partsCount"><a>1</a></div>
                                 <div class="partsSeller"><a>Seller1</a></div>
@@ -66,7 +66,42 @@
                         </div>
                         <span>구매자 확인 및 배송지 정보</span>
                         <div class="purchase-userInfo">
-
+                            <div class="purchase-uInfoKey">
+                                <div><span>받는 사람</span></div>
+                                <div class="userAddress"><span>배송지</span></div>
+                                <div><span>휴대 전화</span></div>
+                                <div><span>배송시 요구사항</span></div>
+                            </div>
+                            <div class="purchase-uInfoValue">
+                                <div class="userName">
+                                    <input id="purchase-userName" type="text" name="name"/>
+                                </div>
+                                <div class="userAddress">
+                                    <input id="purchase-userPostal1" type="text" name="postal1" readonly="true"/>
+                                    <span>-</span>
+                                    <input id="purchase-userPostal2" type="text" name="postal2" readonly="true"/>
+                                    <button id="purchase-postalSearch">우편번호 찾기</button><br>
+                                    <input id="purchase-userAddress1" type="text" name="address1" readonly="true"/>
+                                    <input id="purchase-userAddress2" type="text" name="address2"/>
+                                </div>
+                                <div class="userPhone">
+                                    <select id="purchase-userPhone1">
+                                        <option value="010">010</option>
+                                        <option value="011">011</option>
+                                        <option value="016">016</option>
+                                        <option value="017">017</option>
+                                        <option value="018">018</option>
+                                        <option value="019">019</option>
+                                    </select>
+                                    <span>-</span>
+                                    <input id="purchase-userPhone2" type="text" name="phone2"/>
+                                    <span>-</span>
+                                    <input id="purchase-userPhone3" type="text" name="phone3"/>
+                                </div>
+                                <div class="userMessage">
+                                    <input id="purchase-userMessage" type="text" name="message"/>
+                                </div>
+                            </div>
                         </div>
                         <span>결제 정보</span>
                         <div class="purchase-paymentInfo">
