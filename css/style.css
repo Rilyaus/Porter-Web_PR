@@ -529,7 +529,9 @@ body {
     text-align: center;
 }
 
-#parts-purchase .purchase-partslist .purchase-parts > div > a{
+#parts-purchase .purchase-partslist .purchase-parts .partsCount > a,
+#parts-purchase .purchase-partslist .purchase-parts .partsSeller > a,
+#parts-purchase .purchase-partslist .purchase-parts .partsPrice > a {
     display: table-cell;
     vertical-align: middle;
     text-align: center;
@@ -543,7 +545,30 @@ body {
     max-height: 110px;
     margin-right: 30px;
 }
-#parts-purchase .purchase-partslist .purchase-parts .partsName > a {
+
+#parts-purchase .purchase-partslist .purchase-parts .partsName {
+    display: table-cell;
+    text-decoration: none;
+    padding: 0px 10px;
+    min-width: 300px;
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#parts-purchase .purchase-partslist .purchase-parts .partsName .pName {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    padding: 0px 10px;
+    min-width: 300px;
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#parts-purchase .purchase-partslist .purchase-parts .partsName .carName {
+    display: block;
     padding: 0px 10px;
     min-width: 300px;
     max-width: 300px;
