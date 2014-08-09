@@ -1,20 +1,22 @@
 var current_href = "?page=2222";
 var winHeight = 0;
+var pageCounts = 1;
 
 
 // Jquery with no conflict
 $(document).ready(function() {
 });
 
-/*$(window).resize(function () {
+$(window).resize(function () {
     winHeight = $(window).height();
-
     setModalHeight();
-});*/
+});
 
 window.onload = function() {
     winHeight = $(window).height();
+    pageCounts = parseInt($('#pageCount').val());
     setPagerWidth();
+    setModalHeight();
 }
 
 // search clearance
@@ -27,8 +29,8 @@ function clearInput(target){
 }
 
 function setModalHeight() {
-    var modalHeight = $("#detail-modal .modal-body").height();
-    $("#detail-modal .modal-body").css({'height':(winHeight-modalHeight-250)+'px'});
+    var pTop = (winHeight - 703) / 2 + "px";
+    $('#detail-modal').css("padding-top", pTop);
 }
 
 /* Parts Detail Initialization */
@@ -91,10 +93,11 @@ function changeClassName() {
 
 function setPagerWidth() {
     var obj = document.getElementById('pager');
-    if( pageCount > 7 ) {
+    if( pageCounts > 7 ) {
+        alert("ADF");
         obj.style.width = 11*34+"px";
     } else {
-        obj.style.width  = (pageCount + 4) * 34 + "px";
+        obj.style.width  = (pageCounts + 4) * 34 + "px";
     }
 }
 
