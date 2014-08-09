@@ -22,12 +22,12 @@
 				<a href="index.html"><img id="title_img" src="img/Porter Title.png" alt="Porter - vehicle parts Store" /></a>
 <!-- User Menu -->
                 <div id="user-menu">
-                    <a href="parts_register.html">상품 등록</a>
-                    <a href="">마이페이지</a>
-                    <a href="">장바구니</a>
-                    <a> </a>
-                    <a href="login.html">로그인</a>
-                    <a href="signup.html">회원가입</a>
+                    <li class="utility"><a href="parts_register.html">상품 등록</a></li>
+                    <li class="utility"><a href="">마이페이지</a></li>
+                    <li class="utility"><a href="">장바구니</a></li>
+                    <li class="blank"><a></a></li>
+                    <li class="user"><a href="login.html">로그인</a></li>
+                    <li class="user"><a href="signup.html">회원가입</a></li>
                 </div>
 <!-- User Menu End -->
 			</div>
@@ -240,7 +240,7 @@
                                             </div>
                                         </div>
                                         <div class="detail-pInfo">
-                                            <div class="tabbable"> <!-- 왼쪽과 오른쪽 탭에만 필요 -->
+                                            <div class="tabbable">
                                                 <ul class="nav nav-tabs">
                                                     <li class="active"><a href="#tab1" data-toggle="tab">상품 정보</a></li>
                                                     <li><a href="#tab2" data-toggle="tab">판매자 정보</a></li>
@@ -255,6 +255,7 @@
                                                                 <span>상태 :</span>
                                                                 <span>가격 :</span>
                                                                 <span>수량 :</span>
+                                                                <span>상세 설명</span>
                                                             </div>
                                                             <div id="pInfo-value">
                                                                 <span id="category" class="value-category">외장부품 > 램프(전조등)</span>
@@ -262,6 +263,9 @@
                                                                 <span id="state" class="value-state">중고 A급</span>
                                                                 <span id="price" class="value-price">150,000 원</span>
                                                                 <span id="quantity" class="value-quantity">1</span>
+                                                            </div>
+                                                            <div class="pInfo-content-div">
+                                                                <span id="pInfo-content">미스터 방의 증조가 타관에서 떠들어온 명색 없는 사람이었다. 그 조부가 고을의 아전을 다녔다. 그 아비가 짚신장수였다. 칠십에, 고로롱고로롱, 아직도 살아 있지만, 시방도 짚신 곱게 삼기로 고을에서 첫째가는 방첨지가 바로 그였다. 그러나마 삼십을 바라보도록 남의 집 머슴살이로, 이집 저집 살고 다니는 코삐뚤이 삼복이었다. 물론 낫 놓고 기역자도 못 그리는 판무식이었다. 백주사는 생각하자니 속으로 이렇게 분개스럽지 않을 수가 없었다.</span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -281,6 +285,7 @@
                                     </div>
                                 </div>
                                 <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary cart">장바구니</button>
                                     <button type="button" class="btn btn-primary" onclick="location.href='parts_purchase.html?partsNum=100'";>구매하기</button>
                                     <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
                                 </div>

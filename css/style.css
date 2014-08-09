@@ -30,6 +30,9 @@ body {
 	top: 30px;
 }
 
+.blank {
+}
+
 @font-face {
     font-family: "NanumGothic";
     src: url("/font/NanumGothic.eot");
@@ -93,18 +96,27 @@ body {
 	float: right;
 }
 
-#user-menu > a {
+#user-menu .blank {
+    margin: 0px 20px;
+}
+
+#user-menu > li {
+    display: block;
+    float: left;
+}
+
+#user-menu > li > a {
     font-family: NanumGothic, Dotum;
     font-size: 13px;
     color: #E7E7E7;
-    margin-left: 20px;
+    margin: 0px 10px;
+    text-align: center;
     text-decoration: none;
 }
 
-#user-menu > a:hover {
+#user-menu > li > a:hover {
     color: #ffffff;
 }
-
 /* ---------- NAVIGATION ---------- */
 
 #menu-navi {
@@ -313,13 +325,16 @@ body {
 }
 
 #detail-parts .detail-pInfo .tab-main {
-    padding: 0px 10px;
     height: 420px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
 }
 
 #pInfo-key {
     position: absolute;
-    width: 85px;
+    width: 80px;
+    max-width: 80px;
     max-height: 480px;
     font-size: 100%;
     text-align: right;
@@ -339,10 +354,31 @@ body {
     font-size: 100%;
 }
 
+.pInfo-content-div {
+    position: absolute;
+    margin-top: 220px;
+    margin-left: 15px;
+    width: 325px;
+    min-width: 325px;
+    max-width: 325px;
+    min-height: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#pInfo-content {
+    display: block;
+}
+
 #pInfo-value > span {
     display: block;
     height: 22px;
     margin: 5px 0px 15px 0px;
+}
+
+.cart {
+    float: left;
 }
 
 /* ---------- PARTS ---------- */
@@ -549,6 +585,10 @@ body {
     text-decoration: none;
     height: 110px;
     max-height: 110px;
+}
+
+#parts-purchase .purchase-partslist .purchase-parts > div > a:hover {
+    cursor: default;
 }
 
 #parts-purchase .purchase-partslist .purchase-parts .partsImage {
@@ -974,22 +1014,88 @@ body {
 	border: 1px solid #ccc;
 }
 
-#signup-submit,
-#login-submit {
-    margin-left: 33%;
-    margin-top: 20px;
-    width: 100px;
-    height: 30px;
-    font-size: 14px;
-    font-family: NanumGothic, Dotum;
-    text-decoration: none;
-    color: #ffffff;
-    border: 0px;
-    border-radius: 3px;
-    background: -webkit-gradient(linear,left top,left bottom,from(#0079bc),to(#00509d));
-    box-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+#member-body > form .saveuser-div {
+    float: left;
+    width: 100%;
 }
 
+#member-body > form > div .saveuser-input {
+    display: block;
+    height: 15px;
+    width: 15px;
+    float: left;
+}
+
+#member-body > form .saveuser-span {
+    font-size: 12px;
+    display: block;
+    margin-top: 3px;
+    margin-left: 3px;
+    width: 80px;
+    max-width: 80px;
+    float: left;
+}
+
+#member-body > form .searchuser-span {
+    display: block;
+    text-align: right;
+    margin-top: 3px;
+    margin-left: 100px;
+    font-size: 12px;
+    color: #428bca;
+}
+
+#member-body > form .searchuser-span:hover {
+    cursor: pointer;
+    color: #00509d;
+}
+
+#member-body > form .btn-div {
+    margin-top: 50px;
+}
+
+#member-body > form .anotherLogin-div {
+    width: 100%;
+    height: 100%;
+}
+
+#facebook-login {
+    width: 100%;
+    height: 35px;
+    color: #fff;
+    background: #428bca;
+    border-radius: 4px;
+    border: 1px solid transparent;
+}
+
+#signup-submit,
+#login-submit {
+    display: block;
+    width: 80px;
+    margin: 0 auto;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #428bca;
+    border-color: #357ebd;
+}
+
+#signup-submit {
+    margin-top: 20px;
+}
+
+#facebook-login:hover,
 #signup-submit:hover,
 #login-submit:hover {
     background: #00509d;

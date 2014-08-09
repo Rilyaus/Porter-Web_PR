@@ -6,11 +6,11 @@
 
 		<!-- CSS Link -->
 		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen" />
 
 		<!-- Javascript Link -->
 		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
 		<script type="text/javascript" src="js/script.js"></script>
-
 	</head>
 
 	<body>
@@ -23,14 +23,25 @@
 		<div id="main">
 			<div class="wrapper">
 				<div id="member-title">
-					<a class="title">로그인</a>
+					<div class="title">로그인</div>
 				</div>
 
                 <div id="member-body">
-                    <form action="index.html" method="get">
-                        <a>이메일</a><br><input class="login-input" type="email" name="email" /><br>
-                        <a>비밀번호</a><br><input class="login-input" type="password" name="password" /><br>
-                        <button id="login-submit" type="submit">로그인</button>
+                    <form action="index.html" method="post">
+                        <span>이메일</span><br><input class="login-input" type="email" name="email" /><br>
+                        <span>비밀번호</span><br><input class="login-input" type="password" name="password" /><br>
+                        <div class="saveuser-div">
+                            <input class="saveuser-input" type="checkbox" name="saveuser"/>
+                            <span class="saveuser-span">아이디 저장</span>
+                            <span class="searchuser-span">아이디/비밀번호 찾기</span>
+                        </div>
+                        <div class="btn-div">
+                            <button id="login-submit" type="submit">로그인</button>
+                        </div>
+                        <hr>
+                        <div class="anotherLogin-div">
+                            <button id="facebook-login">페이스북으로 로그인</button>
+                        </div>
                     </form>
                 </div>
 			</div>

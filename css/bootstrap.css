@@ -3615,7 +3615,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   max-width: none;
 }
 .nav-tabs {
-  border-bottom: 1px solid #ddd;
 }
 .nav-tabs > li {
   float: left;
@@ -3753,10 +3752,12 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .tab-content > .tab-pane {
   display: none;
+    overflow: auto;
 }
 .tab-content > .active {
     margin-top: -430px;
   display: block;
+    overflow: auto;
 }
 .nav-tabs .dropdown-menu {
   margin-top: -1px;

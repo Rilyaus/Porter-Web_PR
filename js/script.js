@@ -1,8 +1,4 @@
-var partsCount = 0;
-var pageCount = 1;
-var startP = 0;
 var current_href = "?page=2222";
-
 var winHeight = 0;
 
 
@@ -37,7 +33,6 @@ function setModalHeight() {
 
 /* Parts Detail Initialization */
 function initDetailModal(parts) {
-
 }
 
 function changeImage(img) {
