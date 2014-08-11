@@ -12,6 +12,9 @@ $(window).resize(function () {
     setModalHeight();
 });
 
+$(window).scroll(function() {
+});
+
 window.onload = function() {
     winHeight = $(window).height();
     pageCounts = parseInt($('#pageCount').val());
