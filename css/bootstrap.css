@@ -3751,18 +3751,17 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .tab-content > .tab-pane {
-  display: none;
+    display: none;
     overflow: auto;
 }
 .tab-content > .active {
-    margin-top: -430px;
-  display: block;
+    display: block;
     overflow: auto;
 }
 .nav-tabs .dropdown-menu {
-  margin-top: -1px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+    margin-top: -1px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }
 .navbar {
   position: relative;

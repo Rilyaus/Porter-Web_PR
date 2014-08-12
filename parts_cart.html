@@ -202,7 +202,6 @@
         <div id="main">
 			<div class="wrapper">
 				<div id="content">
-                    <input type="hidden" id="pageCount" value="1">
 					<div id="page_title">
 						<span class="title">장바구니</span>
 						<span class="subtitle">Parts Cart</span>
@@ -212,7 +211,7 @@
                         <div id="parts-cart">
                             <div class="cart-partslist">
                                 <div class="cart-parts-head">
-                                    <div class="partsCheck"><input type="checkbox"/></div>
+                                    <div class="partsCheck"><input class="cart-checkBox-head" type="checkbox" onclick="setCheckBoxHead()"/></div>
                                     <div class="partsImage"><span>상품 사진</span></div>
                                     <div class="partsName"><span>상품 정보</span></div>
                                     <div class="partsCount"><span>수량</span></div>
@@ -221,7 +220,7 @@
                                 </div>
                                 <hr>
                                 <div class="cart-parts">
-                                    <div class="partsCheck"><input type="checkbox"/></div>
+                                    <div class="partsCheck"><input class="cart-checkBox" type="checkbox"/></div>
                                     <div class="partsImage"><img src="img/car/parts7.jpg" height=110 width=110/></div>
                                     <div class="partsName">
                                         <a class="pName">N Test Parts1</a>
@@ -233,7 +232,7 @@
                                 </div>
                                 <hr>
                                 <div class="cart-parts">
-                                    <div class="partsCheck"><input type="checkbox"/></div>
+                                    <div class="partsCheck"><input class="cart-checkBox" type="checkbox"/></div>
                                     <div class="partsImage"><img src="img/car/parts11.jpg" height=110 width=110/></div>
                                     <div class="partsName">
                                         <a class="pName">N Test Parts2</a>
@@ -245,6 +244,12 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div id="cart-function">
+                        <button class="all-select-btn" onclick="setCheckBoxAll()">전체 선택</button>
+                        <button class="list-delete-btn">선택 목록 삭제</button>
+                        <button class="all-order-btn">전체 주문</button>
+                        <button class="list-order-btn">선택 목록 주문</button>
                     </div>
 				</div>
 			</div>
