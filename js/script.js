@@ -2,6 +2,9 @@ var current_href = "?page=2222";
 var winHeight = 0;
 var pageCounts = 1;
 
+function Test() {
+    alert("TEST");
+}
 
 // Jquery with no conflict
 $(document).ready(function() {
@@ -105,6 +108,92 @@ function setPagerWidth() {
         obj.style.width = 11*34+"px";
     } else {
         obj.style.width  = (pageCounts + 4) * 34 + "px";
+    }
+}
+
+function inputOnlyPhone(obj){
+    var leng = obj.value.length;
+
+    if( leng > 3 ) {
+        event.returnValue=false;
+    } else if ((event.keyCode> 47) && (event.keyCode < 58)){
+        event.returnValue=true;
+    } else {
+        event.returnValue=false;
+    }
+}
+
+function inputOnlyNum(){
+    if ((event.keyCode> 47) && (event.keyCode < 58)){
+        event.returnValue=true;
+    } else {
+        event.returnValue=false;
+    }
+}
+
+function pageReload() {
+    location.reload();
+}
+
+function initMypageTab() {
+    $('#recently-list').css('display', 'block');
+    $('#payWait-list').css('display', 'none');
+    $('#payComplete-list').css('display', 'none');
+    $('#deliveryReady-list').css('display', 'none');
+    $('#deliveryProgress-list').css('display', 'none');
+    $('#deliveryComplete-list').css('display', 'none');
+    $('#orderComplete-list').css('display', 'none');
+}
+
+function setOrderList(obj) {
+    if( obj.className === 'pay-wait' ) {
+        $('#payWait-list').css('display', 'block');
+        $('#recently-list').css('display', 'none');
+        $('#payComplete-list').css('display', 'none');
+        $('#deliveryReady-list').css('display', 'none');
+        $('#deliveryProgress-list').css('display', 'none');
+        $('#deliveryComplete-list').css('display', 'none');
+        $('#orderComplete-list').css('display', 'none');
+    } else if( obj.className === 'pay-complete' ) {
+        $('#payWait-list').css('display', 'none');
+        $('#recently-list').css('display', 'none');
+        $('#payComplete-list').css('display', 'block');
+        $('#deliveryReady-list').css('display', 'none');
+        $('#deliveryProgress-list').css('display', 'none');
+        $('#deliveryComplete-list').css('display', 'none');
+        $('#orderComplete-list').css('display', 'none');
+    } else if( obj.className === 'delivery-ready' ) {
+        $('#payWait-list').css('display', 'none');
+        $('#recently-list').css('display', 'none');
+        $('#payComplete-list').css('display', 'none');
+        $('#deliveryReady-list').css('display', 'block');
+        $('#deliveryProgress-list').css('display', 'none');
+        $('#deliveryComplete-list').css('display', 'none');
+        $('#orderComplete-list').css('display', 'none');
+    } else if( obj.className === 'delivery-progress' ) {
+        $('#payWait-list').css('display', 'none');
+        $('#recently-list').css('display', 'none');
+        $('#payComplete-list').css('display', 'none');
+        $('#deliveryReady-list').css('display', 'none');
+        $('#deliveryProgress-list').css('display', 'block');
+        $('#deliveryComplete-list').css('display', 'none');
+        $('#orderComplete-list').css('display', 'none');
+    } else if( obj.className === 'delivery-complete' ) {
+        $('#payWait-list').css('display', 'none');
+        $('#recently-list').css('display', 'none');
+        $('#payComplete-list').css('display', 'none');
+        $('#deliveryReady-list').css('display', 'none');
+        $('#deliveryProgress-list').css('display', 'none');
+        $('#deliveryComplete-list').css('display', 'block');
+        $('#orderComplete-list').css('display', 'none');
+    } else if( obj.className === 'order-complete' ) {
+        $('#payWait-list').css('display', 'none');
+        $('#recently-list').css('display', 'none');
+        $('#payComplete-list').css('display', 'none');
+        $('#deliveryReady-list').css('display', 'none');
+        $('#deliveryProgress-list').css('display', 'none');
+        $('#deliveryComplete-list').css('display', 'none');
+        $('#orderComplete-list').css('display', 'block');
     }
 }
 
