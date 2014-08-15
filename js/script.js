@@ -64,6 +64,13 @@ function nextImage() {
 }
 /* --------------------------------- */
 
+function setCartPage() {
+    if($('#parts-cart').attr("value") !== '0') {
+        $('#cart-emptyMessage').css('display', 'none');
+        $('#cart-total').css('display', 'block');
+    }
+}
+
 function setCheckBoxAll() {
     $('.cart-parts-head .partsCheck .cart-checkBox-head').prop("checked", true);
     $('.cart-parts .partsCheck .cart-checkBox').prop("checked", true);

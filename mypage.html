@@ -206,18 +206,68 @@
                     <div id="mypage-body">
                         <div class="mypage-tab">
                             <ul class="nav nav-tabs">
-                                <li class="active"><a href="#tab1" data-toggle="tab" onclick="initMypageTab()">구매자</a></li>
-                                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">판매자 <b class="caret"></b></a>
+                                <li class="active"><a href="#tab1" data-toggle="tab" onclick="initMypageTab()">구매 관리</a></li>
+                                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">판매 관리 <b class="caret"></b></a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="#dropdown1" data-toggle="tab" onclick="initMypageTab()">상품 관리</a></li>
-                                        <li><a href="#" data-toggle="tab" onclick="initMypageTab()">배송 관리</a></li>
+                                        <li><a href="#sell-dropdown1" data-toggle="tab" onclick="initMypageTab()">판매 상품 관리</a></li>
+                                        <li><a href="#sell-dropdown2" data-toggle="tab" onclick="initMypageTab()">배송 관리</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#tab3" data-toggle="tab" onclick="initMypageTab()">개인정보 관리</a></li>
                             </ul>
                             <div class="tab-content">
+                                <div class="tab-pane" id="sell-dropdown1">
+                                    <div class="sell-dropdown1-main">
+                                        <span>판매 상품 관리</span>
+                                        <div id="sell-partsList-box">
+                                            <div class="sale-progress" onclick="setSaleList(this)">
+                                                <span>판매중</span>
+                                                <span class="product-count">2</span>
+                                            </div>
+                                            <div class="sale-paywait" onclick="setOrderList(this)">
+                                                <span>입금 대기</span>
+                                                <span class="product-count">0</span>
+                                            </div>
+                                            <div class="sale-complete" onclick="setOrderList(this)">
+                                                <span>판매 완료</span>
+                                                <span class="product-count">1</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane" id="sell-dropdown2">
+                                    <div class="delivery-dropdown1-main">
+                                        <span>배송 상품 관리</span>
+                                        <div id="delivery-partsList-box">
+                                            <div class="delivery-payComplete" onclick="setSaleList(this)">
+                                                <span>결제 완료</span>
+                                                <span class="product-count">1</span>
+                                            </div>
+                                            <div class="delivery-ready" onclick="setOrderList(this)">
+                                                <span>배송 준비중</span>
+                                                <span class="product-count">1</span>
+                                            </div>
+                                            <div class="delivery-progress" onclick="setOrderList(this)">
+                                                <span>배송중</span>
+                                                <span class="product-count">3</span>
+                                            </div>
+                                            <div class="delivery-complete" onclick="setOrderList(this)">
+                                                <span>배송 완료</span>
+                                                <span class="product-count">0</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="tab3">
+                                    <div class="tab-main">
+                                        <p>개인정보</p>
+                                    </div>
+                                </div>
+
                                 <div class="tab-pane active" id="tab1">
                                     <div class="mypage-tab-main">
+                                        <span>전체 구매 내역</span>
                                         <div id="order-state-box">
                                             <div class="pay-wait" onclick="setOrderList(this)">
                                                 <span>입금 대기</span>
@@ -250,7 +300,6 @@
                                             <div class="partslist-table">
                                                 <div class="table-head">
                                                     <div class="partsTime"><span>주문일</span></div>
-                                                    <div class="partsImage"><span>상품 사진</span></div>
                                                     <div class="partsName"><span>상품 정보</span></div>
                                                     <div class="partsCount"><span>수량</span></div>
                                                     <div class="partsSeller"><span>판매자</span></div>
@@ -260,16 +309,16 @@
                                                 <hr>
                                                 <div class="table-body">
                                                     <div class="parts">
-                                                        <div class="partsTime"><a>2014-8-10</a></div>
+                                                        <div class="partsTime"><a>Order Date</a></div>
                                                         <div class="partsImage"><img src="img/car/parts7.jpg" height=90 width=90/></div>
                                                         <div class="partsName">
-                                                            <a class="pName">N Test Parts1</a>
-                                                            <a class="carName">Benz 2010 C63 AMG</a>
+                                                            <a class="pName">Parts Name</a>
+                                                            <a class="carName">Maker Year Car Detail Modal</a>
                                                         </div>
-                                                        <div class="partsCount"><a>1</a></div>
-                                                        <div class="partsSeller"><a>Tester1</a></div>
-                                                        <div class="partsPrice"><a>49,000원</a></div>
-                                                        <div class="orderState"><a>배송 준비중</a></div>
+                                                        <div class="partsCount"><a>Parts Counts</a></div>
+                                                        <div class="partsSeller"><a>Seller ID</a></div>
+                                                        <div class="partsPrice"><a>Parts Price</a></div>
+                                                        <div class="orderState"><a>Order State</a></div>
                                                     </div>
                                                     <hr>
                                                     <div class="parts">
@@ -293,7 +342,6 @@
                                             <div class="partslist-table">
                                                 <div class="table-head">
                                                     <div class="partsTime"><span>주문일</span></div>
-                                                    <div class="partsImage"><span>상품 사진</span></div>
                                                     <div class="partsName"><span>상품 정보</span></div>
                                                     <div class="partsCount"><span>수량</span></div>
                                                     <div class="partsSeller"><span>판매자</span></div>
@@ -336,7 +384,6 @@
                                             <div class="partslist-table">
                                                 <div class="table-head">
                                                     <div class="partsTime"><span>주문일</span></div>
-                                                    <div class="partsImage"><span>상품 사진</span></div>
                                                     <div class="partsName"><span>상품 정보</span></div>
                                                     <div class="partsCount"><span>수량</span></div>
                                                     <div class="partsSeller"><span>판매자</span></div>
@@ -355,7 +402,6 @@
                                             <div class="partslist-table">
                                                 <div class="table-head">
                                                     <div class="partsTime"><span>주문일</span></div>
-                                                    <div class="partsImage"><span>상품 사진</span></div>
                                                     <div class="partsName"><span>상품 정보</span></div>
                                                     <div class="partsCount"><span>수량</span></div>
                                                     <div class="partsSeller"><span>판매자</span></div>
@@ -385,7 +431,6 @@
                                             <div class="partslist-table">
                                                 <div class="table-head">
                                                     <div class="partsTime"><span>주문일</span></div>
-                                                    <div class="partsImage"><span>상품 사진</span></div>
                                                     <div class="partsName"><span>상품 정보</span></div>
                                                     <div class="partsCount"><span>수량</span></div>
                                                     <div class="partsSeller"><span>판매자</span></div>
@@ -432,6 +477,7 @@
                                                         <div class="partsPrice"><a>156,000원</a></div>
                                                         <div class="orderState"><a>배송중</a></div>
                                                     </div>
+                                                    <hr>
                                                 </div>
                                             </div>
                                         </div>
@@ -441,7 +487,6 @@
                                             <div class="partslist-table">
                                                 <div class="table-head">
                                                     <div class="partsTime"><span>주문일</span></div>
-                                                    <div class="partsImage"><span>상품 사진</span></div>
                                                     <div class="partsName"><span>상품 정보</span></div>
                                                     <div class="partsCount"><span>수량</span></div>
                                                     <div class="partsSeller"><span>판매자</span></div>
@@ -484,7 +529,6 @@
                                             <div class="partslist-table">
                                                 <div class="table-head">
                                                     <div class="partsTime"><span>주문일</span></div>
-                                                    <div class="partsImage"><span>상품 사진</span></div>
                                                     <div class="partsName"><span>상품 정보</span></div>
                                                     <div class="partsCount"><span>수량</span></div>
                                                     <div class="partsSeller"><span>판매자</span></div>
@@ -563,17 +607,7 @@
 
                                     </div>
                                 </div>
-                                <div class="tab-pane" id="dropdown1">
-                                    <div class="tab-main">
-                                        <p>판매자 정보 탭</p>
-                                    </div>
-                                </div>
-                                <div class="tab-pane" id="tab3">
-                                    <div class="tab-main">
-                                        <p>개인정보</p>
-                                    </div>
-                                </div>
-                          </div>
+                            </div>
                         </div>
                     </div>
                 </div>
