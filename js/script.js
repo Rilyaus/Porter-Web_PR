@@ -22,11 +22,11 @@ window.onload = function() {
     winHeight = $(window).height();
     pageCounts = parseInt($('#pageCount').val());
     setPagerWidth();
-    setModalHeight();
 }
 
 /*---------- Parts Detail Initialization ----------*/
-function initDetailModal(parts) {
+function initDetailModal() {
+    setModalHeight();
 }
 
 function changeImage(img) {
@@ -66,21 +66,20 @@ function nextImage() {
 
 function setCartPage() {
     if($('#parts-cart').attr("value") !== '0') {
-        $('#cart-emptyMessage').css('display', 'none');
-        $('#cart-total').css('display', 'block');
+        $('#cart-emptyMessage').hide();
+        $('#cart-total').show();
     }
 }
 
 function setCheckBoxAll() {
-    $('.cart-parts-head .partsCheck .cart-checkBox-head').prop("checked", true);
-    $('.cart-parts .partsCheck .cart-checkBox').prop("checked", true);
+    $('.partsCheck > input').prop("checked", true);
 }
 
 function setCheckBoxHead() {
-    if($('.cart-parts-head .partsCheck .cart-checkBox-head').is(':checked')) {
-        $('.cart-parts .partsCheck .cart-checkBox').prop("checked", true);
+    if($('.table-head .partsCheck > input').is(':checked')) {
+        $('.partsCheck > input').prop("checked", true);
     } else {
-        $('.cart-parts .partsCheck .cart-checkBox').prop("checked", false);
+        $('.partsCheck > input').prop("checked", false);
     }
 }
 
@@ -92,11 +91,10 @@ function categorySelect(code) {
     $("#category-middle").append("<option value=1003>" + code + "</option>");
     $("#category-middle").append("<option value=1004>" + code + "</option>");
     $("#category-middle").append("<option value=1004>" + code + "</option>");
-//    alert($("#category-middle option").length);
 }
 
 function setPurchaseBank() {
-    $('#paymentPage-bank').css("display", "block");
+    $('#paymentPage-bank').show();
 }
 
 function changeClassName() {
@@ -143,64 +141,57 @@ function pageReload() {
 }
 
 function initMypageTab() {
-    $('#recently-list').css('display', 'block');
-    $('#payWait-list').css('display', 'none');
-    $('#payComplete-list').css('display', 'none');
-    $('#deliveryReady-list').css('display', 'none');
-    $('#deliveryProgress-list').css('display', 'none');
-    $('#deliveryComplete-list').css('display', 'none');
-    $('#orderComplete-list').css('display', 'none');
+    $('#recently-buy').show();
+    $('#payWait-buy').hide();
+    $('#deliveryProgress-buy').hide();
+    $('#cancelProgress-buy').hide();
+    $('#payWait-sell').hide();
+    $('#recently-sell').show();
+    $('#payComplete-sell').hide();
+    $('#deliveryProgress-sell').hide();
+    $('#cancelRequest-sell').hide();
 }
 
-function setOrderList(obj) {
-    if( obj.className === 'pay-wait' ) {
-        $('#payWait-list').css('display', 'block');
-        $('#recently-list').css('display', 'none');
-        $('#payComplete-list').css('display', 'none');
-        $('#deliveryReady-list').css('display', 'none');
-        $('#deliveryProgress-list').css('display', 'none');
-        $('#deliveryComplete-list').css('display', 'none');
-        $('#orderComplete-list').css('display', 'none');
-    } else if( obj.className === 'pay-complete' ) {
-        $('#payWait-list').css('display', 'none');
-        $('#recently-list').css('display', 'none');
-        $('#payComplete-list').css('display', 'block');
-        $('#deliveryReady-list').css('display', 'none');
-        $('#deliveryProgress-list').css('display', 'none');
-        $('#deliveryComplete-list').css('display', 'none');
-        $('#orderComplete-list').css('display', 'none');
-    } else if( obj.className === 'delivery-ready' ) {
-        $('#payWait-list').css('display', 'none');
-        $('#recently-list').css('display', 'none');
-        $('#payComplete-list').css('display', 'none');
-        $('#deliveryReady-list').css('display', 'block');
-        $('#deliveryProgress-list').css('display', 'none');
-        $('#deliveryComplete-list').css('display', 'none');
-        $('#orderComplete-list').css('display', 'none');
-    } else if( obj.className === 'delivery-progress' ) {
-        $('#payWait-list').css('display', 'none');
-        $('#recently-list').css('display', 'none');
-        $('#payComplete-list').css('display', 'none');
-        $('#deliveryReady-list').css('display', 'none');
-        $('#deliveryProgress-list').css('display', 'block');
-        $('#deliveryComplete-list').css('display', 'none');
-        $('#orderComplete-list').css('display', 'none');
-    } else if( obj.className === 'delivery-complete' ) {
-        $('#payWait-list').css('display', 'none');
-        $('#recently-list').css('display', 'none');
-        $('#payComplete-list').css('display', 'none');
-        $('#deliveryReady-list').css('display', 'none');
-        $('#deliveryProgress-list').css('display', 'none');
-        $('#deliveryComplete-list').css('display', 'block');
-        $('#orderComplete-list').css('display', 'none');
-    } else if( obj.className === 'order-complete' ) {
-        $('#payWait-list').css('display', 'none');
-        $('#recently-list').css('display', 'none');
-        $('#payComplete-list').css('display', 'none');
-        $('#deliveryReady-list').css('display', 'none');
-        $('#deliveryProgress-list').css('display', 'none');
-        $('#deliveryComplete-list').css('display', 'none');
-        $('#orderComplete-list').css('display', 'block');
+function setPartsList(obj) {
+    if( obj.className === 'payWait-buy-status' ) {
+        $('#payWait-buy').show();
+        $('#recently-buy').hide();
+        $('#deliveryProgress-buy').hide();
+        $('#cancelProgress-buy').hide();
+    } else if( obj.className === 'deliveryProgress-buy-status' ) {
+        $('#payWait-buy').hide();
+        $('#recently-buy').hide();
+        $('#deliveryProgress-buy').show();
+        $('#cancelProgress-buy').hide();
+    } else if( obj.className === 'cancelProgress-buy-status' ) {
+        $('#payWait-buy').hide();
+        $('#recently-buy').hide();
+        $('#deliveryProgress-buy').hide();
+        $('#cancelProgress-buy').show();
+    } else if( obj.className === 'payWait-sell-status' ) {
+        $('#payWait-sell').show();
+        $('#recently-sell').hide();
+        $('#payComplete-sell').hide();
+        $('#deliveryProgress-sell').hide();
+        $('#cancelRequest-sell').hide();
+    } else if( obj.className === 'payComplete-sell-status' ) {
+        $('#payWait-sell').hide();
+        $('#recently-sell').hide();
+        $('#payComplete-sell').show();
+        $('#deliveryProgress-sell').hide();
+        $('#cancelRequest-sell').hide();
+    } else if( obj.className === 'deliveryProgress-sell-status' ) {
+        $('#payWait-sell').hide();
+        $('#recently-sell').hide();
+        $('#payComplete-sell').hide();
+        $('#deliveryProgress-sell').show();
+        $('#cancelRequest-sell').hide();
+    } else if( obj.className === 'cancelRequest-sell-status' ) {
+        $('#payWait-sell').hide();
+        $('#recently-sell').hide();
+        $('#payComplete-sell').hide();
+        $('#deliveryProgress-sell').hide();
+        $('#cancelRequest-sell').show();
     }
 }
 
