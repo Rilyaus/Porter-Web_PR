@@ -23,7 +23,6 @@ $(window).scroll(function() {
 
 window.onload = function() {
     winHeight = $(window).height();
-    pageCounts = parseInt($('#pageCount').val());
     setPagerWidth();
 }
 
@@ -66,6 +65,35 @@ function nextImage() {
     }
 }
 /* --------------------------------- */
+
+function setSearchResult() {
+    var priceMin = parseInt($('#price-min').val());
+    var priceMax = parseInt($('#price-max').val());
+
+    if( $('#price-min').val() === '' ) {
+        priceMin = 0;
+        $('#price-min').val(0);
+    }
+    if( $('#price-max').val() === '' ) {
+        priceMax = 0;
+        $('#price-max').val(0);
+    }
+
+    if( isNaN(priceMin) || isNaN(priceMax) ) {
+        alert("입력값이 올바르지 않습니다.");
+        return;
+    } else if( priceMin < 0 || priceMax < 0 ) {
+        alert("입력 금액이 0 보다 작습니다.");
+        return;
+    } else if( priceMin > priceMax ) {
+        alert("최대 금액이 최저 금액보다 작습니다.");
+        return;
+    }
+
+    $('#price-min').val(priceMin);
+    $('#price-max').val(priceMax);
+    $('#search-result-list').show();
+}
 
 function setCartPage() {
     if($('#parts-cart').attr("value") !== '0') {
@@ -112,7 +140,6 @@ function setModalHeight() {
 function setPagerWidth() {
     var obj = document.getElementById('pager');
     if( pageCounts > 7 ) {
-        alert("ADF");
         obj.style.width = 11*34+"px";
     } else {
         obj.style.width  = (pageCounts + 4) * 34 + "px";

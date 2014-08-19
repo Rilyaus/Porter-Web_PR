@@ -557,127 +557,122 @@
     color: #000000;
     font-weight: bolder;
     cursor: default; }
-
-#parts-purchase .purchase-partslist .purchase-parts-head .partsImage {
-  width: 110px;
-  max-width: 110px;
-  margin-right: 30px; }
-
-#parts-purchase .purchase-partslist .purchase-parts-head .partsName {
-  width: 300px; }
-
-#parts-purchase .purchase-partslist .purchase-parts-head .partsCount {
-  width: 100px; }
-
-#parts-purchase .purchase-partslist .purchase-parts-head .partsSeller {
-  width: 140px; }
-
-#parts-purchase .purchase-partslist .purchase-parts-head .partsPrice {
-  width: 110px; }
-
+  #parts-purchase .purchase-partslist .purchase-parts-head .partsImage {
+    width: 110px;
+    max-width: 110px;
+    min-width: 110px;
+    margin-right: 30px; }
+  #parts-purchase .purchase-partslist .purchase-parts-head .partsName {
+    width: 300px;
+    max-width: 300px;
+    min-width: 300px; }
+  #parts-purchase .purchase-partslist .purchase-parts-head .partsCount {
+    width: 100px;
+    max-width: 100px;
+    min-width: 100px; }
+  #parts-purchase .purchase-partslist .purchase-parts-head .partsSeller {
+    width: 140px;
+    max-width: 140px;
+    min-width: 140px; }
+  #parts-purchase .purchase-partslist .purchase-parts-head .partsPrice {
+    width: 110px;
+    max-width: 110px;
+    min-width: 110px; }
 #parts-purchase .purchase-partslist .purchase-parts {
   margin: 15px 0px;
   width: 100%;
   height: 110px;
-  max-height: 110px; }
-
+  max-height: 110px;
+  min-height: 110px; }
+  #parts-purchase .purchase-partslist .purchase-parts .partsCount > a,
+  #parts-purchase .purchase-partslist .purchase-parts .partsSeller > a,
+  #parts-purchase .purchase-partslist .purchase-parts .partsPrice > a {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    height: 110px;
+    max-height: 110px;
+    min-height: 110px; }
+  #parts-purchase .purchase-partslist .purchase-parts .partsImage {
+    max-width: 110px;
+    max-height: 110px;
+    margin-right: 30px; }
+  #parts-purchase .purchase-partslist .purchase-parts .partsName {
+    display: table-cell;
+    text-decoration: none;
+    padding: 0px 10px;
+    width: 300px;
+    max-width: 300px;
+    min-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+    #parts-purchase .purchase-partslist .purchase-parts .partsName .pName {
+      display: block;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      padding: 0px 10px;
+      width: 300px;
+      max-width: 300px;
+      min-width: 300px;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+    #parts-purchase .purchase-partslist .purchase-parts .partsName .carName {
+      display: block;
+      padding: 0px 10px;
+      width: 300px;
+      max-width: 300px;
+      min-width: 300px;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+  #parts-purchase .purchase-partslist .purchase-parts .partsCount > a {
+    width: 100px;
+    max-width: 100px;
+    min-width: 100px;
+    padding: 0px 10px; }
+  #parts-purchase .purchase-partslist .purchase-parts .partsSeller > a {
+    width: 140px;
+    max-width: 140px;
+    min-width: 140px;
+    padding: 0px 10px; }
+  #parts-purchase .purchase-partslist .purchase-parts .partsPrice > a {
+    width: 110px;
+    max-width: 110px;
+    min-width: 110px;
+    padding: 0px 10px; }
+  #parts-purchase .purchase-partslist .purchase-parts > div > a:hover {
+    cursor: default;
+    text-decoration: none; }
 #parts-purchase .purchase-partslist .purchase-parts > div,
 #parts-purchase .purchase-partslist .purchase-parts-head > div {
   display: block;
   float: left;
   text-align: center; }
-
-#parts-purchase .purchase-partslist .purchase-parts .partsCount > a,
-#parts-purchase .purchase-partslist .purchase-parts .partsSeller > a,
-#parts-purchase .purchase-partslist .purchase-parts .partsPrice > a {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-  text-decoration: none;
-  height: 110px;
-  max-height: 110px; }
-
-#parts-purchase .purchase-partslist .purchase-parts > div > a:hover {
-  cursor: default;
-  text-decoration: none; }
-
-#parts-purchase .purchase-partslist .purchase-parts .partsImage {
-  max-width: 110px;
-  max-height: 110px;
-  margin-right: 30px; }
-
-#parts-purchase .purchase-partslist .purchase-parts .partsName {
-  display: table-cell;
-  text-decoration: none;
-  padding: 0px 10px;
-  min-width: 300px;
-  max-width: 300px;
-  overflow: hidden;
-  text-overflow: ellipsis; }
-
-#parts-purchase .purchase-partslist .purchase-parts .partsName .pName {
-  display: block;
-  margin-top: 20px;
-  margin-bottom: 15px;
-  padding: 0px 10px;
-  min-width: 300px;
-  max-width: 300px;
-  overflow: hidden;
-  text-overflow: ellipsis; }
-
-#parts-purchase .purchase-partslist .purchase-parts .partsName .carName {
-  display: block;
-  padding: 0px 10px;
-  min-width: 300px;
-  max-width: 300px;
-  overflow: hidden;
-  text-overflow: ellipsis; }
-
-#parts-purchase .purchase-partslist .purchase-parts .partsCount > a {
-  padding: 0px 10px;
-  width: 100px;
-  max-width: 100px; }
-
-#parts-purchase .purchase-partslist .purchase-parts .partsSeller > a {
-  padding: 0px 10px;
-  width: 140px;
-  max-width: 140px; }
-
-#parts-purchase .purchase-partslist .purchase-parts .partsPrice > a {
-  padding: 0px 10px;
-  width: 110px;
-  max-width: 110px; }
-
 #parts-purchase .purchase-userInfo {
   margin: 0 auto;
   background: #ffffff;
-  min-width: 850px;
+  width: 850px;
   max-width: 850px;
+  min-width: 850px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
   padding: 1px 15px;
   margin-bottom: 45px; }
-
-#parts-purchase .purchase-userInfo .purchase-uInfoKey {
-  position: absolute;
-  width: 110px;
-  margin-top: 10px; }
-
-#parts-purchase .purchase-userInfo .purchase-uInfoKey > div {
-  font-size: 12px;
-  padding: 8px 0px; }
-
-#parts-purchase .purchase-userInfo .purchase-uInfoKey .userAddress {
-  margin-bottom: 25px; }
-
-#parts-purchase .purchase-userInfo .purchase-uInfoValue {
-  margin-left: 110px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  min-width: 700px;
-  max-width: 700px; }
-
-#parts-purchase .purchase-userInfo .purchase-uInfoValue > div {
-  font-size: 12px; }
+  #parts-purchase .purchase-userInfo .purchase-uInfoKey {
+    position: absolute;
+    width: 110px;
+    margin-top: 10px; }
+    #parts-purchase .purchase-userInfo .purchase-uInfoKey > div {
+      font-size: 12px;
+      padding: 8px 0px; }
+    #parts-purchase .purchase-userInfo .purchase-uInfoKey .userAddress {
+      margin-bottom: 25px; }
+  #parts-purchase .purchase-userInfo .purchase-uInfoValue {
+    margin: 10px 0px 10px 110px;
+    width: 700px;
+    max-width: 700px;
+    min-width: 700px; }
+    #parts-purchase .purchase-userInfo .purchase-uInfoValue > div {
+      font-size: 12px; }
 
 #purchase-userName {
   margin: 5px 0px;
@@ -718,34 +713,30 @@
 #purchase-paymentList {
   margin-top: 20px;
   margin-left: 5px; }
-
-#purchase-paymentList > input {
-  margin-right: 5px; }
-
-#purchase-paymentList > span {
-  margin-right: 15px; }
+  #purchase-paymentList > input {
+    margin-right: 5px; }
+  #purchase-paymentList > span {
+    margin-right: 15px; }
 
 #paymentPage-bank {
   display: none;
   width: 100%;
   margin-bottom: 20px; }
-
-#paymentPage-bank .bank-key {
-  margin-top: 2px;
-  margin-left: 10px;
-  font-size: 12px;
-  width: 80px;
-  max-width: 80px;
-  min-width: 80px; }
-
-#paymentPage-bank .bank-key > span {
-  display: block;
-  margin-bottom: 15px; }
-
-#paymentPage-bank .bank-value {
-  position: absolute;
-  margin-left: 100px;
-  font-size: 13px; }
+  #paymentPage-bank .bank-key {
+    margin-top: 2px;
+    margin-left: 10px;
+    font-size: 12px;
+    width: 80px;
+    width: 80px;
+    max-width: 80px;
+    min-width: 80px; }
+    #paymentPage-bank .bank-key > span {
+      display: block;
+      margin-bottom: 15px; }
+  #paymentPage-bank .bank-value {
+    position: absolute;
+    margin-left: 100px;
+    font-size: 13px; }
 
 #selectBank-account {
   margin-left: 10px;
@@ -794,3 +785,86 @@
 #purchase-paymentButton:hover {
   background: #00509d;
   cursor: pointer; }
+
+/*---------- PARTS SEARCH ----------*/
+#search-body {
+  background: #ffffff;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  padding: 15px 15px 20px 15px; }
+  #search-body > span {
+    display: block;
+    font-size: 20px; }
+  #search-body .search-option {
+    margin-left: 20px;
+    margin-top: 15px;
+    overflow: auto; }
+    #search-body .search-option .option-list {
+      float: left;
+      width: 700px;
+      max-width: 700px;
+      min-width: 700px;
+      background-color: #428bca;
+      border: 1px solid #000; }
+      #search-body .search-option .option-list > div {
+        overflow: auto; }
+        #search-body .search-option .option-list > div .tHead {
+          float: left;
+          width: 120px;
+          max-width: 120px;
+          min-width: 120px;
+          height: 35px;
+          max-height: 35px;
+          min-height: 35px;
+          font-size: 15px;
+          background-color: #ccc; }
+          #search-body .search-option .option-list > div .tHead > span {
+            width: 120px;
+            max-width: 120px;
+            min-width: 120px;
+            height: 35px;
+            max-height: 35px;
+            min-height: 35px;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center; }
+        #search-body .search-option .option-list > div .tBody {
+          float: left;
+          padding: 0px 15px;
+          height: 35px;
+          max-height: 35px;
+          min-height: 35px;
+          overflow: hidden;
+          background-color: #428bca; }
+          #search-body .search-option .option-list > div .tBody > span {
+            margin: 0px 10px;
+            font-size: 16px; }
+        #search-body .search-option .option-list > div > div > select {
+          height: 35px;
+          max-height: 35px;
+          min-height: 35px;
+          font-size: 20px; }
+        #search-body .search-option .option-list > div > div > input {
+          width: 80px;
+          max-width: 80px;
+          min-width: 80px;
+          font-size: 12px;
+          margin-top: 6px; }
+        #search-body .search-option .option-list > div .blank {
+          float: left;
+          border-top: 1px solid #000;
+          width: 100%;
+          max-width: 100%;
+          min-width: 100%;
+          height: 0px;
+          max-height: 0px;
+          min-height: 0px; }
+  #search-body .searchBtn {
+    font-size: 23px;
+    padding: 25px 20px;
+    margin-top: 30px;
+    margin-left: 40px; }
+  #search-body .searchBtn:hover {
+    background-color: #00509d; }
+
+#search-result-list {
+  display: none; }

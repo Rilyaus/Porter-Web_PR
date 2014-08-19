@@ -25,6 +25,17 @@ $porter-red-hover : #ED0000;
     border-right: $borderValue solid #ccc;
 }
 
+@mixin fixHeight ($size) {
+    height: $size;
+    max-height: $size;
+    min-height: $size;
+}
+@mixin fixWidth ($size) {
+    width: $size;
+    max-width: $size;
+    min-width: $size;
+}
+
 /*---------- MY PAGE ----------*/
 
 #mypage-body {
@@ -362,3 +373,17 @@ $porter-red-hover : #ED0000;
         background-color: $porter-blue-hover;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

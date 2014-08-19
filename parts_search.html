@@ -13,15 +13,14 @@
 
 		<!-- Javascript Link -->
 		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/script.js"></script>
-        <script type="text/javascript" src="js/bootstrap.min.js"></script>
 	</head>
 
 	<body>
 		<div id="header">
 			<div class="wrapper">
-				<a href="index.html"><img id="title_img" src="img/Porter Title.png" alt="Porter - vehicle parts Store" /></a>
-<!-- User Menu -->
+				<a href="index.html"><img id="title_img" src="img/Porter Title.png" alt="Porter - Vehicle parts Store" /></a>
                 <div id="user-menu">
                     <li class="utility"><a href="parts_search.html">상품 검색</a></li>
                     <li class="utility"><a href="parts_register.html">상품 등록</a></li>
@@ -31,11 +30,10 @@
                     <li class="user"><a href="login.html">로그인</a></li>
                     <li class="user"><a href="signup.html">회원가입</a></li>
                 </div>
-<!-- User Menu End -->
 			</div>
 		</div>
-<!-- Category List Menu -->
-		<div id="menu">
+
+		<div id="menu"> <!-- Parts Category List Menu -->
 			<div id="menu-holder">
 				<div class="wrapper">
 					<ul id="menu-navi" class="category_list">
@@ -201,134 +199,269 @@
 					</ul><!-- End Navigation -->
 				</div><!-- Wrapper Menu -->
 			</div><!-- End Menu Holder -->
-		</div>
-<!-- Category List Menu End -->
- <!-- MAIN -->
-		<div id="main">
-			<div class="wrapper">
-				<div id="content">
+		</div> <!-- End Menu -->
+
+        <div id="main">
+            <div class="wrapper">
+                <div id="content">
 					<div id="page_title">
-						<span class="title">상품 주문/결제</span>
-						<span class="subtitle">Parts Order/Payment</span>
-					</div>
-<!-- End Page Title -->
+						<span class="title">상품 검색</span>
+						<span class="subtitle">Parts Search</span>
+					</div> <!-- End Page Title -->
 
-<!-- Parts Purchase -->
-                    <div id="parts-purchase">
-                        <span>주문 상품 확인</span>
-                        <div class="purchase-partslist">
-                            <div class="purchase-parts-head">
-                                <div class="partsImage"><span>상품 사진</span></div>
-                                <div class="partsName"><span>상품 정보</span></div>
-                                <div class="partsCount"><span>수량</span></div>
-                                <div class="partsSeller"><span>판매자</span></div>
-                                <div class="partsPrice"><span>가격</span></div>
-                            </div>
-                            <hr>
-                            <div class="purchase-parts">
-                                <div class="partsImage"><img src="img/car/parts7.jpg" height=110 width=110/></div>
-                                <div class="partsName">
-                                    <a class="pName">N Test Parts1</a>
-                                    <a class="carName">Benz 2010 C63 AMG</a>
+                    <div id="search-body">
+                        <span>옵션 설정</span>
+                        <div class="search-option">
+                            <div class="option-list">
+                                <div class="category">
+                                    <div class="tHead"><span>카테고리</span></div>
+                                    <div class="large tBody">
+                                        <select class="large-select">
+                                            <option>외장부품</option>
+                                        </select>
+                                        <span>></span>
+                                        <select class="middle-select">
+                                            <option>바디</option>
+                                            <option>또 머가있을까용</option>
+                                        </select>
+                                    </div>
+                                    <div class="blank"></div>
                                 </div>
-                                <div class="partsCount"><a>1</a></div>
-                                <div class="partsSeller"><a>Tester1</a></div>
-                                <div class="partsPrice"><a>49,000원</a></div>
-                            </div>
-                            <hr>
-                            <div class="purchase-parts">
-                                <div class="partsImage"><img src="img/car/parts11.jpg" height=110 width=110/></div>
-                                <div class="partsName">
-                                    <a class="pName">N Test Parts2</a>
-                                    <a class="carName">Audi 2012 A6 TFSI 2.0</a>
+                                <div class="car">
+                                    <div class="maker tHead"><span>제조사</span></div>
+                                    <div class="maker tBody">
+                                        <select class="maker-select">
+                                            <option>어울림모터스</option>
+                                            <option>아우디</option>
+                                        </select>
+                                    </div>
+                                    <div class="year tHead"><span>연식</span></div>
+                                    <div class="year tBody">
+                                        <select class="year-select">
+                                            <option>2014</option>
+                                        </select>
+                                    </div>
+                                    <div class="blank"></div>
+                                    <div class="model tHead"><span>차량 모델</span></div>
+                                    <div class="model tBody">
+                                        <select class="model-select">
+                                            <option>콰트로포르테</option>
+                                        </select>
+                                    </div>
+                                    <div class="detailModel tHead"><span>세부 모델</span></div>
+                                    <div class="detailModel tBody">
+                                        <select class="maker-select">
+                                            <option>TFSI 2.0 </option>
+                                            <option>B200 CDI 블루 이피션시 스포츠(W246)</option>
+                                        </select>
+                                    </div>
+                                    <div class="blank"></div>
                                 </div>
-                                <div class="partsCount"><a>1</a></div>
-                                <div class="partsSeller"><a>Seller1</a></div>
-                                <div class="partsPrice"><a>38,000원</a></div>
+                                <div class="price">
+                                    <div class="price tHead"><span>가격</span></div>
+                                    <div class="price tBody">
+                                        <input id="price-min" class="min" type="text"/>
+                                        <span>~</span>
+                                        <input id="price-max" class="max" type="text"/>
+                                    </div>
+                                </div>
                             </div>
+                            <button class="searchBtn pBtn" onclick="setSearchResult();setPagerWidth()">검색하기</button>
                         </div>
-                        <span>구매자 확인 및 배송지 정보</span>
-                        <div class="purchase-userInfo">
-                            <div class="purchase-uInfoKey">
-                                <div><span>받는 사람</span></div>
-                                <div class="userAddress"><span>배송지</span></div>
-                                <div><span>휴대 전화</span></div>
-                                <div><span>배송시 요구사항</span></div>
-                            </div>
-                            <div class="purchase-uInfoValue">
-                                <div class="userName">
-                                    <input id="purchase-userName" type="text" name="name"/>
-                                </div>
-                                <div class="userAddress">
-                                    <input id="purchase-userPostal1" type="text" name="postal1" readonly="true"/>
-                                    <span>-</span>
-                                    <input id="purchase-userPostal2" type="text" name="postal2" readonly="true"/>
-                                    <button id="purchase-postalSearch">우편번호 찾기</button><br>
-                                    <input id="purchase-userAddress1" type="text" name="address1" readonly="true"/>
-                                    <input id="purchase-userAddress2" type="text" name="address2"/>
-                                </div>
-                                <div class="userPhone">
-                                    <select id="purchase-userPhone1">
-                                        <option value="010">010</option>
-                                        <option value="011">011</option>
-                                        <option value="016">016</option>
-                                        <option value="017">017</option>
-                                        <option value="018">018</option>
-                                        <option value="019">019</option>
-                                    </select>
-                                    <span>-</span>
-                                    <input id="purchase-userPhone2" type="text" name="phone2" onkeypress="inputOnlyPhone(this)"/>
-                                    <span>-</span>
-                                    <input id="purchase-userPhone3" type="text" name="phone3" onkeypress="inputOnlyPhone(this)"/>
-                                </div>
-                                <div class="userMessage">
-                                    <input id="purchase-userMessage" type="text" name="message"/>
-                                </div>
-                            </div>
-                        </div>
-                        <span>결제 정보</span>
-                        <div class="purchase-paymentInfo">
-                            <div id="purchase-paymentList">
-                                <input class="bank" type="radio" name="pay" onclick="setPurchaseBank()"/><span>무통장입금</span>
-                                <input class="card" type="radio" name="pay" disabled="true"  /><span>신용카드</span>
-                                <input class="phone" type="radio" name="pay" disabled="true"/><span>휴대폰결제</span>
-                            </div>
-                            <hr>
+                    </div>
+<!-- SEARCH BODY END -->
+<!-- SEARCH RESULT BODY -->
 
-                            <div id="paymentPage-bank">
-                                <div class="bank-value">
-                                    <select id="purchase-selectBank">
-                                        <option value="01">농협</option>
-                                        <option value="02">국민은행</option>
-                                        <option value="03">신한은행</option>
-                                        <option value="04">하나은행</option>
-                                        <option value="05">우리은행</option>
-                                        <option value="06">기업은행</option>
-                                    </select>
-
-                                    <span id="selectBank-account">0124-1245-1234421</span>
-                                    <span>예금주 :</span>
-                                    <span id="selectBank-name">Porter</span>
+<!-- Parts Detail -->
+                    <div class="modal fade" id="detail-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" onshow="initImage()">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h4 class="modal-title" id="myModalLabel">Porter 테스트 부품142352523</h4>
                                 </div>
-
-                                <div class="bank-key">
-                                    <span>은행 선택</span>
-                                    <span>결제 안내</span>
+                                <div class="modal-body">
+                                    <div id="detail-parts">
+                                        <div class="detail-pImage">
+                                            <div class="pImage-large">
+                                                <div id="pImage-prev"><img src="img/prev-arrow.png" onclick="prevImage()"/></div>
+                                                <div id="pImage-next"><img src="img/next-arrow.png" onclick="nextImage()"/></div>
+                                                <img id="pImage-main" src="img/car/parts10.jpg" height="350"/>
+                                            </div>
+                                            <div class="pImage-small">
+                                                <ul id="pImage-list">
+                                                    <li><img src="img/car/parts2.jpg" height="90" onclick="changeImage(this)"/></li>
+                                                    <li><img src="img/car/parts3.jpg" height="90" onclick="changeImage(this)"/></li>
+                                                    <li><img src="img/car/parts4.jpg" height="90" onclick="changeImage(this)"/></li>
+                                                    <li><img src="img/car/parts5.jpg" height="90" onclick="changeImage(this)"/></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="detail-pInfo">
+                                            <div class="tabbable">
+                                                <ul class="nav nav-tabs">
+                                                    <li class="active"><a href="#tab1" data-toggle="tab">상품 정보</a></li>
+                                                    <li><a href="#tab2" data-toggle="tab">판매자 정보</a></li>
+                                                    <li><a href="#tab3" data-toggle="tab">상품 Q&A</a></li>
+                                                </ul>
+                                                <div class="tab-content">
+                                                    <div class="tab-pane active" id="tab1">
+                                                        <div class="tab-main">
+                                                            <div id="pInfo-key">
+                                                                <span>부품 종류 :</span>
+                                                                <span>차량 정보 :</span>
+                                                                <span>상태 :</span>
+                                                                <span>가격 :</span>
+                                                                <span>수량 :</span>
+                                                                <span>상세 설명</span>
+                                                            </div>
+                                                            <div id="pInfo-value">
+                                                                <span id="category" class="value-category">외장부품 > 램프(전조등)</span>
+                                                                <span id="car_type" class="value-car">혼다 > 어코드 > 2012</span>
+                                                                <span id="state" class="value-state">중고 A급</span>
+                                                                <span id="price" class="value-price">150,000 원</span>
+                                                                <span id="quantity" class="value-quantity">1</span>
+                                                            </div>
+                                                            <div class="pInfo-content-div">
+                                                                <span id="pInfo-content">미스터 방의 증조가 타관에서 떠들어온 명색 없는 사람이었다. 그 조부가 고을의 아전을 다녔다. 그 아비가 짚신장수였다. 칠십에, 고로롱고로롱, 아직도 살아 있지만, 시방도 짚신 곱게 삼기로 고을에서 첫째가는 방첨지가 바로 그였다. 그러나마 삼십을 바라보도록 남의 집 머슴살이로, 이집 저집 살고 다니는 코삐뚤이 삼복이었다. 물론 낫 놓고 기역자도 못 그리는 판무식이었다. 백주사는 생각하자니 속으로 이렇게 분개스럽지 않을 수가 없었다.</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane" id="tab2">
+                                                        <div class="tab-main">
+                                                            <p>판매자 정보 탭</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane" id="tab3">
+                                                        <div class="tab-main">
+                                                            <p>상품 Q&A탭</p>
+                                                        </div>
+                                                    </div>
+                                              </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            <hr>
-                            </div>
-                            <div class="purchase-paymentPrice">
-                                <span>결제 금액</span>
-                                <span id="purchase-totalPrice">87,000원</span>
-                                <button id="purchase-paymentButton">결제하기</button>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary cart">장바구니</button>
+                                    <button type="button" class="btn btn-primary" onclick="location.href='parts_purchase.html?partsNum=100'";>구매하기</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-<!-- End Parts Purchase -->
+<!-- Parts Detail End -->
+
+<!-- Parts List -->
+                    <div id="search-result-list">
+                        <div id="parts_list">
+                            <hr>
+                            <div class="parts">
+                                <div class="img" data-target="#detail-modal" data-toggle="modal" onclick="initDetailModal(this)">
+                                    <img src="img/car/parts9.jpg" width="180" alt="Test Parts 1"/>
+                                </div>
+                                <div class="info" data-target="#detail-modal" data-toggle="modal" onclick="initDetailModal(this)">
+                                    <div class="name"><a title="Test Parts1">N Test Parts1ADFBCFDFasdfaf</a></div>
+                                    <div class="price">$ 4.99</div>
+                                    <div class="car">Audi A6</div>
+                                </div>
+                            </div> <!-- Single Parts End -->
+
+                            <div class="parts">
+                                <div class="img" data-target="#detail-modal" data-toggle="modal">
+                                    <img src="img/car/parts2.jpg" width="180" alt="Test Parts 1"/>
+                                </div>
+                                <div class="info" data-target="#detail-modal" data-toggle="modal">
+                                    <div class="name"><a title="Test Parts1">N Test Parts2</a></div>
+                                    <div class="price">$ 12.99</div>
+                                    <div class="car">Audi R8</div>
+                                </div>
+                            </div> <!-- Single Parts End -->
+
+                            <div class="parts">
+                                <div class="img" data-target="#detail-modal" data-toggle="modal">
+                                    <img src="img/car/parts3.jpg" width="180" alt="Test Parts 1"/>
+                                </div>
+                                <div class="info" data-target="#detail-modal" data-toggle="modal">
+                                    <div class="name"><a title="Test Parts1">N Test Parts3</a></div>
+                                    <div class="price">$ 123.99</div>
+                                    <div class="car">BMW Z4</div>
+                                </div>
+                            </div> <!-- Single Parts End -->
+
+                            <div class="parts">
+                                <div class="img" data-target="#detail-modal" data-toggle="modal">
+                                    <img src="img/car/parts4.jpg" width="180" alt="Test Parts 1"/>
+                                </div>
+                                <div class="info" data-target="#detail-modal" data-toggle="modal">
+                                    <div class="name"><a title="Test Parts1">N Test Parts4</a></div>
+                                    <div class="price">$ 1234.99</div>
+                                    <div class="car">아우디 뉴 A4 1.8 TFSI(B7) 2005년</div>
+                                </div>
+                            </div> <!-- Single Parts End -->
+
+                            <div class="parts">
+                                <div class="img" data-target="#detail-modal" data-toggle="modal">
+                                    <img src="img/car/parts5.jpg" width="180" alt="Test Parts 1"/>
+                                </div>
+                                <div class="info" data-target="#detail-modal" data-toggle="modal">
+                                    <div class="name"><a title="Test Parts1">테스트 부품 1</a></div>
+                                    <div class="price">₩ 3,000</div>
+                                    <div class="car">A6</div>
+                                </div>
+                            </div> <!-- Single Parts End -->
+
+                            <div class="parts">
+                                <div class="img" data-target="#detail-modal" data-toggle="modal">
+                                    <img src="img/car/parts6.jpg" width="180" alt="Test Parts 1"/>
+                                </div>
+                                <div class="info" data-target="#detail-modal" data-toggle="modal">
+                                    <div class="name"><a title="Test Parts1">테스트 부품 2</a></div>
+                                    <div class="price">₩ 82,000</div>
+                                    <div class="car">A6</div>
+                                </div>
+                            </div> <!-- Single Parts End -->
+
+                            <div class="parts">
+                                <div class="img" data-target="#detail-modal" data-toggle="modal">
+                                    <img src="img/car/parts7.jpg" width="180" alt="Test Parts 1"/>
+                                </div>
+                                <div class="info" data-target="#detail-modal" data-toggle="modal">
+                                    <div class="name"><a title="Test Parts1">테스트 부품 3</a></div>
+                                    <div class="price">₩ 270,000</div>
+                                    <div class="car">A6</div>
+                                </div>
+                            </div> <!-- Single Parts End -->
+
+                            <div class="parts">
+                                <div class="img" data-target="#detail-modal" data-toggle="modal">
+                                    <img src="img/car/parts8.jpg" width="180" alt="Test Parts 1"/>
+                                </div>
+                                <div class="info" data-target="#detail-modal" data-toggle="modal">
+                                    <div class="name"><a title="Test Parts1">테스트 부품 4</a></div>
+                                    <div class="price">₩ 1,200,000</div>
+                                    <div class="car">A6</div>
+                                </div>
+                            </div> <!-- Single Parts End -->
+                        </div>
+
+<!-- Pager -->          <div id="pager-holder">
+                            <div class="wrapper">
+                                <ul id="pager">
+                                    <li class="first-page"><a href=""><<</a></li>
+                                    <li class="current-page"><a href="">1</a></li>
+                                    <li class="last-page"><a href="">>></a></li>
+                                </ul>
+                            </div>
+                        </div>
+<!-- Pager End -->
+                    </div>
+<!-- SEARCH RESULT BODY END -->
                 </div>
             </div>
         </div>
-<!-- End MAIN -->
-        <iframe src="footer.html" frameborder="0" width="100%" height="160px"></iframe>
-    </body>
+        <iframe id="iFooter" src="footer.html" frameborder="0" width="100%" height="160px"></iframe>
+	</body>
 </html>
