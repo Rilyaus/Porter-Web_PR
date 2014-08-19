@@ -1,0 +1,336 @@
+/*---------- MY PAGE ----------*/
+#mypage-body {
+  font-family: "NanumGothic";
+  width: 900px;
+  padding: 15px 15px 0px 15px;
+  margin: 0 auto;
+  margin: 30px;
+  background: #ffffff;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3); }
+  #mypage-body .mypage-tab > ul {
+    border-bottom: 1px solid #428bca; }
+    #mypage-body .mypage-tab > ul > li > a {
+      padding: 10px 25px;
+      border-radius: 5px 5px 0px 0px; }
+    #mypage-body .mypage-tab > ul > .active {
+      font-weight: bolder;
+      font-size: 15px; }
+  #mypage-body .mypage-tab .nav-tabs > li.active > a, #mypage-body .mypage-tab .nav-tabs > li.active > a:hover, #mypage-body .mypage-tab .nav-tabs > li.active > a:focus {
+    cursor: pointer;
+    background-color: #fff;
+    border: 0px;
+    border-bottom-color: transparent;
+    background-color: #428bca;
+    color: #fff; }
+
+.mypage-tab-main > span,
+.delivery-dropdown1-main > span,
+.delivery-dropdown2-main > span,
+.sell-dropdown1-main > span,
+.sell-dropdown2-main > span,
+.sell-dropdown3-main > span {
+  display: block;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bolder; }
+
+#order-state-box {
+  display: block;
+  float: left;
+  max-width: 100%;
+  margin-left: 22%;
+  margin-top: 20px;
+  padding: 15px 35px;
+  border: 3px solid #428bca;
+  text-align: center; }
+
+#sell-partsList-box {
+  display: block;
+  float: left;
+  max-width: 55%;
+  margin-top: 20px;
+  margin-left: 23%;
+  padding: 15px 35px;
+  border: 3px solid #428bca;
+  text-align: center; }
+
+#trade-partsList-box {
+  display: block;
+  float: left;
+  max-width: 70%;
+  margin-top: 20px;
+  margin-left: 16%;
+  padding: 15px 35px;
+  border: 3px solid #428bca;
+  text-align: center; }
+
+#order-state-box > div,
+#sell-partsList-box > div,
+#trade-partsList-box > div {
+  float: left;
+  margin: 0px 30px;
+  font-size: 18px;
+  cursor: pointer; }
+
+#order-state-box > div > span,
+#sell-partsList-box > div > span,
+#trade-partsList-box > div > span {
+  display: block; }
+
+#order-state-box > div .product-count,
+#sell-partsList-box > div > .product-count,
+#trade-partsList-box > div > .product-count {
+  color: #FF3636;
+  font-size: 22px;
+  font-weight: bolder; }
+
+#payWait-buy,
+#payComplete-buy,
+#deliveryProgress-buy,
+#cancelProgress-buy,
+#recently-sell,
+#payWait-sell,
+#payComplete-sell,
+#deliveryProgress-sell,
+#cancelRequest-sell {
+  display: none; }
+
+#recently-buy > span,
+#payWait-buy > span,
+#deliveryProgress-buy > span,
+#cancelProgress-buy > span,
+#recently-sell > span,
+#payWait-sell > span,
+#payComplete-sell > span,
+#deliveryProgress-sell > span,
+#cancelRequest-sell > span {
+  display: block;
+  margin-top: 120px;
+  font-size: 16px;
+  font-weight: bolder; }
+
+.partslist-table {
+  margin-top: 10px;
+  border-top: 1px solid #ccc;
+  font-size: 13px; }
+  .partslist-table .table-head {
+    height: 20px;
+    margin-top: 10px;
+    margin-bottom: -10px;
+    font-size: 14px; }
+    .partslist-table .table-head > div {
+      display: block;
+      float: left;
+      text-align: center; }
+      .partslist-table .table-head > div > span {
+        color: #000000;
+        font-weight: bolder;
+        cursor: default; }
+    .partslist-table .table-head .partsCheck {
+      width: 40px;
+      border-right: 1px solid #cccccc; }
+    .partslist-table .table-head .partsTime {
+      width: 100px;
+      border-right: 1px solid #cccccc; }
+    .partslist-table .table-head .partsName {
+      width: 360px;
+      border-right: 1px solid #cccccc; }
+    .partslist-table .table-head .partsCount {
+      width: 70px;
+      border-right: 1px solid #cccccc; }
+    .partslist-table .table-head .partsSeller {
+      width: 100px;
+      border-right: 1px solid #cccccc; }
+    .partslist-table .table-head .partsPrice {
+      width: 100px;
+      border-right: 1px solid #cccccc; }
+    .partslist-table .table-head .etc {
+      width: 100px;
+      border-right: 0px solid #cccccc; }
+  .partslist-table .table-body > span {
+    display: block;
+    height: 40px;
+    font-size: 14px;
+    padding: 0px 10px; }
+  .partslist-table .table-body .parts {
+    margin: 15px 0px;
+    width: 100%;
+    height: 90px;
+    max-height: 110px; }
+    .partslist-table .table-body .parts > div {
+      display: block;
+      float: left;
+      text-align: center; }
+      .partslist-table .table-body .parts > div a:hover {
+        cursor: default;
+        text-decoration: none; }
+    .partslist-table .table-body .parts .partsCheck {
+      margin-top: -4px;
+      padding: 0px 10px;
+      width: 40px;
+      max-width: 40px; }
+    .partslist-table .table-body .parts .partsImage {
+      max-width: 90px;
+      max-height: 90px;
+      margin-right: 10px;
+      overflow: hidden; }
+    .partslist-table .table-body .parts .partsName {
+      display: table-cell;
+      text-decoration: none;
+      padding: 0px 10px;
+      width: 240px;
+      max-width: 260px;
+      min-width: 260px;
+      height: 90px;
+      max-height: 90px;
+      min-height: 90px;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+      .partslist-table .table-body .parts .partsName .pName {
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 15px;
+        padding: 0px 10px;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+      .partslist-table .table-body .parts .partsName .carName {
+        display: block;
+        padding: 0px 10px;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+    .partslist-table .table-body .parts .etc {
+      display: table-cell;
+      text-decoration: none;
+      padding: 0px 10px;
+      width: 100px;
+      max-width: 100px;
+      height: 90px;
+      max-height: 90px;
+      min-height: 90px;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+      .partslist-table .table-body .parts .etc .statusBtn {
+        display: block;
+        margin: 0 auto;
+        margin-top: 15px;
+        margin-bottom: 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 12px;
+        font-weight: normal;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        color: white;
+        background-color: #ff3636; }
+      .partslist-table .table-body .parts .etc .statusBtn:hover {
+        background-color: #ed0000; }
+    .partslist-table .table-body .parts .partsCheck > input,
+    .partslist-table .table-body .parts .partsTime > a,
+    .partslist-table .table-body .parts .partsCount > a,
+    .partslist-table .table-body .parts .partsSeller > a,
+    .partslist-table .table-body .parts .partsPrice > a,
+    .partslist-table .table-body .parts .etc > a {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      text-decoration: none;
+      height: 90px;
+      max-height: 90px; }
+    .partslist-table .table-body .parts .partsTime > a {
+      padding: 0px 10px;
+      width: 100px;
+      max-width: 100px; }
+    .partslist-table .table-body .parts .partsCount > a {
+      padding: 0px 10px;
+      width: 70px;
+      max-width: 70px; }
+    .partslist-table .table-body .parts .partsSeller > a {
+      padding: 0px 10px;
+      width: 100px;
+      max-width: 100px; }
+    .partslist-table .table-body .parts .partsPrice > a {
+      padding: 0px 10px;
+      width: 100px;
+      max-width: 100px; }
+    .partslist-table .table-body .parts .etc > a {
+      padding: 0px 10px;
+      width: 100px;
+      max-width: 100px;
+      font-size: 12px; }
+    .partslist-table .table-body .parts .etc .partsStatus {
+      display: block;
+      padding: 0px 10px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 12px; }
+
+#sell-function {
+  margin-bottom: 20px; }
+  #sell-function .all-select-btn {
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 13px;
+    font-weight: normal;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: black;
+    background-color: white;
+    padding: 4px 10px;
+    border: 1px solid #000; }
+  #sell-function .all-select-btn:hover {
+    background-color: #eee; }
+  #sell-function .list-delete-btn {
+    font-size: 13px;
+    font-weight: normal;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: white;
+    background-color: #ff3636;
+    padding: 4px 10px; }
+  #sell-function .list-delete-btn:hover {
+    background-color: #ed0000; }
+  #sell-function .all-order-btn,
+  #sell-function .list-order-btn {
+    font-size: 13px;
+    font-weight: normal;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: white;
+    background-color: #428bca;
+    padding: 4px 10px;
+    float: right; }
+  #sell-function .all-order-btn:hover,
+  #sell-function .list-order-btn:hover {
+    background-color: #00509d; }

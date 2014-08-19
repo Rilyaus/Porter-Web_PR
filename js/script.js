@@ -16,6 +16,9 @@ $(window).resize(function () {
 });
 
 $(window).scroll(function() {
+    var position = $(window).scrollTop();
+
+    $('#fixedMenu').css('top', position+50);
 });
 
 window.onload = function() {

@@ -1,0 +1,131 @@
+/* ---------- LOGIN & SIGN UP ---------- */
+#member-title {
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center; }
+  #member-title > div {
+    font-size: 40px;
+    margin-left: 20px;
+    font-family: NanumGothic, Dotum;
+    letter-spacing: 3px; }
+
+#member-body {
+  font-family: "NanumGothic";
+  width: 370px;
+  margin: 0 auto;
+  margin-bottom: 150px;
+  background: #ffffff;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3); }
+  #member-body > form {
+    padding: 40px 50px; }
+    #member-body > form > label {
+      font-size: 14px; }
+    #member-body > form .signup-input, #member-body > form .login-input {
+      width: 100%;
+      height: 30px;
+      margin-bottom: 15px;
+      margin-top: 3px;
+      border-radius: 5px;
+      font-size: 16px;
+      border: 1px solid #ccc; }
+    #member-body > form .saveuser-div {
+      float: left;
+      widows: 100%; }
+    #member-body > form .saveuser-span {
+      font-size: 12px;
+      display: block;
+      margin-top: 3px;
+      margin-left: 3px;
+      width: 80px;
+      max-width: 80px;
+      float: left; }
+    #member-body > form > div .saveuser-input {
+      display: block;
+      height: 15px;
+      width: 15px;
+      float: left; }
+    #member-body > form .searchuser-span {
+      display: block;
+      text-align: right;
+      margin-top: 3px;
+      margin-left: 100px;
+      font-size: 12px;
+      color: #428bca; }
+    #member-body > form .searchuser-span a:hover {
+      cursor: pointer;
+      color: #00509d; }
+    #member-body > form .btn-div {
+      margin-top: 30px; }
+    #member-body > form .anotherLogin-div {
+      width: 100%;
+      height: 100%; }
+
+#fail-message {
+  width: 270px;
+  position: absolute;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #ff3636; }
+
+#facebook-login {
+  width: 100%;
+  height: 35px;
+  color: #fff;
+  background: #428bca;
+  border-radius: 4px;
+  border: 1px solid transparent; }
+
+#sendPassword-submit,
+#changePassword-submit,
+#signup-submit,
+#login-submit {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 15px;
+  border-color: #428bca;
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: white;
+  background-color: #428bca; }
+
+#sendPassword-submit,
+#signup-submit {
+  margin-top: 20px; }
+
+#sendPassword-submit:hover,
+#changePassword-submit:hover,
+#facebook-login:hover,
+#signup-submit:hover,
+#login-submit:hover {
+  background: #00509d;
+  cursor: pointer; }
+
+/*---------- PASSWORD CHANGE ----------*/
+#member-password .member-password-main {
+  width: 300px;
+  margin: 0 auto;
+  padding: 25px; }
+  #member-password .member-password-main > form > input {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 15px;
+    margin-top: 3px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc; }
+
+#changePassword-submit {
+  margin-top: 15px; }

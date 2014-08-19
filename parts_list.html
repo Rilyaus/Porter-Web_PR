@@ -8,6 +8,7 @@
 
 		<!-- CSS Link -->
 		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="css/parts.css" type="text/css" media="screen" />
         <link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen" />
 
 		<!-- Javascript Link -->
@@ -202,10 +203,41 @@
 			</div><!-- End Menu Holder -->
 		</div>
 <!-- Category List Menu End -->
-
 <!-- MAIN -->
 		<div id="main">
 			<div class="wrapper">
+                <div id="fixedMenu">
+                    <span>박지단!!! 보고있나!?</span>
+                    <div class="option-select-box">
+                        <span>제조사</span>
+                        <select class="maker-list">
+                            <option value="001">아우디</option>
+                        </select>
+
+                        <span>연식</span>
+                        <select class="year-list">
+                            <option value="2012">2012</option>
+                            <option value="2013">2013</option>
+                            <option value="2014">2014</option>
+                        </select>
+
+                        <span>차량 모델</span>
+                        <select class="year-list">
+                            <option value="01">만두</option>
+                        </select>
+
+                        <span>세부 모델</span>
+                        <select class="year-list">
+                            <option value="01">고기만두</option>
+                            <option value="02">김치만두</option>
+                            <option value="03">만두만두</option>
+                        </select>
+                    </div>
+                    <div class="action-button-box">
+                        <button class="searchBtn pBtn">검색</button>
+                        <button class="mycarBtn pBtn">My Car</button>
+                    </div>
+                </div>
 				<div id="content">
                     <input type="hidden" id="pageCount" value="1">
 					<div id="page_title">
@@ -402,6 +434,6 @@
 			</div>
 		</div>
 <!-- End MAIN -->
-        <iframe src="footer.html" frameborder="0" width="100%" height="160px"></iframe>
+        <iframe id="iFooter" src="footer.html" frameborder="0" width="100%" height="160px"></iframe>
 	</body>
 </html>

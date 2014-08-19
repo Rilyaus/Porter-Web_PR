@@ -1,0 +1,796 @@
+/* ---------- PARTS LIST ---------- */
+#parts_list {
+  position: static;
+  width: 100%;
+  padding-left: 35px;
+  padding-right: 10px; }
+  #parts_list .parts:hover {
+    border: 1px #000000 solid; }
+  #parts_list .parts {
+    position: static;
+    margin: 0px 20px 30px 20px;
+    display: block;
+    float: left;
+    background: #ffffff;
+    border: 1px #ffffff solid;
+    height: 285px;
+    width: 180px;
+    cursor: pointer; }
+    #parts_list .parts .img {
+      margin: 0 auto;
+      height: 180px;
+      width: 180px; }
+    #parts_list .parts .info {
+      height: 105px;
+      max-height: 105px;
+      width: 180px;
+      max-width: 180px;
+      padding: 10px 15px;
+      font-family: 'NanumGothic';
+      font-size: 13px; }
+      #parts_list .parts .info .name {
+        color: #0042ED;
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; }
+      #parts_list .parts .info .price {
+        margin-top: 5px;
+        height: 20px;
+        overflow: hidden;
+        font-weight: bold; }
+      #parts_list .parts .info .car {
+        color: #000000;
+        overflow: hidden;
+        margin-top: 5px;
+        font-weight: bold; }
+  #parts_list .img > img {
+    height: 178px;
+    max-height: 178px;
+    width: 178px;
+    max-width: 178px; }
+
+/* ---------- PARTS DETAIL ---------- */
+#detail-parts {
+  width: 885px;
+  height: 500px;
+  margin-left: -15px; }
+  #detail-parts .detail-pInfo {
+    margin-left: 55%;
+    width: 45%;
+    height: 100%;
+    max-height: 100%;
+    max-width: 45%;
+    padding: 10px; }
+    #detail-parts .detail-pInfo .tab-main {
+      margin-top: 10px;
+      height: 420px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      position: relative; }
+    #detail-parts .detail-pInfo .tabbable > ul {
+      max-width: 378px;
+      height: 41px;
+      border-bottom: 1px solid #428bca; }
+    #detail-parts .detail-pInfo .tabbable .nav-tabs > li.active > a, #detail-parts .detail-pInfo .tabbable .nav-tabs > li.active > a:hover, #detail-parts .detail-pInfo .tabbable .nav-tabs > li.active > a:focus {
+      cursor: pointer;
+      background-color: #fff;
+      border: 0px;
+      border-bottom-color: transparent;
+      background-color: #428bca;
+      color: #fff; }
+  #detail-parts .detail-pImage {
+    float: left;
+    height: 100%;
+    width: 55%;
+    border-right: 1px #ccc solid;
+    padding: 10px 0px; }
+    #detail-parts .detail-pImage .pImage-large {
+      max-width: 100%;
+      max-height: 350px;
+      margin-bottom: 25px; }
+    #detail-parts .detail-pImage .pImage-small {
+      position: absolute;
+      width: 480px; }
+      #detail-parts .detail-pImage .pImage-small > ul > li {
+        padding: 1px;
+        display: block;
+        float: left;
+        margin: 5px;
+        border: 1px #fff solid;
+        overflow: hidden; }
+        #detail-parts .detail-pImage .pImage-small > ul > li > img {
+          height: 90px;
+          max-height: 90px;
+          min-height: 90px;
+          width: 90px;
+          max-width: 90px;
+          min-width: 90px; }
+      #detail-parts .detail-pImage .pImage-small > ul > li:hover {
+        border: 1px #A7A7A7 solid;
+        cursor: pointer; }
+
+#pImage-prev {
+  position: absolute;
+  height: 350px;
+  width: 70px; }
+  #pImage-prev > img {
+    padding: 25px;
+    margin-top: 135px;
+    cursor: pointer; }
+
+#pImage-next {
+  position: absolute;
+  height: 350px;
+  width: 70px;
+  left: 415px; }
+  #pImage-next > img {
+    padding: 25px;
+    margin-top: 135px;
+    cursor: pointer; }
+
+#pImage-main {
+  margin-left: 14%;
+  max-width: 350px;
+  padding: 1px;
+  border: 2px #fff solid; }
+
+#pImage-main:hover {
+  cursor: pointer;
+  border: 2px #A7A7A7 solid; }
+
+#pInfo-key {
+  position: absolute;
+  width: 80px;
+  max-width: 80px;
+  max-height: 480px;
+  font-size: 100%;
+  text-align: right; }
+  #pInfo-key > span {
+    display: block;
+    height: 22px;
+    margin: 5px 0px 15px 0px; }
+
+#pInfo-value {
+  position: absolute;
+  margin-left: 105px;
+  width: 270px;
+  max-height: 480px;
+  font-size: 100%; }
+  #pInfo-value > span {
+    display: block;
+    height: 22px;
+    margin: 5px 0px 15px 0px; }
+
+.pInfo-content-div {
+  position: absolute;
+  margin-top: 220px;
+  margin-left: 15px;
+  width: 325px;
+  max-width: 325px;
+  min-width: 325px;
+  min-height: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc; }
+
+#pInfo-content {
+  display: block; }
+
+.cart {
+  float: left; }
+
+/* ---------- PARTS REGISTRATION ---------- */
+#parts-regist > form {
+  margin: 0 auto;
+  background: #ffffff;
+  width: 580px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  padding: 40px 50px;
+  margin-bottom: 120px; }
+
+#category-select,
+#parts-name,
+#parts-price,
+#parts-quantity,
+#parts-content {
+  margin-bottom: 25px; }
+
+#parts-regist > form > div > a {
+  color: #000;
+  font-weight: bolder;
+  font-size: 14px; }
+
+#parts-regist > form > div > a:hover {
+  cursor: default;
+  text-decoration: none; }
+
+/* Category */
+#category-select .category-body {
+  margin-top: 10px;
+  margin-left: 10px; }
+
+#category-select .category-body > select {
+  width: 140px;
+  margin-right: 10px;
+  font-size: 20px; }
+
+/* Car, Maker */
+#car-select {
+  display: block; }
+
+#car-select .car-body {
+  margin-top: 10px;
+  margin-left: 10px; }
+
+#car-select .car-body > select {
+  width: 140px;
+  margin-right: 10px;
+  font-size: 20px; }
+
+/* Photo */
+#photo-upload {
+  width: 100%;
+  margin-bottom: 20px; }
+
+#photo-upload .photo-body {
+  display: block;
+  width: 480px;
+  max-width: 480px;
+  height: 133px;
+  max-height: 133px;
+  margin-top: 10px;
+  padding: 15px 7px;
+  border: 1px solid #bbb;
+  border-radius: 5px; }
+
+.photo-set {
+  float: left;
+  display: block;
+  margin: 0px 8px;
+  height: 100px;
+  width: 100px; }
+
+.photo-set > div {
+  position: absolute;
+  display: block;
+  float: left;
+  width: 100px;
+  height: 100px;
+  background-image: url(../img/160x160_1.jpg); }
+
+.photo-set > input {
+  float: left;
+  position: relative;
+  opacity: 0;
+  width: 100px;
+  height: 100px;
+  cursor: pointer; }
+
+/* Name */
+#name-text {
+  margin-left: 10px;
+  margin-top: 10px;
+  width: 470px;
+  height: 25px;
+  font-size: 12px; }
+
+/* Price */
+#price-text {
+  margin: 10px 7px 0px 10px;
+  width: 90px;
+  height: 25px;
+  font-size: 12px; }
+
+/* Quantity */
+#quantity-text {
+  margin: 10px 7px 0px 10px;
+  width: 50px;
+  height: 25px;
+  font-size: 12px; }
+
+/* State */
+#state-select {
+  margin: 10px 7px 0px 10px;
+  font-size: 20px; }
+
+/* Content */
+#content-text {
+  margin: 10px 7px 0px 10px;
+  width: 470px;
+  height: 200px;
+  font-size: 12px; }
+
+#parts-submit {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 15px;
+  border-color: #428bca;
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: white;
+  background-color: #428bca; }
+
+#parts-submit:hover {
+  background: #00509d;
+  cursor: pointer; }
+
+/* ---------- PARTS CART ---------- */
+#cart-body {
+  width: 900px;
+  padding: 1px 15px;
+  margin: 0 auto;
+  background: #ffffff;
+  font-family: "NanumGothic";
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3); }
+
+#cart-emptyMessage {
+  display: block;
+  font-size: 14px; }
+
+#parts-cart .cart-partslist .table-head {
+  height: 20px;
+  margin-top: 10px;
+  margin-bottom: -10px; }
+  #parts-cart .cart-partslist .table-head div {
+    display: block;
+    float: left;
+    text-align: center; }
+    #parts-cart .cart-partslist .table-head div > span {
+      color: #000000;
+      font-weight: bolder;
+      cursor: default; }
+  #parts-cart .cart-partslist .table-head .partsCheck {
+    width: 40px;
+    max-width: 40px;
+    min-width: 40px; }
+  #parts-cart .cart-partslist .table-head .partsImage {
+    width: 110px;
+    max-width: 110px;
+    min-width: 110px;
+    margin-right: 30px; }
+  #parts-cart .cart-partslist .table-head .partsName {
+    width: 300px;
+    max-width: 300px;
+    min-width: 300px; }
+  #parts-cart .cart-partslist .table-head .partsCount {
+    width: 100px;
+    max-width: 100px;
+    min-width: 100px; }
+  #parts-cart .cart-partslist .table-head .partsSeller {
+    width: 140px;
+    max-width: 140px;
+    min-width: 140px; }
+  #parts-cart .cart-partslist .table-head .partsPrice {
+    width: 110px;
+    max-width: 110px;
+    min-width: 110px; }
+#parts-cart .cart-partslist .cart-parts {
+  margin: 15px 0px;
+  width: 100%;
+  height: 110px;
+  max-height: 110px;
+  min-height: 110px; }
+  #parts-cart .cart-partslist .cart-parts > div {
+    display: block;
+    float: left;
+    text-align: center; }
+    #parts-cart .cart-partslist .cart-parts > div > a:hover {
+      cursor: default;
+      text-decoration: none; }
+  #parts-cart .cart-partslist .cart-parts .partsCount > a,
+  #parts-cart .cart-partslist .cart-parts .partsSeller > a,
+  #parts-cart .cart-partslist .cart-parts .partsPrice > a {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    height: 110px;
+    max-height: 110px;
+    min-height: 110px; }
+  #parts-cart .cart-partslist .cart-parts .partsCheck {
+    padding: 0px 10px;
+    width: 40px;
+    max-width: 40px;
+    min-width: 40px;
+    height: 110px; }
+    #parts-cart .cart-partslist .cart-parts .partsCheck > input {
+      margin-top: 50px; }
+  #parts-cart .cart-partslist .cart-parts .partsImage {
+    max-width: 110px;
+    max-height: 110px;
+    margin-right: 30px; }
+  #parts-cart .cart-partslist .cart-parts .partsName {
+    display: table-cell;
+    text-decoration: none;
+    width: 300px;
+    max-width: 300px;
+    min-width: 300px;
+    height: 110px;
+    max-height: 110px;
+    min-height: 110px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0px 10px; }
+    #parts-cart .cart-partslist .cart-parts .partsName .pName {
+      display: block;
+      margin-top: 20px;
+      margin-bottom: 15px; }
+    #parts-cart .cart-partslist .cart-parts .partsName .carName {
+      display: block; }
+  #parts-cart .cart-partslist .cart-parts .partsCount > a {
+    width: 100px;
+    max-width: 100px;
+    min-width: 100px;
+    padding: 0px 10px; }
+  #parts-cart .cart-partslist .cart-parts .partsSeller > a {
+    width: 140px;
+    max-width: 140px;
+    min-width: 140px;
+    padding: 0px 10px; }
+  #parts-cart .cart-partslist .cart-parts .partsPrice > a {
+    width: 110px;
+    max-width: 110px;
+    min-width: 110px;
+    padding: 0px 10px; }
+
+#cart-total {
+  display: none;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  height: 50px;
+  max-height: 50px;
+  min-height: 50px; }
+  #cart-total > span:nth-child(1) {
+    position: absolute;
+    display: table-cell;
+    font-size: 20px;
+    margin-top: 12px; }
+
+#cart-totalPrice {
+  position: absolute;
+  display: block;
+  margin-left: 140px;
+  font-size: 230%;
+  color: #FF0000;
+  width: 300px;
+  max-width: 300px;
+  overflow: hidden; }
+
+#cart-function {
+  width: 900px;
+  margin: 0 auto;
+  margin-top: 12px; }
+  #cart-function .all-select-btn {
+    margin-right: 5px;
+    padding: 4px 10px;
+    font-size: 13px;
+    font-weight: normal;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: black;
+    background-color: white;
+    border-color: #000; }
+  #cart-function .all-select-btn:hover {
+    background-color: #eee; }
+  #cart-function .list-delete-btn {
+    padding: 4px 10px;
+    font-size: 13px;
+    font-weight: normal;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: white;
+    background-color: #ff3636; }
+  #cart-function .list-delete-btn:hover {
+    background-color: #ed0000; }
+  #cart-function .all-order-btn,
+  #cart-function .list-order-btn {
+    float: right;
+    margin-left: 10px;
+    padding: 4px 10px;
+    font-size: 13px;
+    font-weight: normal;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: white;
+    background-color: #428bca; }
+  #cart-function .all-order-btn:hover,
+  #cart-function .list-order-btn:hover {
+    background-color: #00509d; }
+
+/* ---------- PARTS PURCHASE ---------- */
+#parts-purchase > span {
+  display: block;
+  margin-left: 50px;
+  margin-bottom: 10px;
+  font-size: 22px; }
+#parts-purchase > div {
+  margin: 0 auto;
+  background: #ffffff;
+  width: 850px;
+  max-width: 850px;
+  min-width: 850px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  padding: 1px 15px;
+  margin-bottom: 45px; }
+#parts-purchase .purchase-partslist .purchase-parts-head {
+  height: 20px;
+  max-height: 20px;
+  min-height: 20px;
+  margin-top: 10px;
+  margin-bottom: -10px; }
+  #parts-purchase .purchase-partslist .purchase-parts-head > div > span {
+    color: #000000;
+    font-weight: bolder;
+    cursor: default; }
+
+#parts-purchase .purchase-partslist .purchase-parts-head .partsImage {
+  width: 110px;
+  max-width: 110px;
+  margin-right: 30px; }
+
+#parts-purchase .purchase-partslist .purchase-parts-head .partsName {
+  width: 300px; }
+
+#parts-purchase .purchase-partslist .purchase-parts-head .partsCount {
+  width: 100px; }
+
+#parts-purchase .purchase-partslist .purchase-parts-head .partsSeller {
+  width: 140px; }
+
+#parts-purchase .purchase-partslist .purchase-parts-head .partsPrice {
+  width: 110px; }
+
+#parts-purchase .purchase-partslist .purchase-parts {
+  margin: 15px 0px;
+  width: 100%;
+  height: 110px;
+  max-height: 110px; }
+
+#parts-purchase .purchase-partslist .purchase-parts > div,
+#parts-purchase .purchase-partslist .purchase-parts-head > div {
+  display: block;
+  float: left;
+  text-align: center; }
+
+#parts-purchase .purchase-partslist .purchase-parts .partsCount > a,
+#parts-purchase .purchase-partslist .purchase-parts .partsSeller > a,
+#parts-purchase .purchase-partslist .purchase-parts .partsPrice > a {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  height: 110px;
+  max-height: 110px; }
+
+#parts-purchase .purchase-partslist .purchase-parts > div > a:hover {
+  cursor: default;
+  text-decoration: none; }
+
+#parts-purchase .purchase-partslist .purchase-parts .partsImage {
+  max-width: 110px;
+  max-height: 110px;
+  margin-right: 30px; }
+
+#parts-purchase .purchase-partslist .purchase-parts .partsName {
+  display: table-cell;
+  text-decoration: none;
+  padding: 0px 10px;
+  min-width: 300px;
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+#parts-purchase .purchase-partslist .purchase-parts .partsName .pName {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  padding: 0px 10px;
+  min-width: 300px;
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+#parts-purchase .purchase-partslist .purchase-parts .partsName .carName {
+  display: block;
+  padding: 0px 10px;
+  min-width: 300px;
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+#parts-purchase .purchase-partslist .purchase-parts .partsCount > a {
+  padding: 0px 10px;
+  width: 100px;
+  max-width: 100px; }
+
+#parts-purchase .purchase-partslist .purchase-parts .partsSeller > a {
+  padding: 0px 10px;
+  width: 140px;
+  max-width: 140px; }
+
+#parts-purchase .purchase-partslist .purchase-parts .partsPrice > a {
+  padding: 0px 10px;
+  width: 110px;
+  max-width: 110px; }
+
+#parts-purchase .purchase-userInfo {
+  margin: 0 auto;
+  background: #ffffff;
+  min-width: 850px;
+  max-width: 850px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  padding: 1px 15px;
+  margin-bottom: 45px; }
+
+#parts-purchase .purchase-userInfo .purchase-uInfoKey {
+  position: absolute;
+  width: 110px;
+  margin-top: 10px; }
+
+#parts-purchase .purchase-userInfo .purchase-uInfoKey > div {
+  font-size: 12px;
+  padding: 8px 0px; }
+
+#parts-purchase .purchase-userInfo .purchase-uInfoKey .userAddress {
+  margin-bottom: 25px; }
+
+#parts-purchase .purchase-userInfo .purchase-uInfoValue {
+  margin-left: 110px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  min-width: 700px;
+  max-width: 700px; }
+
+#parts-purchase .purchase-userInfo .purchase-uInfoValue > div {
+  font-size: 12px; }
+
+#purchase-userName {
+  margin: 5px 0px;
+  width: 100px;
+  max-width: 100px; }
+
+#purchase-userPostal1,
+#purchase-userPostal2 {
+  margin: 5px 0px;
+  max-width: 50px;
+  width: 50px; }
+
+#purchase-postalSearch {
+  font-size: 11px;
+  display: table-cell;
+  vertical-align: middle; }
+
+#purchase-userAddress1 {
+  margin-bottom: 7px;
+  width: 350px;
+  max-width: 350px; }
+
+#purchase-userAddress2 {
+  margin-bottom: 7px;
+  width: 200px;
+  max-width: 200px; }
+
+#purchase-userPhone2,
+#purchase-userPhone3 {
+  margin-bottom: 5px;
+  width: 50px;
+  max-width: 50px; }
+
+#purchase-userMessage {
+  margin: 4px 0px;
+  width: 400px; }
+
+#purchase-paymentList {
+  margin-top: 20px;
+  margin-left: 5px; }
+
+#purchase-paymentList > input {
+  margin-right: 5px; }
+
+#purchase-paymentList > span {
+  margin-right: 15px; }
+
+#paymentPage-bank {
+  display: none;
+  width: 100%;
+  margin-bottom: 20px; }
+
+#paymentPage-bank .bank-key {
+  margin-top: 2px;
+  margin-left: 10px;
+  font-size: 12px;
+  width: 80px;
+  max-width: 80px;
+  min-width: 80px; }
+
+#paymentPage-bank .bank-key > span {
+  display: block;
+  margin-bottom: 15px; }
+
+#paymentPage-bank .bank-value {
+  position: absolute;
+  margin-left: 100px;
+  font-size: 13px; }
+
+#selectBank-account {
+  margin-left: 10px;
+  margin-right: 20px; }
+
+#selectBank-name {
+  font-weight: 500;
+  margin-left: 5px; }
+
+.purchase-paymentInfo .purchase-paymentPrice {
+  margin-bottom: 20px;
+  margin-left: 10px;
+  height: 50px; }
+
+.purchase-paymentInfo .purchase-paymentPrice > span:nth-child(1) {
+  position: absolute;
+  display: table-cell;
+  font-size: 20px;
+  margin-top: 12px; }
+
+#purchase-totalPrice {
+  position: absolute;
+  display: block;
+  margin-left: 140px;
+  font-size: 230%;
+  color: #FF0000;
+  width: 300px;
+  max-width: 300px;
+  overflow: hidden; }
+
+#purchase-paymentButton {
+  float: right;
+  margin-top: 5px;
+  margin-right: 20px;
+  width: 120px;
+  height: 40px;
+  font-size: 16px;
+  font-family: NanumGothic, Dotum;
+  text-decoration: none;
+  color: #ffffff;
+  border: 0px;
+  border-radius: 3px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0079bc), to(#00509d));
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); }
+
+#purchase-paymentButton:hover {
+  background: #00509d;
+  cursor: pointer; }

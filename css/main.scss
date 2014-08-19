@@ -1,0 +1,364 @@
+$porter-blue : #428bca;
+$porter-blue-hover : #00509d;
+$porter-red : #FF3636;
+$porter-red-hover : #ED0000;
+
+@mixin Button ($bColor, $fColor, $fSize) {
+    font-size: $fSize;
+    font-weight: normal;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: $fColor;
+    background-color: $bColor;
+}
+
+@mixin setTableAttr ($widthValue, $borderValue) {
+    width: $widthValue;
+    border-right: $borderValue solid #ccc;
+}
+
+/*---------- MY PAGE ----------*/
+
+#mypage-body {
+    font-family: "NanumGothic";
+    width: 900px;
+    padding: 15px 15px 0px 15px;
+    margin: 0 auto;
+    margin: 30px;
+    background: #ffffff;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+
+    .mypage-tab {
+        > ul {
+            border-bottom: 1px solid $porter-blue;
+
+            > li > a {
+                padding: 10px 25px;
+                border-radius: 5px 5px 0px 0px;
+            }
+            > .active {
+                font-weight: bolder;
+                font-size: 15px;
+            }
+        }
+        .nav-tabs > li.active {
+            > a, > a:hover, > a:focus {
+                cursor: pointer;
+                background-color: #fff;
+                border: 0px;
+                border-bottom-color: transparent;
+                background-color: $porter-blue;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.mypage-tab-main > span,
+.delivery-dropdown1-main > span,
+.delivery-dropdown2-main > span,
+.sell-dropdown1-main > span,
+.sell-dropdown2-main > span,
+.sell-dropdown3-main > span  {
+    display: block;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+#order-state-box {
+    display: block;
+    float: left;
+    max-width: 100%;
+    margin-left: 22%;
+    margin-top: 20px;
+    padding: 15px 35px;
+    border: 3px solid #428bca;
+    text-align: center;
+}
+
+#sell-partsList-box {
+    display: block;
+    float: left;
+    max-width: 55%;
+    margin-top: 20px;
+    margin-left: 23%;
+    padding: 15px 35px;
+    border: 3px solid #428bca;
+    text-align: center;
+}
+
+#trade-partsList-box {
+    display: block;
+    float: left;
+    max-width: 70%;
+    margin-top: 20px;
+    margin-left: 16%;
+    padding: 15px 35px;
+    border: 3px solid #428bca;
+    text-align: center;
+}
+
+#order-state-box > div,
+#sell-partsList-box > div,
+#trade-partsList-box > div {
+    float: left;
+    margin: 0px 30px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#order-state-box > div > span,
+#sell-partsList-box > div > span,
+#trade-partsList-box > div > span {
+    display: block;
+}
+
+#order-state-box > div .product-count,
+#sell-partsList-box > div > .product-count,
+#trade-partsList-box > div > .product-count{
+    color: #FF3636;
+    font-size: 22px;
+    font-weight: bolder;
+}
+
+#payWait-buy,
+#payComplete-buy,
+#deliveryProgress-buy,
+#cancelProgress-buy,
+#recently-sell,
+#payWait-sell,
+#payComplete-sell,
+#deliveryProgress-sell,
+#cancelRequest-sell {
+    display: none;
+}
+
+#recently-buy > span,
+#payWait-buy > span,
+#deliveryProgress-buy > span,
+#cancelProgress-buy > span,
+#recently-sell > span,
+#payWait-sell > span,
+#payComplete-sell > span,
+#deliveryProgress-sell > span,
+#cancelRequest-sell > span {
+    display: block;
+    margin-top: 120px;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.partslist-table {
+    margin-top: 10px;
+    border-top: 1px solid #ccc;
+    font-size: 13px;
+
+    .table-head {
+        height: 20px;
+        margin-top: 10px;
+        margin-bottom: -10px;
+        font-size: 14px;
+
+        > div {
+            display: block;
+            float: left;
+            text-align: center;
+
+            > span {
+                color: #000000;
+                font-weight: bolder;
+                cursor: default;
+            }
+        }
+        .partsCheck { @include setTableAttr(40px, 1px); }
+        .partsTime  { @include setTableAttr(100px, 1px); }
+        .partsName  { @include setTableAttr(360px, 1px); }
+        .partsCount { @include setTableAttr(70px, 1px); }
+        .partsSeller{ @include setTableAttr(100px, 1px); }
+        .partsPrice { @include setTableAttr(100px, 1px); }
+        .etc        { @include setTableAttr(100px, 0px); }
+    }
+
+    .table-body {
+        > span {
+            display: block;
+            height: 40px;
+            font-size: 14px;
+            padding: 0px 10px;
+        }
+        .parts {
+            margin: 15px 0px;
+            width: 100%;
+            height: 90px;
+            max-height: 110px;
+
+            > div {
+                display: block;
+                float: left;
+                text-align: center;
+
+                a:hover {
+                    cursor: default;
+                    text-decoration: none;
+                }
+            }
+
+            .partsCheck {
+                margin-top: -4px;
+                padding: 0px 10px;
+                width: 40px;
+                max-width: 40px;
+            }
+            .partsImage {
+                max-width: 90px;
+                max-height: 90px;
+                margin-right: 10px;
+                overflow: hidden;
+            }
+            .partsName {
+                display: table-cell;
+                text-decoration: none;
+                padding: 0px 10px;
+                width: 240px;
+                max-width: 260px;
+                min-width: 260px;
+                height: 90px;
+                max-height: 90px;
+                min-height: 90px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+                .pName {
+                    display: block;
+                    margin-top: 20px;
+                    margin-bottom: 15px;
+                    padding: 0px 10px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                .carName {
+                    display: block;
+                    padding: 0px 10px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+            .etc {
+                display: table-cell;
+                text-decoration: none;
+                padding: 0px 10px;
+                width: 100px;
+                max-width: 100px;
+                height: 90px;
+                max-height: 90px;
+                min-height: 90px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+                .statusBtn {
+                    display: block;
+                    margin: 0 auto;
+                    margin-top: 15px;
+                    margin-bottom: 10px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    @include Button($porter-red, #fff, 12px);
+                }
+                .statusBtn:hover {
+                    background-color: $porter-red-hover;
+                }
+            }
+
+            .partsCheck > input,
+            .partsTime > a,
+            .partsCount > a,
+            .partsSeller > a,
+            .partsPrice > a,
+            .etc > a {
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+                text-decoration: none;
+                height: 90px;
+                max-height: 90px;
+            }
+            .partsTime > a {
+                padding: 0px 10px;
+                width: 100px;
+                max-width: 100px;
+            }
+            .partsCount > a {
+                padding: 0px 10px;
+                width: 70px;
+                max-width: 70px;
+            }
+            .partsSeller > a {
+                padding: 0px 10px;
+                width: 100px;
+                max-width: 100px;
+            }
+            .partsPrice > a {
+                padding: 0px 10px;
+                width: 100px;
+                max-width: 100px;
+            }
+            .etc {
+                > a {
+                    padding: 0px 10px;
+                    width: 100px;
+                    max-width: 100px;
+                    font-size: 12px;
+                }
+                .partsStatus {
+                    display: block;
+                    padding: 0px 10px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+#sell-function {
+    margin-bottom: 20px;
+
+    .all-select-btn {
+        margin-right: 5px;
+        margin-left: 5px;
+        @include Button(#fff, #000, 13px);
+        padding: 4px 10px;
+        border: 1px solid #000;
+    }
+    .all-select-btn:hover {
+        background-color: #eee;
+    }
+    .list-delete-btn {
+        @include Button($porter-red, #fff, 13px);
+        padding: 4px 10px;
+    }
+    .list-delete-btn:hover {
+        background-color: $porter-red-hover;
+    }
+
+    .all-order-btn,
+    .list-order-btn {
+        @include Button($porter-blue, #fff, 13px);
+        padding: 4px 10px;
+        float: right;
+    }
+    .all-order-btn:hover,
+    .list-order-btn:hover {
+        background-color: $porter-blue-hover;
+    }
+}
