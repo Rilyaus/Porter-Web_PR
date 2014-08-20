@@ -26,6 +26,53 @@ window.onload = function() {
     setPagerWidth();
 }
 
+/*---------- Board Event ----------*/
+
+function loadNoticeContent() {
+    $('#notice-board .notice-main').show();
+}
+function loadNoticeList() {
+    $('#notice-board .notice-main').hide();
+}
+
+function changeNoticeBoard(type, obj) {
+    initNoticeType();
+    $('#notice-board .notice-type > span').removeAttr("class");
+    obj.className = 'active';
+    obj.innerHTML = type + ' <b class="caret"></b>';
+
+    var contentList = $('.notice-content .type').get();
+
+    if( type === "전체" ) {
+        for( var i=0; i<contentList.length ; i++ ) {
+            contentList[i].parentElement.style.display = 'block';
+        }
+    } else {
+        for( var i=0; i<contentList.length ; i++ ) {
+            if( contentList[i].children[0].innerHTML !== type ) {
+                contentList[i].parentElement.style.display = 'none';
+            } else {
+                contentList[i].parentElement.style.display = 'block';
+            }
+        }
+    }
+}
+
+function initNoticeType() {
+    $('#notice-board .notice-type > span:nth-child(1)').text("전체");
+    $('#notice-board .notice-type > span:nth-child(2)').text("공지");
+    $('#notice-board .notice-type > span:nth-child(3)').text("업데이트");
+    $('#notice-board .notice-type > span:nth-child(4)').text("이벤트");
+}
+
+function initNoticeBoard() {
+    $('#notice-board .notice-type > span').removeAttr("class");
+
+    var initText = $('#notice-board .notice-type').children().first().text();
+    $('#notice-board .notice-type').children().first().addClass('active');
+    $('#notice-board .notice-type').children().first().html(initText + ' <b class="caret"></b>');
+}
+
 /*---------- Parts Detail Initialization ----------*/
 function initDetailModal() {
     setModalHeight();

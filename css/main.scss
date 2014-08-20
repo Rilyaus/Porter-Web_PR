@@ -374,8 +374,147 @@ $porter-red-hover : #ED0000;
     }
 }
 
+/*---------- NOTICE BOARD ----------*/
 
+#notice-board {
+    overflow: auto;
+    margin: 0 auto;
+    padding: 20px;
+    background: #ffffff;
+    @include fixWidth(850px);
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
 
+    .notice-main {
+        display: none;
+        overflow: auto;
+        margin-bottom: 15px;
+
+        .title-box {
+            margin-bottom: 20px;
+            overflow: auto;
+
+            .subject {
+                background-color: #eee;
+                padding: 5px 20px;
+                font-size: 15px;
+
+                span { @include fixWidth(500px); display: block; }
+            }
+            .writer, .date, .hits { float: left; padding: 5px 20px; font-size: 15px; }
+            .date, .hits { float: right; }
+
+            .blank {
+                float: left;
+                border-top: 1px solid #ccc;
+                @include fixWidth(100%);
+                @include fixHeight(0px);
+            }
+
+            > div > span {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+        .content-box {
+            padding: 0px 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ccc;
+        }
+
+        .notice-list {
+            float: right;
+            padding: 3px 15px;
+            margin-top: 10px;
+        }
+        .notice-list:hover { background-color: $porter-blue-hover; }
+    }
+
+    .notice-type {
+        overflow: auto;
+        margin-bottom: 15px;
+
+        span {
+            float: left;
+            color: #000;
+            padding: 0px 10px;
+        }
+        span:hover { cursor: pointer; color: $porter-blue; }
+        span:nth-child(1), span:nth-child(2), span:nth-child(3) { border-right: 1px solid #999; }
+    }
+    .notice-search {
+        padding: 15px;
+        margin-top: 20px;
+        background-color: #eee;
+
+        .input-option {
+            margin-left: 230px;
+            font-size: 15px;
+        }
+        .input-text {
+            font-size: 12px;
+            @include fixWidth(180px);
+            border: 2px solid $porter-blue;
+        }
+        .input-search { padding: 2px 10px; }
+        .input-search:hover { background-color: $porter-blue-hover; }
+    }
+}
+
+#notice-board-table {
+
+    .board-head {
+        overflow: auto;
+        border-top: 2px solid $porter-blue;
+
+        div {
+            float: left;
+            border-bottom: 1px solid #999;
+            text-align: center;
+            vertical-align: middle;
+            padding: 7px 0px;
+
+            span {
+                display: block;
+                color: $porter-blue-hover;
+                border-right: 1px solid #bbb;
+            }
+        }
+        .number { @include fixWidth(60px); }
+        .type { @include fixWidth(90px); }
+        .subject { @include fixWidth(360px); }
+        .writer { @include fixWidth(110px); }
+        .date { @include fixWidth(110px); }
+        .hits { @include fixWidth(80px); span { border-right: 0px; } }
+    }
+
+    .board-body {
+        border-bottom: 1px solid #ccc;
+
+        div {
+            overflow: auto;
+
+            div {
+                float: left;
+                border-bottom: 1px solid #ccc;
+                text-align: center;
+                vertical-align: middle;
+                padding: 5px 10px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            .number { @include fixWidth(60px); }
+            .type { @include fixWidth(90px); }
+            .subject { @include fixWidth(360px); text-align: left; }
+            .writer { @include fixWidth(110px); }
+            .date { @include fixWidth(110px); }
+            .hits { @include fixWidth(80px); }
+
+            .subject:hover { cursor: pointer; color: $porter-blue; }
+        }
+    }
+}
 
 
 
