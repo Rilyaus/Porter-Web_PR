@@ -112,6 +112,9 @@ function nextImage() {
     }
 }
 /* --------------------------------- */
+function inputSearchPrice() {
+    alert("SDF");
+}
 
 function setSearchResult() {
     var priceMin = parseInt($('#price-min').val());
@@ -205,12 +208,20 @@ function inputOnlyPhone(obj){
     }
 }
 
-function inputOnlyNum(){
+function returnOnlyNum(){
     if ((event.keyCode> 47) && (event.keyCode < 58)){
         event.returnValue=true;
     } else {
         event.returnValue=false;
     }
+}
+
+function inputOnlyNum(obj)
+{
+    //좌우 방향키, 백스페이스, 딜리트, 탭키에 대한 예외
+    if(event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 37 || event.keyCode == 39 || event.keyCode == 46 ) return;
+
+    obj.value = obj.value.replace(/[-=,.<>/?{}`~!@#$%^&*()_+\|;:'""["\ㄱ-ㅎㅏ-ㅣ가-힣]/g, '');
 }
 
 function pageReload() {
@@ -270,6 +281,10 @@ function setPartsList(obj) {
         $('#deliveryProgress-sell').hide();
         $('#cancelRequest-sell').show();
     }
+}
+
+function changeParentPage(link) {
+    window.top.location.href = link;
 }
 
 /* 상품 등록 이미지 미리보기 */

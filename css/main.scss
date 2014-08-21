@@ -516,10 +516,118 @@ $porter-red-hover : #ED0000;
     }
 }
 
+#support-body {
+    font-family: "NanumGothic";
+    width: 900px;
+    padding: 20px;
+    margin: 0 auto;
+    margin: 30px;
+    background: #ffffff;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
 
+    .support-tab {
+        > ul {
+            border-bottom: 1px solid $porter-blue;
 
+            > li > a {
+                padding: 10px 25px;
+                border-radius: 5px 5px 0px 0px;
+            }
+            > .active {
+                font-weight: bolder;
+                font-size: 15px;
+            }
+        }
+        .nav-tabs > li.active {
+            > a, > a:hover, > a:focus {
+                cursor: pointer;
+                background-color: #fff;
+                border: 0px;
+                border-bottom-color: transparent;
+                background-color: $porter-blue;
+                color: #fff;
+            }
+        }
+        .tab-content {
+            padding-top: 20px;
+        }
+    }
+}
 
+#private-tab {
+    .private-main {
+        > span { display: block; font-size: 18px; margin-bottom: 10px; }
+        > div { overflow: auto; border-top: 2px solid $porter-blue; }
+        > div > div {
+            @include fixWidth(100%);
+            overflow: auto;
+            border-bottom: 1px solid #ccc;
+            > div { float: left; }
+            .pHead {
+                @include fixWidth(120px);
+                padding: 8px 15px;
+                background-color: #eee;
+            }
+        }
 
+        .userInfo-box {
+            margin-bottom: 30px;
+            > div {
+                .id { padding: 8px 15px; }
+                .phone {
+                    padding: 6px 15px;
+
+                    > input { font-size: 12px; @include fixWidth(45px); }
+                }
+                .email {
+                    padding: 6px 15px;
+
+                    > input { font-size: 12px; @include fixWidth(100px); }
+                }
+            }
+        }
+
+        .questionContent-box {
+            > div {
+                .contentH {
+                    @include fixHeight(300px);
+                    > span {
+                        display: block;
+                        padding: 130px 0px;
+
+                        @include fixHeight(100%);
+                    }
+                }
+
+                .type {
+                    padding: 3px 15px;
+                    font-size: 18px;
+                    > select { margin-right: 10px; }
+                }
+                .subject {
+                    padding: 6px 15px;
+                    font-size: 12px;
+                    @include fixWidth(740px);
+                    > input { @include fixWidth(100%); }
+                }
+                .content {
+                    padding: 15px 15px;
+                    font-size: 13px;
+                    @include fixWidth(740px);
+                    > textarea { @include fixWidth(100%); @include fixHeight(265px); }
+                }
+            }
+        }
+        .send {
+            margin-top: 30px;
+            margin-left: 390px;
+            margin-bottom: 30px;
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+        .send:hover { background-color: $porter-blue-hover; }
+    }
+}
 
 
 

@@ -76,37 +76,39 @@ body {
     position: relative;
 }
 
-#iFooter {
-    min-width: 1220px;
-}
+iframe { min-width: 1220px; max-width: 100%; }
 
 #footer {
     padding-top: 60px;
+    min-width: 1220px;
 
     .bar {
         margin-left: 2%;
-        width: 96%;
-        min-width: 1220px;
         max-width: 96%;
-        @include fixHeight(100px);
+        min-width: 1220px;
         border-top: 3px solid #2A2d30;
-
+    }
+    .main {
+        min-width: 1220px;
+        padding: 0px 200px;
         .wrap {
-            width: 900px;
+            width: 950px;
             margin: 0 auto;
+            position: relative;
 
             .content {
-                margin-left: 250px;
+                overflow: auto;
+                margin-left: 280px;
                 margin-top: 15px;
                 width: 410px;
-                overflow: auto;
 
                 > span {
                     float: left;
                     margin: 10px;
                 }
+                > span:hover { color: $porter-blue; cursor: pointer; }
             }
-            > span { margin-left: 275px; }
+            > span { margin-left: 300px; }
         }
     }
 }

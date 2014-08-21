@@ -31,7 +31,7 @@
       border: 1px solid #ccc; }
     #member-body > form .saveuser-div {
       float: left;
-      widows: 100%; }
+      width: 100%; }
     #member-body > form .saveuser-span {
       font-size: 12px;
       display: block;

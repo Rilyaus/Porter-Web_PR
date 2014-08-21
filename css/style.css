@@ -40,33 +40,38 @@ body {
   margin: 0 auto;
   position: relative; }
 
-#iFooter {
-  min-width: 1220px; }
+iframe {
+  min-width: 1220px;
+  max-width: 100%; }
 
 #footer {
-  padding-top: 60px; }
+  padding-top: 60px;
+  min-width: 1220px; }
   #footer .bar {
     margin-left: 2%;
-    width: 96%;
-    min-width: 1220px;
     max-width: 96%;
-    height: 100px;
-    max-height: 100px;
-    min-height: 100px;
+    min-width: 1220px;
     border-top: 3px solid #2A2d30; }
-    #footer .bar .wrap {
-      width: 900px;
-      margin: 0 auto; }
-      #footer .bar .wrap .content {
-        margin-left: 250px;
+  #footer .main {
+    min-width: 1220px;
+    padding: 0px 200px; }
+    #footer .main .wrap {
+      width: 950px;
+      margin: 0 auto;
+      position: relative; }
+      #footer .main .wrap .content {
+        overflow: auto;
+        margin-left: 280px;
         margin-top: 15px;
-        width: 410px;
-        overflow: auto; }
-        #footer .bar .wrap .content > span {
+        width: 410px; }
+        #footer .main .wrap .content > span {
           float: left;
           margin: 10px; }
-      #footer .bar .wrap > span {
-        margin-left: 275px; }
+        #footer .main .wrap .content > span:hover {
+          color: #428bca;
+          cursor: pointer; }
+      #footer .main .wrap > span {
+        margin-left: 300px; }
 
 #title_img {
   position: absolute;

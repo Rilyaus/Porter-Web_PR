@@ -22,7 +22,7 @@
 			<div class="wrapper">
 				<a href="index.html"><img id="title_img" src="img/Porter Title.png" alt="Porter - Vehicle parts Store" /></a>
                 <div id="user-menu">
-                    <li class="utility"><a href="noticeboard.html">공지사항</a></li>
+                    <li class="utility"><a href="notice_board.html">공지사항</a></li>
                     <li class="utility"><a href="parts_search.html">상품 검색</a></li>
                     <li class="utility"><a href="parts_register.html">상품 등록</a></li>
                     <li class="utility"><a href="mypage.html">마이페이지</a></li>
@@ -261,9 +261,9 @@
                                 <div class="price">
                                     <div class="price tHead"><span>가격</span></div>
                                     <div class="price tBody">
-                                        <input id="price-min" class="min" type="text"/>
+                                        <input id="price-min" class="min" type="text" onblur="inputOnlyNum(this)" onkeypress="returnOnlyNum()" onkeyup="inputOnlyNum(this)" />
                                         <span>~</span>
-                                        <input id="price-max" class="max" type="text"/>
+                                        <input id="price-max" class="max" type="text" onblur="inputOnlyNum(this)" onkeypress="returnOnlyNum()" onkeyup="inputOnlyNum(this)" />
                                     </div>
                                 </div>
                             </div>

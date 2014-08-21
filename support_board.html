@@ -8,7 +8,7 @@
 
 		<!-- CSS Link -->
 		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
-		<link rel="stylesheet" href="css/parts.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="css/main.css" type="text/css" media="screen" />
         <link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen" />
 
 		<!-- Javascript Link -->
@@ -18,7 +18,7 @@
 
 	</head>
 
-	<body onload="setCartPage()">
+	<body>
 		<div id="header">
 			<div class="wrapper">
 				<a href="index.html"><img id="title_img" src="img/Porter Title.png" alt="Porter - Vehicle parts Store" /></a>
@@ -202,59 +202,103 @@
 				</div><!-- Wrapper Menu -->
 			</div><!-- End Menu Holder -->
 		</div> <!-- End Menu -->
+
         <div id="main">
 			<div class="wrapper">
 				<div id="content">
 					<div id="page_title">
-						<span class="title">장바구니</span>
-						<span class="subtitle">Parts Cart</span>
-					</div> <!-- End Page Title -->
+						<span class="title">고객센터</span>
+						<span class="subtitle">Porter Online Support</span>
+					</div>
 
-                    <div id="cart-body">
-                        <div id="parts-cart" value="0">
-                            <div class="cart-partslist">
-                                <div class="table-head">
-                                    <div class="partsCheck"><input class="cart-checkBox-head" type="checkbox" onclick="setCheckBoxHead()"/></div>
-                                    <div class="partsImage"><span>상품 사진</span></div>
-                                    <div class="partsName"><span>상품 정보</span></div>
-                                    <div class="partsCount"><span>수량</span></div>
-                                    <div class="partsSeller"><span>판매자</span></div>
-                                    <div class="partsPrice"><span>가격</span></div>
-                                </div>
-                                <hr>
-                                <div class="cart-parts">
-                                    <div class="partsCheck"><input class="cart-checkBox" type="checkbox" /></div>
-                                    <div class="partsImage"><img src="/img/car/parts11.jpg" height=110 width=110/></div>
-                                    <div class="partsName">
-                                        <a class="pName">PAdfe</a>
-                                        <a class="carName">Audi 2012 A6 TFSI 2.0</a>
+                    <div id="support-body">
+                        <div class="support-tab">
+                            <ul class="nav nav-tabs">
+                                <li><a href="#FAQ-tab" data-toggle="tab">FAQ</a></li>
+                                <li class="active"><a href="#private-tab" data-toggle="tab">1:1 문의</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane" id="FAQ-tab">
+                                    <div class="FAQ-main">
+                                        <span>FAQ</span>
                                     </div>
-                                    <div class="partsCount"><a>1</a></div>
-                                    <div class="partsSeller"><a>GOJIN</a></div>
-                                    <div class="partsPrice"><a>240,000</a></div>
                                 </div>
-                                <hr>
-                                <div id="cart-emptyMessage">
-                                    <span>장바구니에 담긴 상품이 없습니다.</span>
-                                    <hr>
+
+                                <div class="tab-pane active" id="private-tab">
+                                    <div class="private-main">
+                                        <span>회원 정보</span>
+                                        <div class="userInfo-box">
+                                            <div class="id-box">
+                                                <div class="idH pHead">아이디(닉네임)</div>
+                                                <div class="id pBody"><span>Rilyaus</span></div>
+                                            </div>
+                                            <div class="phone-box">
+                                                <div class="phoneH pHead">연락처</div>
+                                                <div class="phone pBody">
+                                                    <select class="number1">
+                                                        <option val="010">010</option>
+                                                        <option val="011">011</option>
+                                                        <option val="016">016</option>
+                                                        <option val="017">017</option>
+                                                        <option val="018">018</option>
+                                                        <option val="019">019</option>
+                                                    </select>
+                                                    <span>-</span>
+                                                    <input class="number2" type="text" onkeypress="inputOnlyPhone(this)" onkeyup="inputOnlyNum(this)" onblur="inputOnlyNum(this)" />
+                                                    <span>-</span>
+                                                    <input class="number3" type="text" onkeypress="inputOnlyPhone(this)" onkeyup="inputOnlyNum(this)" onblur="inputOnlyNum(this)" />
+                                                </div>
+                                            </div>
+                                            <div class="email-box">
+                                                <div class="emailH pHead">이메일</div>
+                                                <div class="email pBody">
+                                                    <input class="emailHead" type="text"/>
+                                                    <span>@</span>
+                                                    <input class="emailBody" type="text"/>
+                                                    <select class="email-list">
+                                                        <option val="0">직접입력</option>
+                                                        <option val="naver.com">naver.com</option>
+                                                        <option val="nate.com">nate.com</option>
+                                                        <option val="gmail.com">gmail.com</option>
+                                                        <option val="hotmail.com">hotmail.com</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span>문의 정보</span>
+                                        <div class="questionContent-box">
+                                            <div class="type-box">
+                                                <div class="typeH pHead">문의 분류</div>
+                                                <div class="type pBody">
+                                                    <select class="large-type">
+                                                        <option>주문/결제/배송</option>
+                                                    </select>
+                                                    <select class="middle-type">
+                                                        <option>물품위치 확인</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="subject-box">
+                                                <div class="subjectH pHead">제목</div>
+                                                <div class="subject pBody"><input type="text"/></div>
+                                            </div>
+
+                                            <div class="content-box">
+                                                <div class="contentH pHead"><span>내용</span></div>
+                                                <div class="content pBody"><textarea name="content"></textarea></div>
+                                            </div>
+                                        </div>
+
+                                        <button class="send pBtn">문의하기</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div id="cart-total">
-                            <span>주문 합계</span>
-                            <span id="cart-totalPrice">40,000원</span>
-                        </div>
                     </div>
-                    <div id="cart-function">
-                        <button class="all-select-btn" onclick="setCheckBoxAll()">전체 선택</button>
-                        <button class="list-delete-btn">선택 목록 삭제</button>
-                        <button class="all-order-btn">전체 주문</button>
-                        <button class="list-order-btn">선택 목록 주문</button>
-                    </div>
-				</div>
+                </div>
 			</div>
 		</div>
-
         <iframe src="footer.html" frameborder="0" width="100%" height="160px"></iframe>
 	</body>
 </html>
