@@ -215,113 +215,130 @@
 <!-- End Page Title -->
 
 <!-- Parts Purchase -->
-                    <div id="parts-purchase">
+                    <div id="purchase-main">
                         <span>주문 상품 확인</span>
-                        <div class="purchase-partslist">
-                            <div class="purchase-parts-head">
-                                <div class="partsImage"><span>상품 사진</span></div>
-                                <div class="partsName"><span>상품 정보</span></div>
-                                <div class="partsCount"><span>수량</span></div>
-                                <div class="partsSeller"><span>판매자</span></div>
-                                <div class="partsPrice"><span>가격</span></div>
+                        <div class="list-box">
+                            <div class="list-head">
+                                <div class="code tHead"><span>상품 번호</span></div>
+                                <div class="name tHead"><span>상품 정보</span></div>
+                                <div class="count tHead"><span>수량</span></div>
+                                <div class="seller tHead"><span>판매자</span></div>
+                                <div class="price tHead"><span>가격</span></div>
+                                <div class="deliver tHead"><span>배송비</span></div>
                             </div>
-                            <hr>
-                            <div class="purchase-parts">
-                                <div class="partsImage"><img src="img/car/parts7.jpg" height=110 width=110/></div>
-                                <div class="partsName">
-                                    <a class="pName">N Test Parts1</a>
-                                    <a class="carName">Benz 2010 C63 AMG</a>
+                            <div class="list-body">
+                                <div class="parts">
+                                    <div class="code"><span>080000001</span></div>
+                                    <div class="name">
+                                        <img src="img/car/parts7.jpg" height=90 width=90/>
+                                        <span class="partsName">N Test Parts1</span>
+                                        <span class="carName">Benz 2010 C63 AMG</span>
+                                    </div>
+                                    <div class="count"><span>1</span></div>
+                                    <div class="seller"><span>Tester1</span></div>
+                                    <div class="price"><span>49,000원</span></div>
+                                    <div class="deliver"><span>착불</span></div>
                                 </div>
-                                <div class="partsCount"><a>1</a></div>
-                                <div class="partsSeller"><a>Tester1</a></div>
-                                <div class="partsPrice"><a>49,000원</a></div>
-                            </div>
-                            <hr>
-                            <div class="purchase-parts">
-                                <div class="partsImage"><img src="img/car/parts11.jpg" height=110 width=110/></div>
-                                <div class="partsName">
-                                    <a class="pName">N Test Parts2</a>
-                                    <a class="carName">Audi 2012 A6 TFSI 2.0</a>
+
+                                <div class="parts">
+                                    <div class="code"><span>080000002</span></div>
+                                    <div class="name">
+                                        <img src="img/car/parts11.jpg" height=90 width=90/>
+                                        <span class="partsName">N Test Parts2</span>
+                                        <span class="carName">Audi 2012 A6 TFSI 2.0</span>
+                                    </div>
+                                    <div class="count"><span>1</span></div>
+                                    <div class="seller"><span>Seller1</span></div>
+                                    <div class="price"><span>38,000원</span></div>
+                                    <div class="deliver"><span>선불</span></div>
                                 </div>
-                                <div class="partsCount"><a>1</a></div>
-                                <div class="partsSeller"><a>Seller1</a></div>
-                                <div class="partsPrice"><a>38,000원</a></div>
                             </div>
                         </div>
-                        <span>구매자 확인 및 배송지 정보</span>
-                        <div class="purchase-userInfo">
-                            <div class="purchase-uInfoKey">
-                                <div><span>받는 사람</span></div>
-                                <div class="userAddress"><span>배송지</span></div>
-                                <div><span>휴대 전화</span></div>
-                                <div><span>배송시 요구사항</span></div>
+
+                        <span>구매자 확인 및 배송지 선택</span>
+                        <div class="receiverInfo-box">
+                            <div class="addressSelect-box">
+                                <div class="addressSelectH pHead">배송지 선택</div>
+                                <div class="addressSelect pBody">
+                                    <input class="radio-default" checked="true" type="radio" name="addressSelect"/><span>기본 배송지</span>
+                                    <input class="radio-new" type="radio" name="addressSelect"/><span>새로운 배송지</span>
+                                    <input class="radio-user" type="radio" name="addressSelect"/><span>회원정보와 동일</span>
+                                </div>
                             </div>
-                            <div class="purchase-uInfoValue">
-                                <div class="userName">
-                                    <input id="purchase-userName" type="text" name="name"/>
-                                </div>
-                                <div class="userAddress">
-                                    <input id="purchase-userPostal1" type="text" name="postal1" readonly="true"/>
+
+                            <div class="receiver-box">
+                                <div class="receiverH pHead">받는 사람</div>
+                                <div class="receiver pBody"><input type="text"/></div>
+                            </div>
+                            <div class="address-box">
+                                <div class="addressH pHead">배송 주소</div>
+                                <div class="address pBody">
+                                    <input class="postal-front" type="text" readonly="true" />
                                     <span>-</span>
-                                    <input id="purchase-userPostal2" type="text" name="postal2" readonly="true"/>
-                                    <button id="purchase-postalSearch">우편번호 찾기</button><br>
-                                    <input id="purchase-userAddress1" type="text" name="address1" readonly="true"/>
-                                    <input id="purchase-userAddress2" type="text" name="address2"/>
+                                    <input class="postal-end" type="text" readonly="true" />
+                                    <button class="postal-btn" onclick="openDaumPostcode()">우편번호 찾기</button>
+                                    <div class="blank"></div>
+                                    <input class="address-front" type="text" readonly="true" />
+                                    <input class="address-end" type="text"/>
                                 </div>
-                                <div class="userPhone">
-                                    <select id="purchase-userPhone1">
+                            </div>
+                            <div class="phone-box">
+                                <div class="phoneH pHead">휴대 전화</div>
+                                <div class="phone pBody">
+                                    <select class="phone-front">
                                         <option value="010">010</option>
-                                        <option value="011">011</option>
-                                        <option value="016">016</option>
-                                        <option value="017">017</option>
-                                        <option value="018">018</option>
-                                        <option value="019">019</option>
+                                        <option value="010">011</option>
+                                        <option value="010">016</option>
+                                        <option value="010">017</option>
+                                        <option value="010">018</option>
+                                        <option value="010">019</option>
                                     </select>
                                     <span>-</span>
-                                    <input id="purchase-userPhone2" type="text" name="phone2" onkeypress="inputOnlyPhone(this)" onkeyup="inputOnlyNum(this)" />
+                                    <input class="phone-middle" type="text" onkeypress="inputOnlyPhone(this)" onkeyup="inputOnlyNum(this)" onblur="inputOnlyNum(this)" />
                                     <span>-</span>
-                                    <input id="purchase-userPhone3" type="text" name="phone3" onkeypress="inputOnlyPhone(this)" onkeyup="inputOnlyNum(this)" />
+                                    <input class="phone-end" type="text" onkeypress="inputOnlyPhone(this)" onkeyup="inputOnlyNum(this)" onblur="inputOnlyNum(this)" />
                                 </div>
-                                <div class="userMessage">
-                                    <input id="purchase-userMessage" type="text" name="message"/>
+                            </div>
+                            <div class="message-box">
+                                <div class="messageH pHead">배송시 요구사항</div>
+                                <div class="message pBody">
+                                    <input class="delivery-message" type="text"/>
                                 </div>
                             </div>
                         </div>
-                        <span>결제 정보</span>
-                        <div class="purchase-paymentInfo">
-                            <div id="purchase-paymentList">
-                                <input class="bank" type="radio" name="pay" onclick="setPurchaseBank()"/><span>무통장입금</span>
+
+                        <span>결제 방식 선택 및 결제</span>
+                        <div class="payment-box">
+                            <div class="plan-box">
+                                <input class="bank" type="radio" name="pay" onclick="setPayPlanSelect()"/><span>무통장입금</span>
                                 <input class="card" type="radio" name="pay" disabled="true"  /><span>신용카드</span>
                                 <input class="phone" type="radio" name="pay" disabled="true"/><span>휴대폰결제</span>
                             </div>
-                            <hr>
 
-                            <div id="paymentPage-bank">
-                                <div class="bank-value">
-                                    <select id="purchase-selectBank">
-                                        <option value="01">농협</option>
-                                        <option value="02">국민은행</option>
-                                        <option value="03">신한은행</option>
-                                        <option value="04">하나은행</option>
-                                        <option value="05">우리은행</option>
-                                        <option value="06">기업은행</option>
-                                    </select>
+                            <div class="bank-box">
+                                <div class="bankInfo-box">
+                                    <div class="bankH pHead">은행 선택</div>
+                                    <div class="bank pBody">
+                                        <select class="bank-list">
+                                            <option value="01">농협</option>
+                                            <option value="02">국민은행</option>
+                                            <option value="03">신한은행</option>
+                                            <option value="04">하나은행</option>
+                                            <option value="05">우리은행</option>
+                                            <option value="06">기업은행</option>
+                                        </select>
 
-                                    <span id="selectBank-account">0124-1245-1234421</span>
-                                    <span>예금주 :</span>
-                                    <span id="selectBank-name">Porter</span>
+                                        <span class="account-number">0124-1245-1234421</span>
+                                        <span>예금주 :</span>
+                                        <span class="account-name">Porter</span>
+                                    </div>
                                 </div>
-
-                                <div class="bank-key">
-                                    <span>은행 선택</span>
-                                    <span>결제 안내</span>
-                                </div>
-                            <hr>
                             </div>
-                            <div class="purchase-paymentPrice">
-                                <span>결제 금액</span>
-                                <span id="purchase-totalPrice">87,000원</span>
-                                <button id="purchase-paymentButton">결제하기</button>
+
+                            <div class="totalPrice-box">
+                                <span>총 결제 금액</span>
+                                <span class="totalPrice">87,000원</span>
+                                <button class="payment-btn">결제하기</button>
                             </div>
                         </div>
                     </div>

@@ -576,254 +576,208 @@ $porter-red-hover : #ED0000;
 
 /* ---------- PARTS PURCHASE ---------- */
 
-#parts-purchase {
-    > span {
-        display: block;
-        margin-left: 50px;
-        margin-bottom: 10px;
-        font-size: 22px;
-    }
-    > div {
-        margin: 0 auto;
-        background: #ffffff;
-        @include fixWidth(850px);
-        box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
-        padding: 1px 15px;
-        margin-bottom: 45px;
-    }
 
-    .purchase-partslist {
-        .purchase-parts-head {
-            @include fixHeight(20px);
-            margin-top: 10px;
-            margin-bottom: -10px;
+#purchase-main {
+    margin: 0 auto;
+    background: #fff;
+    @include fixWidth(900px);
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+    padding: 20px;
 
-            > div > span {
-                color: #000000;
-                font-weight: bolder;
-                cursor: default;
+    > div { border-top: 2px solid $porter-blue; border-bottom: 1px solid #ccc; margin-bottom: 50px; overflow: auto; }
+    > span { display: block; font-size: 20px; font-weight: bold; margin-bottom: 5px; }
+
+    .list-box {
+        > div {overflow: auto; }
+        .list-head {
+            border-bottom: 1px solid #ccc;
+            > div {
+                float:left;
+                padding: 10px 0px;
+                text-align: center;
+
+                span { display: block; border-right: 1px solid #ccc; color: $porter-blue-hover; }
+                span:hover { cursor: default; }
             }
+            > div:last-child > span { border-right: 0px; }
 
-            .partsImage { @include fixWidth(110px); margin-right: 30px; }
-            .partsName { @include fixWidth(300px); }
-            .partsCount { @include fixWidth(100px); }
-            .partsSeller { @include fixWidth(140px); }
-            .partsPrice { @include fixWidth(110px); }
+            .code { @include fixWidth(120px); }
+            .name { @include fixWidth(350px); }
+            .count { @include fixWidth(70px); }
+            .seller { @include fixWidth(110px); }
+            .price { @include fixWidth(110px); }
+            .deliver { @include fixWidth(100px); }
+        }
+        .list-body {
+            div {
+                overflow: auto;
+
+                div {
+                    float: left;
+                    border-bottom: 1px solid #ccc;
+                    padding: 10px 10px;
+                    text-align: center;
+                    vertical-align: middle;
+                    overflow: hidden;
+                    @include fixHeight(110px);
+
+                    span {
+                        display: table-cell;
+                        text-align: center;
+                        vertical-align: middle;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                    span:hover { cursor: default; }
+                    img { float: left; }
+                }
+                .code {
+                    @include fixWidth(120px);
+
+                    span { @include fixWidth(100px); @include fixHeight(90px); }
+                }
+                .name {
+                    @include fixWidth(350px);
+                    span { margin-left: 100px; display: block; @include fixWidth(230px); }
+                    img:hover, span:hover { cursor: pointer; color: $porter-blue; }
+                    .partsName { margin-top: 15px; margin-bottom: 15px; }
+                }
+                .count {
+                    @include fixWidth(70px);
+                    span { @include fixWidth(50px); @include fixHeight(90px); }
+                }
+                .seller {
+                    @include fixWidth(110px);
+                    span { @include fixWidth(90px); @include fixHeight(90px); }
+                }
+                .price {
+                    @include fixWidth(110px);
+                    span { @include fixWidth(90px); @include fixHeight(90px); }
+                }
+                .deliver {
+                    @include fixWidth(100px);
+                    span { @include fixWidth(80px); @include fixHeight(90px); }
+                }
+
+            }
+        }
+    }
+
+    .receiverInfo-box {
+        > div {
+            overflow: auto;
+            border-bottom: 1px solid #ccc;
+
+            > div { float: left; font-size: 12px; }
+            .pHead {
+                padding: 8px 12px;
+                font-size: 14px;
+                @include fixWidth(125px);
+                background-color: #eee;
+            }
         }
 
-        .purchase-parts {
-            margin: 15px 0px;
-            width: 100%;
-            @include fixHeight(110px);
+        .addressSelect-box {
+            > div {
+                padding: 8px 12px;
 
-            .partsCount > a,
-            .partsSeller > a,
-            .partsPrice > a {
-                display: table-cell;
-                vertical-align: middle;
-                text-align: center;
-                text-decoration: none;
-                @include fixHeight(110px);
+                span { margin-right: 10px; margin-left: 5px; }
             }
+        }
+        .receiver-box {
+            .pBody {
+                padding: 6px 12px;
+                input { @include fixWidth(100px); }
+            }
+        }
+        .address-box {
+            .pHead { padding: 22px 12px; }
+            .pBody {
+                padding: 6px 12px;
+                .postal-btn {
+                    font-size: 10px;
+                    @include Button(#fff, #000, 11px);
+                    border: 1px solid #000;
+                    margin-left: 5px;
+                }
+                .postal-btn:hover { background-color: #eee; }
+                .postal-front, .postal-end { @include fixWidth(40px); }
+                .address-front, .address-end { margin-top: 5px; }
+                .blank { @include fixHeight(0px); @include fixWidth(100%); }
+            }
+        }
+        .phone-box {
+            .pBody {
+                padding: 6px 12px;
+                input { @include fixWidth(40px); }
+            }
+        }
+        .message-box {
+            .pBody {
+                padding: 6px 12px;
+                input { @include fixWidth(600px); }
+            }
+        }
+    }
 
-            .partsImage {
-                max-width: 110px;
-                max-height: 110px;
+    .payment-box {
+        .plan-box {
+            overflow: auto;
+            border-bottom: 1px solid #ccc;
+            padding: 15px;
+
+            span { margin-left: 7px; margin-right: 12px; }
+        }
+
+        .bank-box {
+            display: none;
+            .bankInfo-box {
+                overflow: auto;
+                border-bottom: 1px solid #ccc;
+
+                > div { float: left; }
+                .pHead{
+                    padding: 8px 12px;
+                    font-size: 14px;
+                    @include fixWidth(125px);
+                    background-color: #eee;
+                }
+                .pBody {
+                    padding: 8px 12px;
+                    > span { margin-left: 10px; }
+                    .account-name { color: $porter-blue; font-weight: bold; }
+                }
+            }
+        }
+        .totalPrice-box {
+            overflow: auto;
+            padding: 25px 10px;
+            border-bottom: 1px solid #ccc;
+
+            > span:first-child {
+                font-size: 18px;
                 margin-right: 30px;
             }
-            .partsName {
-                display: table-cell;
-                text-decoration: none;
-                padding: 0px 10px;
-                @include fixWidth(300px);
-                overflow: hidden;
-                text-overflow: ellipsis;
-
-                .pName {
-                    display: block;
-                    margin-top: 20px;
-                    margin-bottom: 15px;
-                    padding: 0px 10px;
-                    @include fixWidth(300px);
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                }
-                .carName {
-                    display: block;
-                    padding: 0px 10px;
-                    @include fixWidth(300px);
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                }
+            > span:nth-child(2) {
+                font-size: 30px;
+                color: $porter-red;
             }
-            .partsCount > a { @include fixWidth(100px); padding: 0px 10px; }
-            .partsSeller > a { @include fixWidth(140px); padding: 0px 10px; }
-            .partsPrice > a { @include fixWidth(110px); padding: 0px 10px; }
-
-            > div > a:hover { cursor: default; text-decoration: none; }
-        }
-        .purchase-parts > div,
-        .purchase-parts-head > div {
-            display: block;
-            float: left;
-            text-align: center;
-        }
-    }
-
-    .purchase-userInfo {
-        margin: 0 auto;
-        background: #ffffff;
-        @include fixWidth(850px);
-        box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
-        padding: 1px 15px;
-        margin-bottom: 45px;
-
-        .purchase-uInfoKey {
-            position: absolute;
-            width: 110px;
-            margin-top: 10px;
-
-            > div {
-                font-size: 12px;
-                padding: 8px 0px;
+            .payment-btn {
+                float: right;
+                margin-right: 20px;
+                width: 120px;
+                height: 40px;
+                font-size: 16px;
+                color: #ffffff;
+                border: 0px;
+                border-radius: 3px;
+                background: -webkit-gradient(linear, left top, left bottom, from(#0079bc), to(#00509d));
+                box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
             }
-
-            .userAddress { margin-bottom: 25px; }
-        }
-        .purchase-uInfoValue {
-            margin: 10px 0px 10px 110px;
-            @include fixWidth(700px);
-
-            > div { font-size: 12px; }
+            .payment-btn:hover { background: $porter-blue-hover; }
         }
     }
-}
-
-#purchase-userName {
-    margin: 5px 0px;
-    width: 100px;
-    max-width: 100px;
-}
-
-#purchase-userPostal1,
-#purchase-userPostal2 {
-    margin: 5px 0px;
-    max-width: 50px;
-    width: 50px;
-}
-
-#purchase-postalSearch {
-    font-size: 11px;
-    display: table-cell;
-    vertical-align: middle;
-}
-
-#purchase-userAddress1 {
-    margin-bottom: 7px;
-    width: 350px;
-    max-width: 350px;
-}
-
-#purchase-userAddress2 {
-    margin-bottom: 7px;
-    width: 200px;
-    max-width: 200px;
-}
-
-#purchase-userPhone2,
-#purchase-userPhone3 {
-    margin-bottom: 5px;
-    width: 50px;
-    max-width: 50px;
-}
-
-#purchase-userMessage {
-    margin: 4px 0px;
-    width: 400px;
-}
-
-#purchase-paymentList {
-    margin-top: 20px;
-    margin-left: 5px;
-
-    > input { margin-right: 5px; }
-    > span { margin-right: 15px; }
-}
-
-#paymentPage-bank {
-    display: none;
-    width: 100%;
-    margin-bottom: 20px;
-
-    .bank-key {
-        margin-top: 2px;
-        margin-left: 10px;
-        font-size: 12px;
-        width: 80px;
-        @include fixWidth(80px);
-
-        > span { display: block; margin-bottom: 15px; }
-    }
-    .bank-value {
-        position: absolute;
-        margin-left: 100px;
-        font-size: 13px;
-    }
-}
-
-#selectBank-account {
-    margin-left: 10px;
-    margin-right: 20px;
-}
-
-#selectBank-name {
-    font-weight: 500;
-    margin-left: 5px;
-}
-
-.purchase-paymentInfo .purchase-paymentPrice {
-    margin-bottom: 20px;
-    margin-left: 10px;
-    height: 50px;
-}
-
-.purchase-paymentInfo .purchase-paymentPrice > span:nth-child(1) {
-    position: absolute;
-    display: table-cell;
-    font-size: 20px;
-    margin-top: 12px;
-}
-
-#purchase-totalPrice {
-    position: absolute;
-    display: block;
-    margin-left: 140px;
-    font-size: 230%;
-    color: #FF0000;
-    width: 300px;
-    max-width: 300px;
-    overflow: hidden;
-}
-
-#purchase-paymentButton {
-    float: right;
-    margin-top: 5px;
-    margin-right: 20px;
-    width: 120px;
-    height: 40px;
-    font-size: 16px;
-    font-family: NanumGothic, Dotum;
-    text-decoration: none;
-    color: #ffffff;
-    border: 0px;
-    border-radius: 3px;
-    background: -webkit-gradient(linear,left top,left bottom,from(#0079bc),to(#00509d));
-    box-shadow: 1px 1px 4px rgba(0,0,0,0.5);
-}
-
-#purchase-paymentButton:hover {
-    background: #00509d;
-    cursor: pointer;
 }
 
 /*---------- PARTS SEARCH ----------*/

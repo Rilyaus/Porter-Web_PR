@@ -174,8 +174,8 @@ function categorySelect(code) {
     $("#category-middle").append("<option value=1004>" + code + "</option>");
 }
 
-function setPurchaseBank() {
-    $('#paymentPage-bank').show();
+function setPayPlanSelect() {
+    $(".bank-box").show();
 }
 
 function changeClassName() {

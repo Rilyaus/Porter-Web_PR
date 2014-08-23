@@ -33,7 +33,8 @@ body {
   margin-top: -190px;
   margin-bottom: -170px;
   padding: 190px 200px 170px 200px;
-  overflow: auto; }
+  overflow: auto;
+  font-family: 'NanumGothic'; }
 
 .wrapper {
   width: 950px;
@@ -42,7 +43,8 @@ body {
 
 iframe {
   min-width: 1220px;
-  max-width: 100%; }
+  max-width: 100%;
+  margin-top: 70px; }
 
 #footer {
   padding-top: 60px;

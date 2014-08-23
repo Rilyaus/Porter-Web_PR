@@ -533,258 +533,282 @@
     background-color: #00509d; }
 
 /* ---------- PARTS PURCHASE ---------- */
-#parts-purchase > span {
-  display: block;
-  margin-left: 50px;
-  margin-bottom: 10px;
-  font-size: 22px; }
-#parts-purchase > div {
+#purchase-main {
   margin: 0 auto;
-  background: #ffffff;
-  width: 850px;
-  max-width: 850px;
-  min-width: 850px;
+  background: #fff;
+  width: 900px;
+  max-width: 900px;
+  min-width: 900px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
-  padding: 1px 15px;
-  margin-bottom: 45px; }
-#parts-purchase .purchase-partslist .purchase-parts-head {
-  height: 20px;
-  max-height: 20px;
-  min-height: 20px;
-  margin-top: 10px;
-  margin-bottom: -10px; }
-  #parts-purchase .purchase-partslist .purchase-parts-head > div > span {
-    color: #000000;
-    font-weight: bolder;
-    cursor: default; }
-  #parts-purchase .purchase-partslist .purchase-parts-head .partsImage {
-    width: 110px;
-    max-width: 110px;
-    min-width: 110px;
-    margin-right: 30px; }
-  #parts-purchase .purchase-partslist .purchase-parts-head .partsName {
-    width: 300px;
-    max-width: 300px;
-    min-width: 300px; }
-  #parts-purchase .purchase-partslist .purchase-parts-head .partsCount {
-    width: 100px;
-    max-width: 100px;
-    min-width: 100px; }
-  #parts-purchase .purchase-partslist .purchase-parts-head .partsSeller {
-    width: 140px;
-    max-width: 140px;
-    min-width: 140px; }
-  #parts-purchase .purchase-partslist .purchase-parts-head .partsPrice {
-    width: 110px;
-    max-width: 110px;
-    min-width: 110px; }
-#parts-purchase .purchase-partslist .purchase-parts {
-  margin: 15px 0px;
-  width: 100%;
-  height: 110px;
-  max-height: 110px;
-  min-height: 110px; }
-  #parts-purchase .purchase-partslist .purchase-parts .partsCount > a,
-  #parts-purchase .purchase-partslist .purchase-parts .partsSeller > a,
-  #parts-purchase .purchase-partslist .purchase-parts .partsPrice > a {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-    text-decoration: none;
-    height: 110px;
-    max-height: 110px;
-    min-height: 110px; }
-  #parts-purchase .purchase-partslist .purchase-parts .partsImage {
-    max-width: 110px;
-    max-height: 110px;
-    margin-right: 30px; }
-  #parts-purchase .purchase-partslist .purchase-parts .partsName {
-    display: table-cell;
-    text-decoration: none;
-    padding: 0px 10px;
-    width: 300px;
-    max-width: 300px;
-    min-width: 300px;
-    overflow: hidden;
-    text-overflow: ellipsis; }
-    #parts-purchase .purchase-partslist .purchase-parts .partsName .pName {
-      display: block;
-      margin-top: 20px;
-      margin-bottom: 15px;
-      padding: 0px 10px;
-      width: 300px;
-      max-width: 300px;
-      min-width: 300px;
+  padding: 20px; }
+  #purchase-main > div {
+    border-top: 2px solid #428bca;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+    overflow: auto; }
+  #purchase-main > span {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px; }
+  #purchase-main .list-box > div {
+    overflow: auto; }
+  #purchase-main .list-box .list-head {
+    border-bottom: 1px solid #ccc; }
+    #purchase-main .list-box .list-head > div {
+      float: left;
+      padding: 10px 0px;
+      text-align: center; }
+      #purchase-main .list-box .list-head > div span {
+        display: block;
+        border-right: 1px solid #ccc;
+        color: #00509d; }
+      #purchase-main .list-box .list-head > div span:hover {
+        cursor: default; }
+    #purchase-main .list-box .list-head > div:last-child > span {
+      border-right: 0px; }
+    #purchase-main .list-box .list-head .code {
+      width: 120px;
+      max-width: 120px;
+      min-width: 120px; }
+    #purchase-main .list-box .list-head .name {
+      width: 350px;
+      max-width: 350px;
+      min-width: 350px; }
+    #purchase-main .list-box .list-head .count {
+      width: 70px;
+      max-width: 70px;
+      min-width: 70px; }
+    #purchase-main .list-box .list-head .seller {
+      width: 110px;
+      max-width: 110px;
+      min-width: 110px; }
+    #purchase-main .list-box .list-head .price {
+      width: 110px;
+      max-width: 110px;
+      min-width: 110px; }
+    #purchase-main .list-box .list-head .deliver {
+      width: 100px;
+      max-width: 100px;
+      min-width: 100px; }
+  #purchase-main .list-box .list-body div {
+    overflow: auto; }
+    #purchase-main .list-box .list-body div div {
+      float: left;
+      border-bottom: 1px solid #ccc;
+      padding: 10px 10px;
+      text-align: center;
+      vertical-align: middle;
       overflow: hidden;
-      text-overflow: ellipsis; }
-    #parts-purchase .purchase-partslist .purchase-parts .partsName .carName {
-      display: block;
-      padding: 0px 10px;
-      width: 300px;
-      max-width: 300px;
-      min-width: 300px;
-      overflow: hidden;
-      text-overflow: ellipsis; }
-  #parts-purchase .purchase-partslist .purchase-parts .partsCount > a {
-    width: 100px;
-    max-width: 100px;
-    min-width: 100px;
-    padding: 0px 10px; }
-  #parts-purchase .purchase-partslist .purchase-parts .partsSeller > a {
-    width: 140px;
-    max-width: 140px;
-    min-width: 140px;
-    padding: 0px 10px; }
-  #parts-purchase .purchase-partslist .purchase-parts .partsPrice > a {
-    width: 110px;
-    max-width: 110px;
-    min-width: 110px;
-    padding: 0px 10px; }
-  #parts-purchase .purchase-partslist .purchase-parts > div > a:hover {
-    cursor: default;
-    text-decoration: none; }
-#parts-purchase .purchase-partslist .purchase-parts > div,
-#parts-purchase .purchase-partslist .purchase-parts-head > div {
-  display: block;
-  float: left;
-  text-align: center; }
-#parts-purchase .purchase-userInfo {
-  margin: 0 auto;
-  background: #ffffff;
-  width: 850px;
-  max-width: 850px;
-  min-width: 850px;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
-  padding: 1px 15px;
-  margin-bottom: 45px; }
-  #parts-purchase .purchase-userInfo .purchase-uInfoKey {
-    position: absolute;
-    width: 110px;
-    margin-top: 10px; }
-    #parts-purchase .purchase-userInfo .purchase-uInfoKey > div {
-      font-size: 12px;
-      padding: 8px 0px; }
-    #parts-purchase .purchase-userInfo .purchase-uInfoKey .userAddress {
-      margin-bottom: 25px; }
-  #parts-purchase .purchase-userInfo .purchase-uInfoValue {
-    margin: 10px 0px 10px 110px;
-    width: 700px;
-    max-width: 700px;
-    min-width: 700px; }
-    #parts-purchase .purchase-userInfo .purchase-uInfoValue > div {
+      height: 110px;
+      max-height: 110px;
+      min-height: 110px; }
+      #purchase-main .list-box .list-body div div span {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; }
+      #purchase-main .list-box .list-body div div span:hover {
+        cursor: default; }
+      #purchase-main .list-box .list-body div div img {
+        float: left; }
+    #purchase-main .list-box .list-body div .code {
+      width: 120px;
+      max-width: 120px;
+      min-width: 120px; }
+      #purchase-main .list-box .list-body div .code span {
+        width: 100px;
+        max-width: 100px;
+        min-width: 100px;
+        height: 90px;
+        max-height: 90px;
+        min-height: 90px; }
+    #purchase-main .list-box .list-body div .name {
+      width: 350px;
+      max-width: 350px;
+      min-width: 350px; }
+      #purchase-main .list-box .list-body div .name span {
+        margin-left: 100px;
+        display: block;
+        width: 230px;
+        max-width: 230px;
+        min-width: 230px; }
+      #purchase-main .list-box .list-body div .name img:hover, #purchase-main .list-box .list-body div .name span:hover {
+        cursor: pointer;
+        color: #428bca; }
+      #purchase-main .list-box .list-body div .name .partsName {
+        margin-top: 15px;
+        margin-bottom: 15px; }
+    #purchase-main .list-box .list-body div .count {
+      width: 70px;
+      max-width: 70px;
+      min-width: 70px; }
+      #purchase-main .list-box .list-body div .count span {
+        width: 50px;
+        max-width: 50px;
+        min-width: 50px;
+        height: 90px;
+        max-height: 90px;
+        min-height: 90px; }
+    #purchase-main .list-box .list-body div .seller {
+      width: 110px;
+      max-width: 110px;
+      min-width: 110px; }
+      #purchase-main .list-box .list-body div .seller span {
+        width: 90px;
+        max-width: 90px;
+        min-width: 90px;
+        height: 90px;
+        max-height: 90px;
+        min-height: 90px; }
+    #purchase-main .list-box .list-body div .price {
+      width: 110px;
+      max-width: 110px;
+      min-width: 110px; }
+      #purchase-main .list-box .list-body div .price span {
+        width: 90px;
+        max-width: 90px;
+        min-width: 90px;
+        height: 90px;
+        max-height: 90px;
+        min-height: 90px; }
+    #purchase-main .list-box .list-body div .deliver {
+      width: 100px;
+      max-width: 100px;
+      min-width: 100px; }
+      #purchase-main .list-box .list-body div .deliver span {
+        width: 80px;
+        max-width: 80px;
+        min-width: 80px;
+        height: 90px;
+        max-height: 90px;
+        min-height: 90px; }
+  #purchase-main .receiverInfo-box > div {
+    overflow: auto;
+    border-bottom: 1px solid #ccc; }
+    #purchase-main .receiverInfo-box > div > div {
+      float: left;
       font-size: 12px; }
-
-#purchase-userName {
-  margin: 5px 0px;
-  width: 100px;
-  max-width: 100px; }
-
-#purchase-userPostal1,
-#purchase-userPostal2 {
-  margin: 5px 0px;
-  max-width: 50px;
-  width: 50px; }
-
-#purchase-postalSearch {
-  font-size: 11px;
-  display: table-cell;
-  vertical-align: middle; }
-
-#purchase-userAddress1 {
-  margin-bottom: 7px;
-  width: 350px;
-  max-width: 350px; }
-
-#purchase-userAddress2 {
-  margin-bottom: 7px;
-  width: 200px;
-  max-width: 200px; }
-
-#purchase-userPhone2,
-#purchase-userPhone3 {
-  margin-bottom: 5px;
-  width: 50px;
-  max-width: 50px; }
-
-#purchase-userMessage {
-  margin: 4px 0px;
-  width: 400px; }
-
-#purchase-paymentList {
-  margin-top: 20px;
-  margin-left: 5px; }
-  #purchase-paymentList > input {
-    margin-right: 5px; }
-  #purchase-paymentList > span {
-    margin-right: 15px; }
-
-#paymentPage-bank {
-  display: none;
-  width: 100%;
-  margin-bottom: 20px; }
-  #paymentPage-bank .bank-key {
-    margin-top: 2px;
-    margin-left: 10px;
-    font-size: 12px;
-    width: 80px;
-    width: 80px;
-    max-width: 80px;
-    min-width: 80px; }
-    #paymentPage-bank .bank-key > span {
-      display: block;
-      margin-bottom: 15px; }
-  #paymentPage-bank .bank-value {
-    position: absolute;
-    margin-left: 100px;
-    font-size: 13px; }
-
-#selectBank-account {
-  margin-left: 10px;
-  margin-right: 20px; }
-
-#selectBank-name {
-  font-weight: 500;
-  margin-left: 5px; }
-
-.purchase-paymentInfo .purchase-paymentPrice {
-  margin-bottom: 20px;
-  margin-left: 10px;
-  height: 50px; }
-
-.purchase-paymentInfo .purchase-paymentPrice > span:nth-child(1) {
-  position: absolute;
-  display: table-cell;
-  font-size: 20px;
-  margin-top: 12px; }
-
-#purchase-totalPrice {
-  position: absolute;
-  display: block;
-  margin-left: 140px;
-  font-size: 230%;
-  color: #FF0000;
-  width: 300px;
-  max-width: 300px;
-  overflow: hidden; }
-
-#purchase-paymentButton {
-  float: right;
-  margin-top: 5px;
-  margin-right: 20px;
-  width: 120px;
-  height: 40px;
-  font-size: 16px;
-  font-family: NanumGothic, Dotum;
-  text-decoration: none;
-  color: #ffffff;
-  border: 0px;
-  border-radius: 3px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#0079bc), to(#00509d));
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); }
-
-#purchase-paymentButton:hover {
-  background: #00509d;
-  cursor: pointer; }
+    #purchase-main .receiverInfo-box > div .pHead {
+      padding: 8px 12px;
+      font-size: 14px;
+      width: 125px;
+      max-width: 125px;
+      min-width: 125px;
+      background-color: #eee; }
+  #purchase-main .receiverInfo-box .addressSelect-box > div {
+    padding: 8px 12px; }
+    #purchase-main .receiverInfo-box .addressSelect-box > div span {
+      margin-right: 10px;
+      margin-left: 5px; }
+  #purchase-main .receiverInfo-box .receiver-box .pBody {
+    padding: 6px 12px; }
+    #purchase-main .receiverInfo-box .receiver-box .pBody input {
+      width: 100px;
+      max-width: 100px;
+      min-width: 100px; }
+  #purchase-main .receiverInfo-box .address-box .pHead {
+    padding: 22px 12px; }
+  #purchase-main .receiverInfo-box .address-box .pBody {
+    padding: 6px 12px; }
+    #purchase-main .receiverInfo-box .address-box .pBody .postal-btn {
+      font-size: 10px;
+      font-size: 11px;
+      font-weight: normal;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      color: black;
+      background-color: white;
+      border: 1px solid #000;
+      margin-left: 5px; }
+    #purchase-main .receiverInfo-box .address-box .pBody .postal-btn:hover {
+      background-color: #eee; }
+    #purchase-main .receiverInfo-box .address-box .pBody .postal-front, #purchase-main .receiverInfo-box .address-box .pBody .postal-end {
+      width: 40px;
+      max-width: 40px;
+      min-width: 40px; }
+    #purchase-main .receiverInfo-box .address-box .pBody .address-front, #purchase-main .receiverInfo-box .address-box .pBody .address-end {
+      margin-top: 5px; }
+    #purchase-main .receiverInfo-box .address-box .pBody .blank {
+      height: 0px;
+      max-height: 0px;
+      min-height: 0px;
+      width: 100%;
+      max-width: 100%;
+      min-width: 100%; }
+  #purchase-main .receiverInfo-box .phone-box .pBody {
+    padding: 6px 12px; }
+    #purchase-main .receiverInfo-box .phone-box .pBody input {
+      width: 40px;
+      max-width: 40px;
+      min-width: 40px; }
+  #purchase-main .receiverInfo-box .message-box .pBody {
+    padding: 6px 12px; }
+    #purchase-main .receiverInfo-box .message-box .pBody input {
+      width: 600px;
+      max-width: 600px;
+      min-width: 600px; }
+  #purchase-main .payment-box .plan-box {
+    overflow: auto;
+    border-bottom: 1px solid #ccc;
+    padding: 15px; }
+    #purchase-main .payment-box .plan-box span {
+      margin-left: 7px;
+      margin-right: 12px; }
+  #purchase-main .payment-box .bank-box {
+    display: none; }
+    #purchase-main .payment-box .bank-box .bankInfo-box {
+      overflow: auto;
+      border-bottom: 1px solid #ccc; }
+      #purchase-main .payment-box .bank-box .bankInfo-box > div {
+        float: left; }
+      #purchase-main .payment-box .bank-box .bankInfo-box .pHead {
+        padding: 8px 12px;
+        font-size: 14px;
+        width: 125px;
+        max-width: 125px;
+        min-width: 125px;
+        background-color: #eee; }
+      #purchase-main .payment-box .bank-box .bankInfo-box .pBody {
+        padding: 8px 12px; }
+        #purchase-main .payment-box .bank-box .bankInfo-box .pBody > span {
+          margin-left: 10px; }
+        #purchase-main .payment-box .bank-box .bankInfo-box .pBody .account-name {
+          color: #428bca;
+          font-weight: bold; }
+  #purchase-main .payment-box .totalPrice-box {
+    overflow: auto;
+    padding: 25px 10px;
+    border-bottom: 1px solid #ccc; }
+    #purchase-main .payment-box .totalPrice-box > span:first-child {
+      font-size: 18px;
+      margin-right: 30px; }
+    #purchase-main .payment-box .totalPrice-box > span:nth-child(2) {
+      font-size: 30px;
+      color: #ff3636; }
+    #purchase-main .payment-box .totalPrice-box .payment-btn {
+      float: right;
+      margin-right: 20px;
+      width: 120px;
+      height: 40px;
+      font-size: 16px;
+      color: #ffffff;
+      border: 0px;
+      border-radius: 3px;
+      background: -webkit-gradient(linear, left top, left bottom, from(#0079bc), to(#00509d));
+      box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); }
+    #purchase-main .payment-box .totalPrice-box .payment-btn:hover {
+      background: #00509d; }
 
 /*---------- PARTS SEARCH ----------*/
 #search-body {

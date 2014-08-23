@@ -629,8 +629,71 @@ $porter-red-hover : #ED0000;
     }
 }
 
+#FAQ-tab {
+    .FAQ-main {
+        .FAQ-search {
+            padding: 15px;
+            background-color: #eee;
 
+            .input-option {
+                margin-left: 272px;
+                font-size: 15px;
+            }
+            .input-text {
+                font-size: 12px;
+                @include fixWidth(180px);
+                border: 2px solid $porter-blue;
+            }
+            .input-search { padding: 2px 10px; }
+            .input-search:hover { background-color: $porter-blue-hover; }
+        }
 
+        .FAQ-type {
+            padding: 10px;
 
+            .type {
+                border: 1px solid #ccc;
+                margin: 0 auto;
+                overflow: auto;
+                @include fixWidth(280px);
+
+                > span {
+                    float: left;
+                    display: block;
+                    padding: 5px 10px;
+                }
+                > span:hover { cursor: pointer; color: $porter-blue; }
+            }
+        }
+    }
+}
+
+#FAQ-accordion {
+    .FAQ-content {
+        margin-bottom: 2px;
+
+        .content-title {
+            border: 1px solid $porter-blue;
+            border-radius: 3px;
+            padding: 7px 15px;
+        }
+        .content-body {
+            margin-top: -1px;
+            border-radius: 0px 0px 3px 3px;
+            border: {
+                style: solid;
+                color: $porter-blue;
+                right: { width: 1px; }
+                left: { width: 1px; }
+                bottom: { width: 1px; }
+                top: { width: 1px; }
+            }
+
+            .content-inner {
+                padding: 15px;
+            }
+        }
+    }
+}
 
 
