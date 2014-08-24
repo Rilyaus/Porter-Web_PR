@@ -1,8 +1,39 @@
+.board-head {
+  overflow: auto;
+  border-top: 2px solid #428bca; }
+  .board-head > div {
+    float: left;
+    border-bottom: 1px solid #999;
+    text-align: center;
+    vertical-align: middle;
+    padding: 7px 0px; }
+    .board-head > div span {
+      display: block;
+      color: #00509d;
+      border-right: 1px solid #bbb; }
+  .board-head > div:last-child > span {
+    border-right: 0px; }
+
+.board-body {
+  overflow: auto;
+  border-bottom: 1px solid #ccc; }
+  .board-body div {
+    overflow: auto; }
+    .board-body div div {
+      float: left;
+      border-bottom: 1px solid #ccc;
+      text-align: center;
+      vertical-align: middle;
+      padding: 5px 10px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap; }
+
 /*---------- MY PAGE ----------*/
 #mypage-body {
   font-family: "NanumGothic";
   width: 900px;
-  padding: 15px 15px 0px 15px;
+  padding: 20px;
   margin: 0 auto;
   margin: 30px;
   background: #ffffff;
@@ -22,15 +53,16 @@
     border-bottom-color: transparent;
     background-color: #428bca;
     color: #fff; }
+  #mypage-body .mypage-tab .tab-content {
+    margin-top: 20px; }
 
-.mypage-tab-main > span,
+.buy-main > span,
 .delivery-dropdown1-main > span,
 .delivery-dropdown2-main > span,
 .sell-dropdown1-main > span,
 .sell-dropdown2-main > span,
 .sell-dropdown3-main > span {
   display: block;
-  margin-top: 20px;
   font-size: 20px;
   font-weight: bolder; }
 
@@ -145,7 +177,7 @@
       width: 100px;
       border-right: 1px solid #cccccc; }
     .partslist-table .table-head .etc {
-      width: 100px;
+      width: 90px;
       border-right: 0px solid #cccccc; }
   .partslist-table .table-body > span {
     display: block;
@@ -202,8 +234,8 @@
       display: table-cell;
       text-decoration: none;
       padding: 0px 10px;
-      width: 100px;
-      max-width: 100px;
+      width: 90px;
+      max-width: 90px;
       height: 90px;
       max-height: 90px;
       min-height: 90px;
@@ -262,8 +294,8 @@
       max-width: 100px; }
     .partslist-table .table-body .parts .etc > a {
       padding: 0px 10px;
-      width: 100px;
-      max-width: 100px;
+      width: 90px;
+      max-width: 90px;
       font-size: 12px; }
     .partslist-table .table-body .parts .etc .partsStatus {
       display: block;
@@ -335,6 +367,130 @@
   #sell-function .list-order-btn:hover {
     background-color: #00509d; }
 
+#member-address > span {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 5px; }
+#member-address .address-main .board-head .select {
+  width: 60px;
+  max-width: 60px;
+  min-width: 60px; }
+#member-address .address-main .board-head .name {
+  width: 130px;
+  max-width: 130px;
+  min-width: 130px; }
+#member-address .address-main .board-head .receiver {
+  width: 100px;
+  max-width: 100px;
+  min-width: 100px; }
+#member-address .address-main .board-head .address {
+  width: 300px;
+  max-width: 300px;
+  min-width: 300px; }
+#member-address .address-main .board-head .phone {
+  width: 140px;
+  max-width: 140px;
+  min-width: 140px; }
+#member-address .address-main .board-head .action {
+  width: 130px;
+  max-width: 130px;
+  min-width: 130px; }
+#member-address .address-main .board-body > div > div {
+  padding: 10px; }
+#member-address .address-main .board-body > div .select {
+  width: 60px;
+  max-width: 60px;
+  min-width: 60px; }
+#member-address .address-main .board-body > div .name {
+  width: 130px;
+  max-width: 130px;
+  min-width: 130px; }
+#member-address .address-main .board-body > div .receiver {
+  width: 100px;
+  max-width: 100px;
+  min-width: 100px; }
+#member-address .address-main .board-body > div .address {
+  width: 300px;
+  max-width: 300px;
+  min-width: 300px;
+  text-align: left; }
+#member-address .address-main .board-body > div .phone {
+  width: 140px;
+  max-width: 140px;
+  min-width: 140px; }
+#member-address .address-main .board-body > div .action {
+  width: 130px;
+  max-width: 130px;
+  min-width: 130px;
+  padding: 8px 10px 7px 10px; }
+#member-address .address-main .action-box {
+  margin-top: 10px; }
+  #member-address .address-main .action-box .add-btn {
+    float: right; }
+
+#member-account {
+  margin: 0 auto; }
+  #member-account > span {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 5px; }
+  #member-account .account-main .board-head .select {
+    width: 60px;
+    max-width: 60px;
+    min-width: 60px; }
+  #member-account .account-main .board-head .name {
+    width: 150px;
+    max-width: 150px;
+    min-width: 150px; }
+  #member-account .account-main .board-head .bank {
+    width: 140px;
+    max-width: 140px;
+    min-width: 140px; }
+  #member-account .account-main .board-head .account {
+    width: 230px;
+    max-width: 230px;
+    min-width: 230px; }
+  #member-account .account-main .board-head .status {
+    width: 150px;
+    max-width: 150px;
+    min-width: 150px; }
+  #member-account .account-main .board-head .action {
+    width: 130px;
+    max-width: 130px;
+    min-width: 130px; }
+  #member-account .account-main .board-body > div > div {
+    padding: 10px; }
+  #member-account .account-main .board-body > div .select {
+    width: 60px;
+    max-width: 60px;
+    min-width: 60px; }
+  #member-account .account-main .board-body > div .name {
+    width: 150px;
+    max-width: 150px;
+    min-width: 150px; }
+  #member-account .account-main .board-body > div .bank {
+    width: 140px;
+    max-width: 140px;
+    min-width: 140px; }
+  #member-account .account-main .board-body > div .account {
+    width: 230px;
+    max-width: 230px;
+    min-width: 230px;
+    text-align: left; }
+  #member-account .account-main .board-body > div .status {
+    width: 150px;
+    max-width: 150px;
+    min-width: 150px; }
+  #member-account .account-main .board-body > div .action {
+    width: 130px;
+    max-width: 130px;
+    min-width: 130px;
+    padding: 8px 10px 7px 10px; }
+  #member-account .account-main .action-box {
+    margin-top: 10px; }
+    #member-account .account-main .action-box .add-btn {
+      float: right; }
+
 /*---------- NOTICE BOARD ----------*/
 #notice-board {
   overflow: auto;
@@ -388,8 +544,10 @@
       float: right;
       padding: 3px 15px;
       margin-top: 10px; }
-    #notice-board .notice-main .notice-list:hover {
-      background-color: #00509d; }
+    #notice-board .notice-main .notice-modify {
+      float: left;
+      padding: 3px 15px;
+      margin-top: 10px; }
   #notice-board .notice-type {
     overflow: auto;
     margin-bottom: 15px; }
@@ -420,86 +578,117 @@
     #notice-board .notice-search .input-search:hover {
       background-color: #00509d; }
 
-#notice-board-table .board-head {
-  overflow: auto;
-  border-top: 2px solid #428bca; }
-  #notice-board-table .board-head div {
+#notice-board-table div {
+  overflow: auto; }
+#notice-board-table .board-head .porterM {
+  width: 60px;
+  max-width: 60px;
+  min-width: 60px; }
+#notice-board-table .board-head .number {
+  width: 60px;
+  max-width: 60px;
+  min-width: 60px;
+  display: none; }
+#notice-board-table .board-head .type {
+  width: 90px;
+  max-width: 90px;
+  min-width: 90px; }
+#notice-board-table .board-head .subject {
+  width: 360px;
+  max-width: 360px;
+  min-width: 360px; }
+#notice-board-table .board-head .writer {
+  width: 110px;
+  max-width: 110px;
+  min-width: 110px; }
+#notice-board-table .board-head .date {
+  width: 110px;
+  max-width: 110px;
+  min-width: 110px; }
+#notice-board-table .board-head .hits {
+  width: 80px;
+  max-width: 80px;
+  min-width: 80px; }
+  #notice-board-table .board-head .hits span {
+    border-right: 0px; }
+#notice-board-table .board-body div .porterM {
+  width: 60px;
+  max-width: 60px;
+  min-width: 60px; }
+#notice-board-table .board-body div .number {
+  width: 60px;
+  max-width: 60px;
+  min-width: 60px;
+  display: none; }
+#notice-board-table .board-body div .type {
+  width: 90px;
+  max-width: 90px;
+  min-width: 90px; }
+#notice-board-table .board-body div .subject {
+  width: 360px;
+  max-width: 360px;
+  min-width: 360px;
+  text-align: left; }
+#notice-board-table .board-body div .writer {
+  width: 110px;
+  max-width: 110px;
+  min-width: 110px; }
+#notice-board-table .board-body div .date {
+  width: 110px;
+  max-width: 110px;
+  min-width: 110px; }
+#notice-board-table .board-body div .hits {
+  width: 80px;
+  max-width: 80px;
+  min-width: 80px; }
+#notice-board-table .board-body div .subject:hover {
+  cursor: pointer;
+  color: #428bca; }
+#notice-board-table .porterM-box {
+  margin-top: 15px; }
+  #notice-board-table .porterM-box button {
     float: left;
-    border-bottom: 1px solid #999;
-    text-align: center;
-    vertical-align: middle;
-    padding: 7px 0px; }
-    #notice-board-table .board-head div span {
-      display: block;
-      color: #00509d;
-      border-right: 1px solid #bbb; }
-  #notice-board-table .board-head .number {
-    width: 60px;
-    max-width: 60px;
-    min-width: 60px; }
-  #notice-board-table .board-head .type {
-    width: 90px;
-    max-width: 90px;
-    min-width: 90px; }
-  #notice-board-table .board-head .subject {
-    width: 360px;
-    max-width: 360px;
-    min-width: 360px; }
-  #notice-board-table .board-head .writer {
-    width: 110px;
-    max-width: 110px;
-    min-width: 110px; }
-  #notice-board-table .board-head .date {
-    width: 110px;
-    max-width: 110px;
-    min-width: 110px; }
-  #notice-board-table .board-head .hits {
-    width: 80px;
-    max-width: 80px;
-    min-width: 80px; }
-    #notice-board-table .board-head .hits span {
-      border-right: 0px; }
-#notice-board-table .board-body {
-  border-bottom: 1px solid #ccc; }
-  #notice-board-table .board-body div {
-    overflow: auto; }
-    #notice-board-table .board-body div div {
-      float: left;
-      border-bottom: 1px solid #ccc;
-      text-align: center;
-      vertical-align: middle;
-      padding: 5px 10px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap; }
-    #notice-board-table .board-body div .number {
-      width: 60px;
-      max-width: 60px;
-      min-width: 60px; }
-    #notice-board-table .board-body div .type {
-      width: 90px;
-      max-width: 90px;
-      min-width: 90px; }
-    #notice-board-table .board-body div .subject {
-      width: 360px;
-      max-width: 360px;
-      min-width: 360px;
-      text-align: left; }
-    #notice-board-table .board-body div .writer {
-      width: 110px;
-      max-width: 110px;
-      min-width: 110px; }
-    #notice-board-table .board-body div .date {
-      width: 110px;
-      max-width: 110px;
-      min-width: 110px; }
-    #notice-board-table .board-body div .hits {
-      width: 80px;
-      max-width: 80px;
-      min-width: 80px; }
-    #notice-board-table .board-body div .subject:hover {
-      cursor: pointer;
-      color: #428bca; }
+    padding: 3px 10px;
+    margin: 0px 5px; }
+  #notice-board-table .porterM-box .notice-write {
+    float: right; }
+
+#notice-write {
+  font-family: "NanumGothic";
+  width: 900px;
+  padding: 20px;
+  margin: 0 auto;
+  margin: 30px;
+  background: #ffffff;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  font-size: 12px; }
+  #notice-write > span {
+    font-size: 18px; }
+  #notice-write .subject-box {
+    padding: 5px 0px;
+    margin-top: 15px; }
+    #notice-write .subject-box > input {
+      width: 775px;
+      max-width: 775px;
+      min-width: 775px;
+      margin-left: 10px; }
+  #notice-write .content-box {
+    font-size: 13px;
+    margin-top: -60px;
+    width: 860px;
+    max-width: 860px;
+    min-width: 860px;
+    margin-bottom: 15px; }
+    #notice-write .content-box > textarea {
+      width: 100%;
+      max-width: 100%;
+      min-width: 100%;
+      height: 400px; }
+  #notice-write button {
+    margin: 0 auto;
+    padding: 3px 14px;
+    font-size: 16px;
+    margin-left: 420px; }
 
 #support-body {
   font-family: "NanumGothic";

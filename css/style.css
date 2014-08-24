@@ -107,12 +107,12 @@ iframe {
   width: 200px;
   background: #428bca;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
-  color: #fff;
   font-size: 15px; }
   #fixedMenu > span {
     font-size: 18px;
     font-weight: bolder;
-    margin-left: 10px; }
+    margin-left: 10px;
+    color: #fff; }
   #fixedMenu .option-select-box {
     display: block;
     margin: 15px; }
@@ -346,3 +346,45 @@ iframe {
   border-radius: 4px;
   color: white;
   background-color: #428bca; }
+
+.pBtn:hover {
+  background-color: #00509d; }
+
+.dBtn {
+  font-size: 13px;
+  font-weight: normal;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: white;
+  background-color: #ff3636; }
+
+.dBtn:hover {
+  background-color: #ed0000; }
+
+.nBtn {
+  font-size: 13px;
+  font-weight: normal;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: black;
+  background-color: white;
+  border: 1px solid #000; }
+
+.nBtn:hover {
+  background-color: #ccc; }

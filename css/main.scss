@@ -36,12 +36,51 @@ $porter-red-hover : #ED0000;
     min-width: $size;
 }
 
+.board-head {
+    overflow: auto;
+    border-top: 2px solid $porter-blue;
+
+    > div {
+        float: left;
+        border-bottom: 1px solid #999;
+        text-align: center;
+        vertical-align: middle;
+        padding: 7px 0px;
+
+        span {
+            display: block;
+            color: $porter-blue-hover;
+            border-right: 1px solid #bbb;
+        }
+    }
+    > div:last-child > span { border-right: 0px; }
+}
+.board-body {
+    overflow: auto;
+    border-bottom: 1px solid #ccc;
+
+    div {
+        overflow: auto;
+
+        div {
+            float: left;
+            border-bottom: 1px solid #ccc;
+            text-align: center;
+            vertical-align: middle;
+            padding: 5px 10px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+}
+
 /*---------- MY PAGE ----------*/
 
 #mypage-body {
     font-family: "NanumGothic";
     width: 900px;
-    padding: 15px 15px 0px 15px;
+    padding: 20px;
     margin: 0 auto;
     margin: 30px;
     background: #ffffff;
@@ -70,17 +109,17 @@ $porter-red-hover : #ED0000;
                 color: #fff;
             }
         }
+        .tab-content { margin-top: 20px; }
     }
 }
 
-.mypage-tab-main > span,
+.buy-main > span,
 .delivery-dropdown1-main > span,
 .delivery-dropdown2-main > span,
 .sell-dropdown1-main > span,
 .sell-dropdown2-main > span,
 .sell-dropdown3-main > span  {
     display: block;
-    margin-top: 20px;
     font-size: 20px;
     font-weight: bolder;
 }
@@ -196,7 +235,7 @@ $porter-red-hover : #ED0000;
         .partsCount { @include setTableAttr(70px, 1px); }
         .partsSeller{ @include setTableAttr(100px, 1px); }
         .partsPrice { @include setTableAttr(100px, 1px); }
-        .etc        { @include setTableAttr(100px, 0px); }
+        .etc        { @include setTableAttr(90px, 0px); }
     }
 
     .table-body {
@@ -267,8 +306,8 @@ $porter-red-hover : #ED0000;
                 display: table-cell;
                 text-decoration: none;
                 padding: 0px 10px;
-                width: 100px;
-                max-width: 100px;
+                width: 90px;
+                max-width: 90px;
                 height: 90px;
                 max-height: 90px;
                 min-height: 90px;
@@ -325,8 +364,8 @@ $porter-red-hover : #ED0000;
             .etc {
                 > a {
                     padding: 0px 10px;
-                    width: 100px;
-                    max-width: 100px;
+                    width: 90px;
+                    max-width: 90px;
                     font-size: 12px;
                 }
                 .partsStatus {
@@ -371,6 +410,72 @@ $porter-red-hover : #ED0000;
     .all-order-btn:hover,
     .list-order-btn:hover {
         background-color: $porter-blue-hover;
+    }
+}
+
+#member-address {
+    > span { display: block; font-size: 20px; margin-bottom: 5px; }
+
+    .address-main {
+        .board-head {
+            .select { @include fixWidth(60px); }
+            .name { @include fixWidth(130px); }
+            .receiver { @include fixWidth(100px); }
+            .address { @include fixWidth(300px); }
+            .phone { @include fixWidth(140px); }
+            .action { @include fixWidth(130px); }
+        }
+        .board-body {
+            > div {
+                > div { padding: 10px; }
+
+                .select { @include fixWidth(60px); }
+                .name { @include fixWidth(130px); }
+                .receiver { @include fixWidth(100px); }
+                .address { @include fixWidth(300px); text-align: left; }
+                .phone { @include fixWidth(140px); }
+                .action { @include fixWidth(130px); padding: 8px 10px 7px 10px; }
+            }
+        }
+        .action-box {
+            margin-top: 10px;
+
+            .add-btn { float: right; }
+        }
+    }
+}
+
+#member-account {
+    margin: 0 auto;
+
+    > span { display: block; font-size: 20px; margin-bottom: 5px; }
+
+    .account-main {
+        .board-head {
+            .select { @include fixWidth(60px); }
+            .name { @include fixWidth(150px); }
+            .bank { @include fixWidth(140px); }
+            .account { @include fixWidth(230px); }
+            .status { @include fixWidth(150px); }
+            .action { @include fixWidth(130px); }
+        }
+        .board-body {
+            > div {
+                > div { padding: 10px; }
+
+                .select { @include fixWidth(60px); }
+                .name { @include fixWidth(150px); }
+                .bank { @include fixWidth(140px); }
+                .account { @include fixWidth(230px); text-align: left; }
+                .status { @include fixWidth(150px); }
+                .action { @include fixWidth(130px); padding: 8px 10px 7px 10px; }
+            }
+        }
+        .action-box {
+            margin-top: 10px;
+
+            .add-btn { float: right; }
+        }
     }
 }
 
@@ -422,12 +527,8 @@ $porter-red-hover : #ED0000;
             border-bottom: 2px solid #ccc;
         }
 
-        .notice-list {
-            float: right;
-            padding: 3px 15px;
-            margin-top: 10px;
-        }
-        .notice-list:hover { background-color: $porter-blue-hover; }
+        .notice-list { float: right; padding: 3px 15px; margin-top: 10px; }
+        .notice-modify { float: left; padding: 3px 15px; margin-top: 10px; }
     }
 
     .notice-type {
@@ -462,25 +563,10 @@ $porter-red-hover : #ED0000;
 }
 
 #notice-board-table {
-
+    div { overflow: auto; }
     .board-head {
-        overflow: auto;
-        border-top: 2px solid $porter-blue;
-
-        div {
-            float: left;
-            border-bottom: 1px solid #999;
-            text-align: center;
-            vertical-align: middle;
-            padding: 7px 0px;
-
-            span {
-                display: block;
-                color: $porter-blue-hover;
-                border-right: 1px solid #bbb;
-            }
-        }
-        .number { @include fixWidth(60px); }
+        .porterM { @include fixWidth(60px); }
+        .number { @include fixWidth(60px); display: none; }
         .type { @include fixWidth(90px); }
         .subject { @include fixWidth(360px); }
         .writer { @include fixWidth(110px); }
@@ -489,22 +575,9 @@ $porter-red-hover : #ED0000;
     }
 
     .board-body {
-        border-bottom: 1px solid #ccc;
-
         div {
-            overflow: auto;
-
-            div {
-                float: left;
-                border-bottom: 1px solid #ccc;
-                text-align: center;
-                vertical-align: middle;
-                padding: 5px 10px;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-            }
-            .number { @include fixWidth(60px); }
+            .porterM { @include fixWidth(60px); }
+            .number { @include fixWidth(60px); display: none; }
             .type { @include fixWidth(90px); }
             .subject { @include fixWidth(360px); text-align: left; }
             .writer { @include fixWidth(110px); }
@@ -514,6 +587,47 @@ $porter-red-hover : #ED0000;
             .subject:hover { cursor: pointer; color: $porter-blue; }
         }
     }
+    .porterM-box {
+        margin-top: 15px;
+
+        button {
+            float: left;
+            padding: 3px 10px;
+            margin: 0px 5px;
+        }
+        .notice-write {
+            float: right;
+        }
+    }
+}
+
+#notice-write {
+    font-family: "NanumGothic";
+    width: 900px;
+    padding: 20px;
+    margin: 0 auto;
+    margin: 30px;
+    background: #ffffff;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+    font-size: 12px;
+
+    > span {
+        font-size: 18px;
+    }
+    .subject-box {
+        padding: 5px 0px;
+        margin-top: 15px;
+        >input { @include fixWidth(775px); margin-left: 10px; }
+    }
+    .content-box {
+        font-size: 13px;
+        margin-top: -60px;
+        @include fixWidth(860px);
+        margin-bottom: 15px;
+        > textarea { @include fixWidth(100%); height:400px; }
+    }
+
+    button { margin: 0 auto; padding: 3px 14px; font-size: 16px; margin-left: 420px; }
 }
 
 #support-body {
@@ -598,7 +712,6 @@ $porter-red-hover : #ED0000;
                         @include fixHeight(100%);
                     }
                 }
-
                 .type {
                     padding: 3px 15px;
                     font-size: 18px;

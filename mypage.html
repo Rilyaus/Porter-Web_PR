@@ -16,7 +16,6 @@
 		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/script.js"></script>
-
 	</head>
 
 	<body>
@@ -210,7 +209,7 @@
                     <div id="mypage-body">
                         <div class="mypage-tab">
                             <ul class="nav nav-tabs">
-                                <li class="active"><a href="#tab1" data-toggle="tab" onclick="initMypageTab()">구매 관리</a></li>
+                                <li class="active"><a href="#buy-tab" data-toggle="tab" onclick="initMypageTab()">구매 관리</a></li>
                                 <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">판매 관리 <b class="caret"></b></a>
                                     <ul class="dropdown-menu">
                                         <li><a href="#sell-dropdown1" data-toggle="tab" onclick="initMypageTab()">판매중인 상품</a></li>
@@ -222,13 +221,266 @@
                                     <ul class="dropdown-menu">
                                         <li><a href="#member-private" data-toggle="tab" onclick="initMypageTab()">개인정보 수정</a></li>
                                         <li><a href="#member-password" data-toggle="tab" onclick="initMypageTab()">비밀번호 변경</a></li>
-                                        <li><a href="#member-delivery" data-toggle="tab" onclick="initMypageTab()">배송지 설정</a></li>
+                                        <li><a href="#member-address" data-toggle="tab" onclick="initMypageTab()">배송지 설정</a></li>
                                         <li><a href="#member-account" data-toggle="tab" onclick="initMypageTab()">계좌 설정</a></li>
                                         <li><a href="#member-takeout" data-toggle="tab" onclick="initMypageTab()">출금 내역</a></li>
                                     </ul>
                                 </li>
                             </ul>
                             <div class="tab-content">
+                                <div class="tab-pane active" id="buy-tab">
+                                    <div class="buy-main">
+                                        <span>전체 구매 내역</span>
+                                        <div id="order-state-box">
+                                            <div class="payWait-buy-status" onclick="setPartsList(this)">
+                                                <span>입금 대기</span>
+                                                <span class="product-count">2</span>
+                                            </div>
+                                            <div class="deliveryProgress-buy-status" onclick="setPartsList(this)">
+                                                <span>배송중</span>
+                                                <span class="product-count">3</span>
+                                            </div>
+                                            <div class="cancelProgress-buy-status" onclick="setPartsList(this)">
+                                                <span>취소 처리중</span>
+                                                <span class="product-count">5</span>
+                                            </div>
+                                        </div><br>
+
+                                        <div id="recently-buy">
+                                            <span>최근 거래 내역</span>
+                                            <div class="partslist-table">
+                                                <div class="table-head">
+                                                    <div class="partsTime"><span>주문일</span></div>
+                                                    <div class="partsName"><span>상품 정보</span></div>
+                                                    <div class="partsCount"><span>수량</span></div>
+                                                    <div class="partsSeller"><span>판매자</span></div>
+                                                    <div class="partsPrice"><span>가격</span></div>
+                                                    <div class="etc"><span>주문 상태</span></div>
+                                                </div>
+                                                <hr>
+                                                <div class="table-body">
+                                                    <div class="parts">
+                                                        <div class="partsTime"><a>Order Date</a></div>
+                                                        <div class="partsImage"><img src="img/car/parts7.jpg" height=90 width=90/></div>
+                                                        <div class="partsName">
+                                                            <a class="pName">Parts Name</a>
+                                                            <a class="carName">Maker Year Car Detail Modal</a>
+                                                        </div>
+                                                        <div class="partsCount"><a>Parts Counts</a></div>
+                                                        <div class="partsSeller"><a>Seller ID</a></div>
+                                                        <div class="partsPrice"><a>Parts Price</a></div>
+                                                        <div class="etc"><a>Order Status</a></div>
+                                                    </div>
+                                                    <hr>
+
+                                                    <div class="parts">
+                                                        <div class="partsTime"><a>2014-8-9</a></div>
+                                                        <div class="partsImage"><img src="img/car/parts11.jpg" height=90 width=90/></div>
+                                                        <div class="partsName">
+                                                            <a class="pName">N Test Parts2</a>
+                                                            <a class="carName">Audi 2012 A6 TFSI 2.0</a>
+                                                        </div>
+                                                        <div class="partsCount"><a>1</a></div>
+                                                        <div class="partsSeller"><a>Seller1</a></div>
+                                                        <div class="partsPrice"><a>38,000원</a></div>
+                                                        <div class="etc"><a>배송중</a></div>
+                                                    </div>
+                                                    <hr>
+
+                                                </div>
+                                            </div>
+                                        </div>
+<!-- PayWait List -->
+                                        <div id="payWait-buy">
+                                            <span>입금 대기중인 상품 목록</span>
+                                            <div class="partslist-table">
+                                                <div class="table-head">
+                                                    <div class="partsTime"><span>주문일</span></div>
+                                                    <div class="partsName"><span>상품 정보</span></div>
+                                                    <div class="partsCount"><span>수량</span></div>
+                                                    <div class="partsSeller"><span>판매자</span></div>
+                                                    <div class="partsPrice"><span>가격</span></div>
+                                                    <div class="etc"><span>주문 상태</span></div>
+                                                </div>
+                                                <hr>
+                                                <div class="table-body">
+                                                    <div class="parts">
+                                                        <div class="partsTime"><a>2014-8-11</a></div>
+                                                        <div class="partsImage"><img src="img/car/parts2.jpg" height=90 width=90/></div>
+                                                        <div class="partsName">
+                                                            <a class="pName">그랜져 그릴</a>
+                                                            <a class="carName">현대 그랜져 XG 2.0</a>
+                                                        </div>
+                                                        <div class="partsCount"><a>1</a></div>
+                                                        <div class="partsSeller"><a>그랜다이져</a></div>
+                                                        <div class="partsPrice"><a>34,000원</a></div>
+                                                        <div class="etc"><a>입금 대기</a></div>
+                                                    </div>
+                                                    <hr>
+
+                                                    <div class="parts">
+                                                        <div class="partsTime"><a>2014-8-10</a></div>
+                                                        <div class="partsImage"><img src="img/car/parts1.jpg" height=90 width=90/></div>
+                                                        <div class="partsName">
+                                                            <a class="pName">V6 엔진</a>
+                                                            <a class="carName">BMW 3시리즈 320d</a>
+                                                        </div>
+                                                        <div class="partsCount"><a>1</a></div>
+                                                        <div class="partsSeller"><a>Bus Metro Walk</a></div>
+                                                        <div class="partsPrice"><a>728,000원</a></div>
+                                                        <div class="etc"><a>입금 대기</a></div>
+                                                    </div>
+                                                    <hr>
+                                                </div>
+                                            </div>
+                                        </div>
+<!-- Delivery Progress List -->
+                                        <div id="deliveryProgress-buy">
+                                            <span>배송중인 상품 목록</span>
+                                            <div class="partslist-table">
+                                                <div class="table-head">
+                                                    <div class="partsTime"><span>주문일</span></div>
+                                                    <div class="partsName"><span>상품 정보</span></div>
+                                                    <div class="partsCount"><span>수량</span></div>
+                                                    <div class="partsSeller"><span>판매자</span></div>
+                                                    <div class="partsPrice"><span>가격</span></div>
+                                                    <div class="etc"><span>주문 상태</span></div>
+                                                </div>
+                                                <hr>
+                                                <div class="table-body">
+                                                    <div class="parts">
+                                                        <div class="partsTime"><a>2014-08-07</a></div>
+                                                        <div class="partsImage"><img src="img/car/parts4.jpg" height=90 width=90/></div>
+                                                        <div class="partsName">
+                                                            <a class="pName">산타페 사이드 미러</a>
+                                                            <a class="carName">현대 산타페 e-VGT R2.2 2WD</a>
+                                                        </div>
+                                                        <div class="partsCount"><a>2</a></div>
+                                                        <div class="partsSeller"><a>산타할아버지</a></div>
+                                                        <div class="partsPrice"><a>79,000원</a></div>
+                                                        <div class="etc">
+                                                            <button class="statusBtn">구매확정</button>
+                                                            <span class="partsStatus">배송중</span>
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="parts">
+                                                        <div class="partsTime"><a>2014-08-09</a></div>
+                                                        <div class="partsImage"><img src="img/car/parts5.jpg" height=90 width=90/></div>
+                                                        <div class="partsName">
+                                                            <a class="pName">벤츠 E300 헤드라이트</a>
+                                                            <a class="carName">Benz 2013 E300</a>
+                                                        </div>
+                                                        <div class="partsCount"><a>2</a></div>
+                                                        <div class="partsSeller"><a>다임러 벤츠</a></div>
+                                                        <div class="partsPrice"><a>110,000원</a></div>
+                                                        <div class="etc">
+                                                            <button class="statusBtn">구매확정</button>
+                                                            <span class="partsStatus">배송중</span></div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="parts">
+                                                        <div class="partsTime"><a>2014-08-10</a></div>
+                                                        <div class="partsImage"><img src="img/car/parts6.jpg" height=90 width=90/></div>
+                                                        <div class="partsName">
+                                                            <a class="pName">BMW 5시리즈 헤드라이트</a>
+                                                            <a class="carName">BMW 5시리즈 전체</a>
+                                                        </div>
+                                                        <div class="partsCount"><a>2</a></div>
+                                                        <div class="partsSeller"><a>아우디짱</a></div>
+                                                        <div class="partsPrice"><a>156,000원</a></div>
+                                                        <div class="etc">
+                                                            <button class="statusBtn">구매확정</button>
+                                                            <span class="partsStatus">배송중</span></div>
+                                                    </div>
+                                                    <hr>
+                                                </div>
+                                            </div>
+                                        </div>
+<!-- Order Complete List -->
+                                        <div id="cancelProgress-buy">
+                                            <span>취소 처리중인 상품 목록</span>
+                                            <div class="partslist-table">
+                                                <div class="table-head">
+                                                    <div class="partsTime"><span>주문일</span></div>
+                                                    <div class="partsName"><span>상품 정보</span></div>
+                                                    <div class="partsCount"><span>수량</span></div>
+                                                    <div class="partsSeller"><span>판매자</span></div>
+                                                    <div class="partsPrice"><span>가격</span></div>
+                                                    <div class="etc"><span>주문 상태</span></div>
+                                                </div>
+                                                <hr>
+                                                <div class="table-body">
+                                                    <div class="parts">
+                                                        <div class="partsTime"><a>2014-07-15</a></div>
+                                                        <div class="partsImage"><img src="img/car/parts10.jpg" height=90 width=90/></div>
+                                                        <div class="partsName">
+                                                            <a class="pName">아반테 에어컴프레셔</a>
+                                                            <a class="carName">현대 아반테XD 가솔린 2.0 VVT</a>
+                                                        </div>
+                                                        <div class="partsCount"><a>1</a></div>
+                                                        <div class="partsSeller"><a>Abang</a></div>
+                                                        <div class="partsPrice"><a>80,000원</a></div>
+                                                        <div class="etc"><a>취소 처리중</a></div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="parts">
+                                                        <div class="partsTime"><a>2014-07-20</a></div>
+                                                        <div class="partsImage"><img src="img/car/parts12.jpg" height=90 width=90/></div>
+                                                        <div class="partsName">
+                                                            <a class="pName">엑센트 앞범퍼</a>
+                                                            <a class="carName">현대 2013 엑센트 1.4가솔린</a>
+                                                        </div>
+                                                        <div class="partsCount"><a>1</a></div>
+                                                        <div class="partsSeller"><a>범퍼카</a></div>
+                                                        <div class="partsPrice"><a>88,000원</a></div>
+                                                        <div class="etc"><a>취소 처리중</a></div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="parts">
+                                                        <div class="partsTime"><a>2014-07-28</a></div>
+                                                        <div class="partsImage"><img src="img/car/parts13.jpg" height=90 width=90/></div>
+                                                        <div class="partsName">
+                                                            <a class="pName">미니쿠퍼 헤드라이트</a>
+                                                            <a class="carName">미니 2013 미니쿠페 쿠퍼퍼S</a>
+                                                        </div>
+                                                        <div class="partsCount"><a>2</a></div>
+                                                        <div class="partsSeller"><a>미니미</a></div>
+                                                        <div class="partsPrice"><a>210,000원</a></div>
+                                                        <div class="etc"><a>취소 처리중</a></div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="parts">
+                                                        <div class="partsTime"><a>2014-08-03</a></div>
+                                                        <div class="partsImage"><img src="img/car/parts14.jpg" height=90 width=90/></div>
+                                                        <div class="partsName">
+                                                            <a class="pName">젠쿱 앞범퍼</a>
+                                                            <a class="carName">현대 2012 제네시스 쿠페 380GT</a>
+                                                        </div>
+                                                        <div class="partsCount"><a>1</a></div>
+                                                        <div class="partsSeller"><a>Asprin</a></div>
+                                                        <div class="partsPrice"><a>120,000원</a></div>
+                                                        <div class="etc"><a>취소 처리중</a></div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="parts">
+                                                        <div class="partsTime"><a>2014-08-07</a></div>
+                                                        <div class="partsImage"><img src="img/car/parts15.jpg" height=90 width=90/></div>
+                                                        <div class="partsName">
+                                                            <a class="pName">젠쿱 헤드라이트</a>
+                                                            <a class="carName">현대 2012 제네시스 쿠페 380GT</a>
+                                                        </div>
+                                                        <div class="partsCount"><a>2</a></div>
+                                                        <div class="partsSeller"><a>Asprin</a></div>
+                                                        <div class="partsPrice"><a>95,000원</a></div>
+                                                        <div class="etc"><a>취소 처리중</a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <div class="tab-pane" id="sell-dropdown1">
                                     <div class="sell-dropdown1-main">
                                         <span>판매중인 상품</span>
@@ -632,274 +884,71 @@
                                     </div>
                                 </div>
 
-                                <div class="tab-pane" id="member-delivery">
-                                    <div class="tab-main">
-                                        <p>배송지 설정</p>
+                                <div class="tab-pane" id="member-address">
+                                    <span>배송지 목록</span>
+                                    <div class="address-main">
+                                        <div class="board-head">
+                                            <div class="select"><span>선택</span></div>
+                                            <div class="name"><span>배송지 이름</span></div>
+                                            <div class="receiver"><span>받는 사람</span></div>
+                                            <div class="address"><span>주소</span></div>
+                                            <div class="phone"><span>연락처</span></div>
+                                            <div class="action"><span>관리</span></div>
+                                        </div>
+                                        <div class="board-body">
+                                            <div class="address-content">
+                                                <div class="select"><input type="radio" name="init"/></div>
+                                                <div class="name"><span>서울</span></div>
+                                                <div class="receiver"><span>이순신</span></div>
+                                                <div class="address"><span>서울특별시 종로구 세종로 1-68</span></div>
+                                                <div class="phone"><span>010-2222-2222</span></div>
+                                                <div class="action">
+                                                    <button class="delte-btn dBtn">삭제</button>
+                                                    <button class="modify-btn nBtn">수정</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="action-box">
+                                            <button class="default-btn pBtn">기본 배송지로 설정</button>
+                                            <button class="add-btn pBtn">배송지 추가</button>
+                                        </div>
                                     </div>
                                 </div>
 
                                 <div class="tab-pane" id="member-account">
-                                    <div class="tab-main">
-                                        <p>계좌 설정</p>
+                                    <span>출금 계좌 목록</span>
+                                    <div class="account-main">
+                                        <div class="board-head">
+                                            <div class="select"><span>선택</span></div>
+                                            <div class="name"><span>계좌 이름</span></div>
+                                            <div class="bank"><span>은행</span></div>
+                                            <div class="account"><span>계좌 번호</span></div>
+                                            <div class="status"><span>출금 가능 여부</span></div>
+                                            <div class="action"><span>관리</span></div>
+                                        </div>
+                                        <div class="board-body">
+                                            <div class="account-content">
+                                                <div class="select"><input type="radio" name="init"/></div>
+                                                <div class="name"><span>기본 계좌</span></div>
+                                                <div class="bank"><span>국민은행</span></div>
+                                                <div class="account"><span>336-9123-391263</span></div>
+                                                <div class="status"><span>출금 가능</span></div>
+                                                <div class="action">
+                                                    <button class="delte-btn dBtn">삭제</button>
+                                                    <button class="modify-btn nBtn">수정</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="action-box">
+                                            <button class="default-btn pBtn">기본 출금 계좌로 설정</button>
+                                            <button class="add-btn pBtn">계좌 추가</button>
+                                        </div>
                                     </div>
                                 </div>
 
                                 <div class="tab-pane" id="member-takeout">
                                     <div class="tab-main">
                                         <p>출금 내역</p>
-                                    </div>
-                                </div>
-
-                                <div class="tab-pane active" id="tab1">
-                                    <div class="mypage-tab-main">
-                                        <span>전체 구매 내역</span>
-                                        <div id="order-state-box">
-                                            <div class="payWait-buy-status" onclick="setPartsList(this)">
-                                                <span>입금 대기</span>
-                                                <span class="product-count">2</span>
-                                            </div>
-                                            <div class="deliveryProgress-buy-status" onclick="setPartsList(this)">
-                                                <span>배송중</span>
-                                                <span class="product-count">3</span>
-                                            </div>
-                                            <div class="cancelProgress-buy-status" onclick="setPartsList(this)">
-                                                <span>취소 처리중</span>
-                                                <span class="product-count">5</span>
-                                            </div>
-                                        </div><br>
-
-                                        <div id="recently-buy">
-                                            <span>최근 거래 내역</span>
-                                            <div class="partslist-table">
-                                                <div class="table-head">
-                                                    <div class="partsTime"><span>주문일</span></div>
-                                                    <div class="partsName"><span>상품 정보</span></div>
-                                                    <div class="partsCount"><span>수량</span></div>
-                                                    <div class="partsSeller"><span>판매자</span></div>
-                                                    <div class="partsPrice"><span>가격</span></div>
-                                                    <div class="etc"><span>주문 상태</span></div>
-                                                </div>
-                                                <hr>
-                                                <div class="table-body">
-                                                    <div class="parts">
-                                                        <div class="partsTime"><a>Order Date</a></div>
-                                                        <div class="partsImage"><img src="img/car/parts7.jpg" height=90 width=90/></div>
-                                                        <div class="partsName">
-                                                            <a class="pName">Parts Name</a>
-                                                            <a class="carName">Maker Year Car Detail Modal</a>
-                                                        </div>
-                                                        <div class="partsCount"><a>Parts Counts</a></div>
-                                                        <div class="partsSeller"><a>Seller ID</a></div>
-                                                        <div class="partsPrice"><a>Parts Price</a></div>
-                                                        <div class="etc"><a>Order Status</a></div>
-                                                    </div>
-                                                    <hr>
-
-                                                    <div class="parts">
-                                                        <div class="partsTime"><a>2014-8-9</a></div>
-                                                        <div class="partsImage"><img src="img/car/parts11.jpg" height=90 width=90/></div>
-                                                        <div class="partsName">
-                                                            <a class="pName">N Test Parts2</a>
-                                                            <a class="carName">Audi 2012 A6 TFSI 2.0</a>
-                                                        </div>
-                                                        <div class="partsCount"><a>1</a></div>
-                                                        <div class="partsSeller"><a>Seller1</a></div>
-                                                        <div class="partsPrice"><a>38,000원</a></div>
-                                                        <div class="etc"><a>배송중</a></div>
-                                                    </div>
-                                                    <hr>
-
-                                                </div>
-                                            </div>
-                                        </div>
-<!-- PayWait List -->
-                                        <div id="payWait-buy">
-                                            <span>입금 대기중인 상품 목록</span>
-                                            <div class="partslist-table">
-                                                <div class="table-head">
-                                                    <div class="partsTime"><span>주문일</span></div>
-                                                    <div class="partsName"><span>상품 정보</span></div>
-                                                    <div class="partsCount"><span>수량</span></div>
-                                                    <div class="partsSeller"><span>판매자</span></div>
-                                                    <div class="partsPrice"><span>가격</span></div>
-                                                    <div class="etc"><span>주문 상태</span></div>
-                                                </div>
-                                                <hr>
-                                                <div class="table-body">
-                                                    <div class="parts">
-                                                        <div class="partsTime"><a>2014-8-11</a></div>
-                                                        <div class="partsImage"><img src="img/car/parts2.jpg" height=90 width=90/></div>
-                                                        <div class="partsName">
-                                                            <a class="pName">그랜져 그릴</a>
-                                                            <a class="carName">현대 그랜져 XG 2.0</a>
-                                                        </div>
-                                                        <div class="partsCount"><a>1</a></div>
-                                                        <div class="partsSeller"><a>그랜다이져</a></div>
-                                                        <div class="partsPrice"><a>34,000원</a></div>
-                                                        <div class="etc"><a>입금 대기</a></div>
-                                                    </div>
-                                                    <hr>
-
-                                                    <div class="parts">
-                                                        <div class="partsTime"><a>2014-8-10</a></div>
-                                                        <div class="partsImage"><img src="img/car/parts1.jpg" height=90 width=90/></div>
-                                                        <div class="partsName">
-                                                            <a class="pName">V6 엔진</a>
-                                                            <a class="carName">BMW 3시리즈 320d</a>
-                                                        </div>
-                                                        <div class="partsCount"><a>1</a></div>
-                                                        <div class="partsSeller"><a>Bus Metro Walk</a></div>
-                                                        <div class="partsPrice"><a>728,000원</a></div>
-                                                        <div class="etc"><a>입금 대기</a></div>
-                                                    </div>
-                                                    <hr>
-                                                </div>
-                                            </div>
-                                        </div>
-<!-- Delivery Progress List -->
-                                        <div id="deliveryProgress-buy">
-                                            <span>배송중인 상품 목록</span>
-                                            <div class="partslist-table">
-                                                <div class="table-head">
-                                                    <div class="partsTime"><span>주문일</span></div>
-                                                    <div class="partsName"><span>상품 정보</span></div>
-                                                    <div class="partsCount"><span>수량</span></div>
-                                                    <div class="partsSeller"><span>판매자</span></div>
-                                                    <div class="partsPrice"><span>가격</span></div>
-                                                    <div class="etc"><span>주문 상태</span></div>
-                                                </div>
-                                                <hr>
-                                                <div class="table-body">
-                                                    <div class="parts">
-                                                        <div class="partsTime"><a>2014-08-07</a></div>
-                                                        <div class="partsImage"><img src="img/car/parts4.jpg" height=90 width=90/></div>
-                                                        <div class="partsName">
-                                                            <a class="pName">산타페 사이드 미러</a>
-                                                            <a class="carName">현대 산타페 e-VGT R2.2 2WD</a>
-                                                        </div>
-                                                        <div class="partsCount"><a>2</a></div>
-                                                        <div class="partsSeller"><a>산타할아버지</a></div>
-                                                        <div class="partsPrice"><a>79,000원</a></div>
-                                                        <div class="etc">
-                                                            <button class="statusBtn">구매확정</button>
-                                                            <span class="partsStatus">배송중</span>
-                                                        </div>
-                                                    </div>
-                                                    <hr>
-                                                    <div class="parts">
-                                                        <div class="partsTime"><a>2014-08-09</a></div>
-                                                        <div class="partsImage"><img src="img/car/parts5.jpg" height=90 width=90/></div>
-                                                        <div class="partsName">
-                                                            <a class="pName">벤츠 E300 헤드라이트</a>
-                                                            <a class="carName">Benz 2013 E300</a>
-                                                        </div>
-                                                        <div class="partsCount"><a>2</a></div>
-                                                        <div class="partsSeller"><a>다임러 벤츠</a></div>
-                                                        <div class="partsPrice"><a>110,000원</a></div>
-                                                        <div class="etc">
-                                                            <button class="statusBtn">구매확정</button>
-                                                            <span class="partsStatus">배송중</span></div>
-                                                    </div>
-                                                    <hr>
-                                                    <div class="parts">
-                                                        <div class="partsTime"><a>2014-08-10</a></div>
-                                                        <div class="partsImage"><img src="img/car/parts6.jpg" height=90 width=90/></div>
-                                                        <div class="partsName">
-                                                            <a class="pName">BMW 5시리즈 헤드라이트</a>
-                                                            <a class="carName">BMW 5시리즈 전체</a>
-                                                        </div>
-                                                        <div class="partsCount"><a>2</a></div>
-                                                        <div class="partsSeller"><a>아우디짱</a></div>
-                                                        <div class="partsPrice"><a>156,000원</a></div>
-                                                        <div class="etc">
-                                                            <button class="statusBtn">구매확정</button>
-                                                            <span class="partsStatus">배송중</span></div>
-                                                    </div>
-                                                    <hr>
-                                                </div>
-                                            </div>
-                                        </div>
-<!-- Order Complete List -->
-                                        <div id="cancelProgress-buy">
-                                            <span>취소 처리중인 상품 목록</span>
-                                            <div class="partslist-table">
-                                                <div class="table-head">
-                                                    <div class="partsTime"><span>주문일</span></div>
-                                                    <div class="partsName"><span>상품 정보</span></div>
-                                                    <div class="partsCount"><span>수량</span></div>
-                                                    <div class="partsSeller"><span>판매자</span></div>
-                                                    <div class="partsPrice"><span>가격</span></div>
-                                                    <div class="etc"><span>주문 상태</span></div>
-                                                </div>
-                                                <hr>
-                                                <div class="table-body">
-                                                    <div class="parts">
-                                                        <div class="partsTime"><a>2014-07-15</a></div>
-                                                        <div class="partsImage"><img src="img/car/parts10.jpg" height=90 width=90/></div>
-                                                        <div class="partsName">
-                                                            <a class="pName">아반테 에어컴프레셔</a>
-                                                            <a class="carName">현대 아반테XD 가솔린 2.0 VVT</a>
-                                                        </div>
-                                                        <div class="partsCount"><a>1</a></div>
-                                                        <div class="partsSeller"><a>Abang</a></div>
-                                                        <div class="partsPrice"><a>80,000원</a></div>
-                                                        <div class="etc"><a>취소 처리중</a></div>
-                                                    </div>
-                                                    <hr>
-                                                    <div class="parts">
-                                                        <div class="partsTime"><a>2014-07-20</a></div>
-                                                        <div class="partsImage"><img src="img/car/parts12.jpg" height=90 width=90/></div>
-                                                        <div class="partsName">
-                                                            <a class="pName">엑센트 앞범퍼</a>
-                                                            <a class="carName">현대 2013 엑센트 1.4가솔린</a>
-                                                        </div>
-                                                        <div class="partsCount"><a>1</a></div>
-                                                        <div class="partsSeller"><a>범퍼카</a></div>
-                                                        <div class="partsPrice"><a>88,000원</a></div>
-                                                        <div class="etc"><a>취소 처리중</a></div>
-                                                    </div>
-                                                    <hr>
-                                                    <div class="parts">
-                                                        <div class="partsTime"><a>2014-07-28</a></div>
-                                                        <div class="partsImage"><img src="img/car/parts13.jpg" height=90 width=90/></div>
-                                                        <div class="partsName">
-                                                            <a class="pName">미니쿠퍼 헤드라이트</a>
-                                                            <a class="carName">미니 2013 미니쿠페 쿠퍼퍼S</a>
-                                                        </div>
-                                                        <div class="partsCount"><a>2</a></div>
-                                                        <div class="partsSeller"><a>미니미</a></div>
-                                                        <div class="partsPrice"><a>210,000원</a></div>
-                                                        <div class="etc"><a>취소 처리중</a></div>
-                                                    </div>
-                                                    <hr>
-                                                    <div class="parts">
-                                                        <div class="partsTime"><a>2014-08-03</a></div>
-                                                        <div class="partsImage"><img src="img/car/parts14.jpg" height=90 width=90/></div>
-                                                        <div class="partsName">
-                                                            <a class="pName">젠쿱 앞범퍼</a>
-                                                            <a class="carName">현대 2012 제네시스 쿠페 380GT</a>
-                                                        </div>
-                                                        <div class="partsCount"><a>1</a></div>
-                                                        <div class="partsSeller"><a>Asprin</a></div>
-                                                        <div class="partsPrice"><a>120,000원</a></div>
-                                                        <div class="etc"><a>취소 처리중</a></div>
-                                                    </div>
-                                                    <hr>
-                                                    <div class="parts">
-                                                        <div class="partsTime"><a>2014-08-07</a></div>
-                                                        <div class="partsImage"><img src="img/car/parts15.jpg" height=90 width=90/></div>
-                                                        <div class="partsName">
-                                                            <a class="pName">젠쿱 헤드라이트</a>
-                                                            <a class="carName">현대 2012 제네시스 쿠페 380GT</a>
-                                                        </div>
-                                                        <div class="partsCount"><a>2</a></div>
-                                                        <div class="partsSeller"><a>Asprin</a></div>
-                                                        <div class="partsPrice"><a>95,000원</a></div>
-                                                        <div class="etc"><a>취소 처리중</a></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>

@@ -149,10 +149,9 @@ iframe { min-width: 1220px; max-width: 100%; margin-top: 70px; }
     width: 200px;
     background: #428bca;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
-    color: #fff;
     font-size: 15px;
 
-    > span { font-size: 18px; font-weight: bolder; margin-left: 10px; }
+    > span { font-size: 18px; font-weight: bolder; margin-left: 10px; color: #fff; }
 
     .option-select-box {
         display: block;
@@ -409,3 +408,8 @@ iframe { min-width: 1220px; max-width: 100%; margin-top: 70px; }
 }
 
 .pBtn { @include Button($porter-blue, #fff, 13px); }
+.pBtn:hover { background-color: $porter-blue-hover; }
+.dBtn { @include Button($porter-red, #fff, 13px); }
+.dBtn:hover { background-color: $porter-red-hover; }
+.nBtn { @include Button(#fff, #000, 13px); border: 1px solid #000; }
+.nBtn:hover { background-color: #ccc; }

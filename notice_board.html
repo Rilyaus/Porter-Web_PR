@@ -15,6 +15,7 @@
 		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/script.js"></script>
+		<script type="text/javascript" src="js/porterM.js"></script>
 	</head>
 
 	<body onload="initNoticeBoard()">
@@ -22,7 +23,7 @@
 			<div class="wrapper">
 				<a href="index.html"><img id="title_img" src="img/Porter Title.png" alt="Porter - Vehicle parts Store" /></a>
                 <div id="user-menu">
-                    <li class="utility"><a href="noticeboard.html">공지사항</a></li>
+                    <li class="utility"><a href="notice_board.html">공지사항</a></li>
                     <li class="utility"><a href="parts_search.html">상품 검색</a></li>
                     <li class="utility"><a href="parts_register.html">상품 등록</a></li>
                     <li class="utility"><a href="mypage.html">마이페이지</a></li>
@@ -268,6 +269,7 @@
 <!-- SAMPLE DATE SET -->
                             </div>
 
+                            <button class="notice-modify pBtn" onclick="modifyNoticeContent()">수정</button>
                             <button class="notice-list pBtn" onclick="loadNoticeList()">목록</button>
                         </div>
 
@@ -280,6 +282,7 @@
                         <div class="notice-body">
                             <div id="notice-board-table">
                                 <div class="board-head">
+                                    <div class="porterM"><input type="checkbox" onclick="porterCheckBoxHead()"/></div>
                                     <div class="number"><span>번호</span></div>
                                     <div class="type"><span>구분</span></div>
                                     <div class="subject"><span>제목</span></div>
@@ -289,6 +292,7 @@
                                 </div>
                                 <div class="board-body">
                                     <div class="notice-content">
+                                        <div class="porterM"><input type="checkbox"/></div>
                                         <div class="number"><span>5</span></div>
                                         <div class="type"><span class="test">업데이트</span></div>
                                         <div class="subject" onclick="loadNoticeContent()"><span>모바일 소액결제 추가 안내</span></div>
@@ -297,6 +301,7 @@
                                         <div class="hits"><span>159</span></div>
                                     </div>
                                     <div class="notice-content">
+                                        <div class="porterM"><input type="checkbox"/></div>
                                         <div class="number"><span>4</span></div>
                                         <div class="type"><span>이벤트</span></div>
                                         <div class="subject" onclick="loadNoticeContent()"><span>문화상품권 쏜다쏜다</span></div>
@@ -305,6 +310,7 @@
                                         <div class="hits"><span>624</span></div>
                                     </div>
                                     <div class="notice-content">
+                                        <div class="porterM"><input type="checkbox"/></div>
                                         <div class="number"><span>3</span></div>
                                         <div class="type"><span>공지</span></div>
                                         <div class="subject" onclick="loadNoticeContent()"><span>Porter 공지사항</span></div>
@@ -313,6 +319,7 @@
                                         <div class="hits"><span>89</span></div>
                                     </div>
                                     <div class="notice-content">
+                                        <div class="porterM"><input type="checkbox"/></div>
                                         <div class="number"><span>2</span></div>
                                         <div class="type"><span>공지</span></div>
                                         <div class="subject" onclick="loadNoticeContent()"><span>부품 협력업체 신청 안내</span></div>
@@ -321,6 +328,7 @@
                                         <div class="hits"><span>452</span></div>
                                     </div>
                                     <div class="notice-content">
+                                        <div class="porterM"><input type="checkbox"/></div>
                                         <div class="number"><span>1</span></div>
                                         <div class="type"><span>업데이트</span></div>
                                         <div class="subject" onclick="loadNoticeContent()"><span>Porter 홈페이지 리뉴얼 안내</span></div>
@@ -328,6 +336,10 @@
                                         <div class="date"><span>2014-8-18</span></div>
                                         <div class="hits"><span>131</span></div>
                                     </div>
+                                </div>
+                                <div class="porterM-box">
+                                    <button class="notice-delete dBtn">선택 목록 삭제</button>
+                                    <button class="notice-write pBtn" onclick="window.location.href='notice_write.html'" >글쓰기</button>
                                 </div>
                             </div>
                         </div>
