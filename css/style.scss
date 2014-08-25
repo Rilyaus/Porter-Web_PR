@@ -4,6 +4,7 @@ $porter-red : #FF3636;
 $porter-red-hover : #ED0000;
 
 @mixin Button ($bColor, $fColor, $fSize) {
+    padding: 2px 6px;
     font-size: $fSize;
     font-weight: normal;
     text-align: center;
@@ -28,6 +29,48 @@ $porter-red-hover : #ED0000;
     width: $size;
     max-width: $size;
     min-width: $size;
+}
+
+.board-head {
+    overflow: auto;
+    overflow-y: hidden;
+    border-top: 2px solid $porter-blue;
+
+    > div {
+        @include fixHeight(37px);
+        float: left;
+        border-bottom: 1px solid #999;
+        text-align: center;
+        vertical-align: middle;
+        padding: 7px 0px;
+
+        span {
+            display: block;
+            color: $porter-blue-hover;
+            border-right: 1px solid #bbb;
+        }
+    }
+    > div:last-child > span { border-right: 0px; }
+}
+.board-body {
+    overflow: auto;
+    overflow-y: hidden;
+    border-bottom: 1px solid #ccc;
+
+    div {
+        overflow: auto;
+
+        div {
+            float: left;
+            border-bottom: 1px solid #ccc;
+            text-align: center;
+            vertical-align: middle;
+            padding: 5px 10px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
 }
 
 /*   Porter HTML Stylesheet  v 1.0  */
@@ -152,14 +195,12 @@ iframe { min-width: 1220px; max-width: 100%; margin-top: 70px; }
     font-size: 15px;
 
     > span { font-size: 18px; font-weight: bolder; margin-left: 10px; color: #fff; }
+    > div > span { display: block; color: #fff; }
 
     .option-select-box {
         display: block;
         margin: 15px;
 
-        > span {
-            display: block;
-        }
         > select {
             @include fixWidth(150px);
             @include fixHeight(30px);
@@ -412,4 +453,4 @@ iframe { min-width: 1220px; max-width: 100%; margin-top: 70px; }
 .dBtn { @include Button($porter-red, #fff, 13px); }
 .dBtn:hover { background-color: $porter-red-hover; }
 .nBtn { @include Button(#fff, #000, 13px); border: 1px solid #000; }
-.nBtn:hover { background-color: #ccc; }
+.nBtn:hover { background-color: #eee; }

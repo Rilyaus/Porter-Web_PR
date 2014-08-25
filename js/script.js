@@ -153,14 +153,15 @@ function setCartPage() {
 }
 
 function setCheckBoxAll() {
-    $('.partsCheck > input').prop("checked", true);
+    $('.board-head .check > input').prop("checked", true);
+    $('.board-body > div .check > input').prop("checked", true);
 }
 
 function setCheckBoxHead() {
-    if($('.table-head .partsCheck > input').is(':checked')) {
-        $('.partsCheck > input').prop("checked", true);
+    if($('.board-head .check > input').is(':checked')) {
+        $('.board-body > div .check > input').prop("checked", true);
     } else {
-        $('.partsCheck > input').prop("checked", false);
+        $('.board-body > div .check > input').prop("checked", false);
     }
 }
 

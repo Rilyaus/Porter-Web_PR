@@ -1,34 +1,3 @@
-.board-head {
-  overflow: auto;
-  border-top: 2px solid #428bca; }
-  .board-head > div {
-    float: left;
-    border-bottom: 1px solid #999;
-    text-align: center;
-    vertical-align: middle;
-    padding: 7px 0px; }
-    .board-head > div span {
-      display: block;
-      color: #00509d;
-      border-right: 1px solid #bbb; }
-  .board-head > div:last-child > span {
-    border-right: 0px; }
-
-.board-body {
-  overflow: auto;
-  border-bottom: 1px solid #ccc; }
-  .board-body div {
-    overflow: auto; }
-    .board-body div div {
-      float: left;
-      border-bottom: 1px solid #ccc;
-      text-align: center;
-      vertical-align: middle;
-      padding: 5px 10px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap; }
-
 /*---------- MY PAGE ----------*/
 #mypage-body {
   font-family: "NanumGothic";
@@ -248,6 +217,7 @@
         margin-bottom: 10px;
         overflow: hidden;
         text-overflow: ellipsis;
+        padding: 2px 6px;
         font-size: 12px;
         font-weight: normal;
         text-align: center;
@@ -309,6 +279,7 @@
   #sell-function .all-select-btn {
     margin-right: 5px;
     margin-left: 5px;
+    padding: 2px 6px;
     font-size: 13px;
     font-weight: normal;
     text-align: center;
@@ -328,6 +299,7 @@
   #sell-function .all-select-btn:hover {
     background-color: #eee; }
   #sell-function .list-delete-btn {
+    padding: 2px 6px;
     font-size: 13px;
     font-weight: normal;
     text-align: center;
@@ -347,6 +319,7 @@
     background-color: #ed0000; }
   #sell-function .all-order-btn,
   #sell-function .list-order-btn {
+    padding: 2px 6px;
     font-size: 13px;
     font-weight: normal;
     text-align: center;
@@ -366,6 +339,114 @@
   #sell-function .all-order-btn:hover,
   #sell-function .list-order-btn:hover {
     background-color: #00509d; }
+
+#member-private > span {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 5px; }
+#member-private .private-main {
+  border-top: 2px solid #428bca;
+  border-bottom: 1px solid #ccc;
+  overflow: auto; }
+  #member-private .private-main > div {
+    overflow: auto;
+    border-bottom: 1px solid #ccc; }
+    #member-private .private-main > div > div {
+      float: left;
+      font-size: 12px;
+      padding: 0px 12px;
+      height: 37px;
+      max-height: 37px;
+      min-height: 37px; }
+    #member-private .private-main > div .pHead {
+      line-height: 37px;
+      font-size: 14px;
+      width: 125px;
+      max-width: 125px;
+      min-width: 125px;
+      background-color: #eee; }
+    #member-private .private-main > div .pBody {
+      padding-top: 7px;
+      overflow-y: hidden; }
+  #member-private .private-main .name-box .pBody > span,
+  #member-private .private-main .id-box .pBody > span {
+    font-size: 14px;
+    margin-right: 10px;
+    margin-left: 5px; }
+  #member-private .private-main .email-box .pBody > input {
+    width: 100px;
+    max-width: 100px;
+    min-width: 100px;
+    height: 22px;
+    max-height: 22px;
+    min-height: 22px; }
+  #member-private .private-main .address-box > div {
+    height: 65px;
+    max-height: 65px;
+    min-height: 65px; }
+  #member-private .private-main .address-box .pHead {
+    line-height: 65px; }
+  #member-private .private-main .address-box .pBody .postal-btn {
+    font-size: 10px;
+    padding: 2px 6px;
+    font-size: 11px;
+    font-weight: normal;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: black;
+    background-color: white;
+    border: 1px solid #000;
+    margin-left: 5px;
+    height: 20px;
+    max-height: 20px;
+    min-height: 20px; }
+  #member-private .private-main .address-box .pBody .postal-btn:hover {
+    background-color: #eee; }
+  #member-private .private-main .address-box .pBody .postal-front, #member-private .private-main .address-box .pBody .postal-end {
+    width: 40px;
+    max-width: 40px;
+    min-width: 40px;
+    height: 22px;
+    max-height: 22px;
+    min-height: 22px; }
+  #member-private .private-main .address-box .pBody .address-front, #member-private .private-main .address-box .pBody .address-end {
+    margin-top: 5px;
+    width: 250px;
+    max-width: 250px;
+    min-width: 250px;
+    height: 22px;
+    max-height: 22px;
+    min-height: 22px; }
+  #member-private .private-main .address-box .pBody .blank {
+    height: 0px;
+    max-height: 0px;
+    min-height: 0px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%; }
+  #member-private .private-main .phone-box .pBody input,
+  #member-private .private-main .call-box .pBody input {
+    width: 40px;
+    max-width: 40px;
+    min-width: 40px;
+    height: 22px;
+    max-height: 22px;
+    min-height: 22px; }
+#member-private .action-box {
+  margin-top: 20px;
+  padding-left: 370px; }
+  #member-private .action-box > button {
+    margin-right: 10px;
+    font-size: 14px;
+    padding: 5px 15px; }
 
 #member-address > span {
   display: block;
@@ -396,7 +477,10 @@
   max-width: 130px;
   min-width: 130px; }
 #member-address .address-main .board-body > div > div {
-  padding: 10px; }
+  height: 37px;
+  max-height: 37px;
+  min-height: 37px;
+  padding-top: 7px; }
 #member-address .address-main .board-body > div .select {
   width: 60px;
   max-width: 60px;
@@ -421,8 +505,12 @@
 #member-address .address-main .board-body > div .action {
   width: 130px;
   max-width: 130px;
-  min-width: 130px;
-  padding: 8px 10px 7px 10px; }
+  min-width: 130px; }
+  #member-address .address-main .board-body > div .action > button {
+    height: 22px;
+    max-height: 22px;
+    min-height: 22px;
+    padding: 1px 6px; }
 #member-address .address-main .action-box {
   margin-top: 10px; }
   #member-address .address-main .action-box .add-btn {
@@ -459,7 +547,10 @@
     max-width: 130px;
     min-width: 130px; }
   #member-account .account-main .board-body > div > div {
-    padding: 10px; }
+    height: 37px;
+    max-height: 37px;
+    min-height: 37px;
+    padding-top: 7px; }
   #member-account .account-main .board-body > div .select {
     width: 60px;
     max-width: 60px;
@@ -484,8 +575,12 @@
   #member-account .account-main .board-body > div .action {
     width: 130px;
     max-width: 130px;
-    min-width: 130px;
-    padding: 8px 10px 7px 10px; }
+    min-width: 130px; }
+    #member-account .account-main .board-body > div .action > button {
+      height: 22px;
+      max-height: 22px;
+      min-height: 22px;
+      padding: 1px 6px; }
   #member-account .account-main .action-box {
     margin-top: 10px; }
     #member-account .account-main .action-box .add-btn {
@@ -611,6 +706,10 @@
   min-width: 80px; }
   #notice-board-table .board-head .hits span {
     border-right: 0px; }
+#notice-board-table .board-body div > div {
+  height: 32px;
+  max-height: 32px;
+  min-height: 32px; }
 #notice-board-table .board-body div .porterM {
   width: 60px;
   max-width: 60px;
@@ -730,31 +829,39 @@
   overflow: auto;
   border-bottom: 1px solid #ccc; }
   #private-tab .private-main > div > div > div {
-    float: left; }
+    float: left;
+    height: 37px;
+    max-height: 37px;
+    min-height: 37px;
+    padding: 0px 12px; }
   #private-tab .private-main > div > div .pHead {
+    line-height: 37px;
     width: 120px;
     max-width: 120px;
     min-width: 120px;
-    padding: 8px 15px;
+    padding: 0px 15px;
     background-color: #eee; }
+  #private-tab .private-main > div > div .pBody {
+    padding-top: 7px;
+    overflow-y: hidden; }
 #private-tab .private-main .userInfo-box {
   margin-bottom: 30px; }
-  #private-tab .private-main .userInfo-box > div .id {
-    padding: 8px 15px; }
-  #private-tab .private-main .userInfo-box > div .phone {
-    padding: 6px 15px; }
-    #private-tab .private-main .userInfo-box > div .phone > input {
-      font-size: 12px;
-      width: 45px;
-      max-width: 45px;
-      min-width: 45px; }
-  #private-tab .private-main .userInfo-box > div .email {
-    padding: 6px 15px; }
-    #private-tab .private-main .userInfo-box > div .email > input {
-      font-size: 12px;
-      width: 100px;
-      max-width: 100px;
-      min-width: 100px; }
+  #private-tab .private-main .userInfo-box > div .phone > input {
+    font-size: 12px;
+    width: 45px;
+    max-width: 45px;
+    min-width: 45px;
+    height: 22px;
+    max-height: 22px;
+    min-height: 22px; }
+  #private-tab .private-main .userInfo-box > div .email > input {
+    font-size: 12px;
+    width: 100px;
+    max-width: 100px;
+    min-width: 100px;
+    height: 22px;
+    max-height: 22px;
+    min-height: 22px; }
 #private-tab .private-main .questionContent-box > div .contentH {
   height: 300px;
   max-height: 300px;
@@ -766,12 +873,13 @@
     max-height: 100%;
     min-height: 100%; }
 #private-tab .private-main .questionContent-box > div .type {
-  padding: 3px 15px;
-  font-size: 18px; }
+  font-size: 15px; }
   #private-tab .private-main .questionContent-box > div .type > select {
-    margin-right: 10px; }
+    margin-right: 10px;
+    height: 22px;
+    max-height: 22px;
+    min-height: 22px; }
 #private-tab .private-main .questionContent-box > div .subject {
-  padding: 6px 15px;
   font-size: 12px;
   width: 740px;
   max-width: 740px;
@@ -779,8 +887,12 @@
   #private-tab .private-main .questionContent-box > div .subject > input {
     width: 100%;
     max-width: 100%;
-    min-width: 100%; }
+    min-width: 100%;
+    height: 22px;
+    max-height: 22px;
+    min-height: 22px; }
 #private-tab .private-main .questionContent-box > div .content {
+  overflow-y: visible;
   padding: 15px 15px;
   font-size: 13px;
   width: 740px;
@@ -801,6 +913,25 @@
   font-size: 18px; }
 #private-tab .private-main .send:hover {
   background-color: #00509d; }
+
+#support-complete {
+  font-family: "NanumGothic";
+  width: 900px;
+  padding: 20px;
+  margin: 0 auto;
+  margin: 30px;
+  background: #ffffff;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3); }
+  #support-complete > span {
+    display: block;
+    font-size: 25px;
+    margin: 0 auto;
+    text-align: center; }
+  #support-complete > button {
+    padding: 10px 25px;
+    font-size: 20px;
+    margin-top: 40px;
+    margin-left: 380px; }
 
 #FAQ-tab .FAQ-main .FAQ-search {
   padding: 15px;

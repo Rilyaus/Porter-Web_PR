@@ -865,8 +865,81 @@
                                 </div>
 
                                 <div class="tab-pane" id="member-private">
-                                    <div class="member-private-main">
-                                        <p>개인정보 수정</p>
+                                    <span>개인정보 수정</span>
+                                    <div class="private-main">
+                                        <div class="name-box">
+                                            <div class="nameH pHead">이름</div>
+                                            <div class="name pBody"><span>김도진</span></div>
+                                        </div>
+                                        <div class="id-box">
+                                            <div class="idH pHead">아이디(닉네임)</div>
+                                            <div class="id pBody"><span>꽃다운그자</span></div>
+                                        </div>
+                                        <div class="email-box">
+                                            <div class="emailH pHead">이메일</div>
+                                            <div class="email pBody">
+                                                <input class="email-id" type="text" />
+                                                <span>@</span>
+                                                <input class="email-host" type="text" />
+                                                <select class="email-list">
+                                                    <option val="0">직접입력</option>
+                                                    <option val="naver.com">naver.com</option>
+                                                    <option val="nate.com">nate.com</option>
+                                                    <option val="gmail.com">gmail.com</option>
+                                                    <option val="hotmail.com">hotmail.com</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="address-box">
+                                            <div class="addressH pHead">주소</div>
+                                            <div class="address pBody">
+                                                <input class="postal-front" type="text" readonly="true" />
+                                                <span>-</span>
+                                                <input class="postal-end" type="text" readonly="true" />
+                                                <button class="postal-btn" onclick="openDaumPostcode()">우편번호 찾기</button>
+                                                <div class="blank"></div>
+                                                <input class="address-front" type="text" readonly="true" />
+                                                <input class="address-end" type="text"/>
+                                            </div>
+                                        </div>
+                                        <div class="phone-box">
+                                            <div class="phoneH pHead">휴대폰 번호</div>
+                                            <div class="phone pBody">
+                                                <select class="phone-front">
+                                                    <option value="010">010</option>
+                                                    <option value="010">011</option>
+                                                    <option value="010">016</option>
+                                                    <option value="010">017</option>
+                                                    <option value="010">018</option>
+                                                    <option value="010">019</option>
+                                                </select>
+                                                <span>-</span>
+                                                <input class="phone-middle" type="text" onkeypress="inputOnlyPhone(this)" onkeyup="inputOnlyNum(this)" onblur="inputOnlyNum(this)" />
+                                                <span>-</span>
+                                                <input class="phone-end" type="text" onkeypress="inputOnlyPhone(this)" onkeyup="inputOnlyNum(this)" onblur="inputOnlyNum(this)" />
+                                            </div>
+                                        </div>
+                                        <div class="call-box">
+                                            <div class="call pHead">전화번호</div>
+                                            <div class="call pBody">
+                                                <select class="call-front">
+                                                    <option value="010">02</option>
+                                                    <option value="010">031</option>
+                                                    <option value="010">032</option>
+                                                    <option value="010">033</option>
+                                                    <option value="010">041</option>
+                                                    <option value="010">042</option>
+                                                </select>
+                                                <span>-</span>
+                                                <input class="call-middle" type="text" onkeypress="inputOnlyPhone(this)" onkeyup="inputOnlyNum(this)" onblur="inputOnlyNum(this)" />
+                                                <span>-</span>
+                                                <input class="call-end" type="text" onkeypress="inputOnlyPhone(this)" onkeyup="inputOnlyNum(this)" onblur="inputOnlyNum(this)" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="action-box">
+                                        <button class="complete-btn pBtn">확인</button>
+                                        <button class="cancel-btn dBtn">취소</button>
                                     </div>
                                 </div>
 

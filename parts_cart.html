@@ -210,46 +210,46 @@
 						<span class="subtitle">Parts Cart</span>
 					</div> <!-- End Page Title -->
 
-                    <div id="cart-body">
-                        <div id="parts-cart" value="0">
-                            <div class="cart-partslist">
-                                <div class="table-head">
-                                    <div class="partsCheck"><input class="cart-checkBox-head" type="checkbox" onclick="setCheckBoxHead()"/></div>
-                                    <div class="partsImage"><span>상품 사진</span></div>
-                                    <div class="partsName"><span>상품 정보</span></div>
-                                    <div class="partsCount"><span>수량</span></div>
-                                    <div class="partsSeller"><span>판매자</span></div>
-                                    <div class="partsPrice"><span>가격</span></div>
+                    <div id="cart-main">
+                        <div class="board-head">
+                            <div class="check"><input class="cart-checkBox-head" type="checkbox" onclick="setCheckBoxHead()"/></div>
+                            <div class="name"><span>상품 정보</span></div>
+                            <div class="count"><span>수량</span></div>
+                            <div class="seller"><span>판매자</span></div>
+                            <div class="price"><span>가격</span></div>
+                            <div class="action"><span>주문</span></div>
+                        </div>
+                        <div class="board-body">
+                            <div class="cart-content">
+                                <div class="check"><input class="cart-checkBox" type="checkbox" /></div>
+                                <div class="name">
+                                    <img src="/img/car/parts3.jpg" height=110 width=110/>
+                                    <span class="partsName">PAdfe</span>
+                                    <span class="carName">Audi 2012 A6 TFSI 2.0</span>
                                 </div>
-                                <hr>
-                                <div class="cart-parts">
-                                    <div class="partsCheck"><input class="cart-checkBox" type="checkbox" /></div>
-                                    <div class="partsImage"><img src="/img/car/parts11.jpg" height=110 width=110/></div>
-                                    <div class="partsName">
-                                        <a class="pName">PAdfe</a>
-                                        <a class="carName">Audi 2012 A6 TFSI 2.0</a>
-                                    </div>
-                                    <div class="partsCount"><a>1</a></div>
-                                    <div class="partsSeller"><a>GOJIN</a></div>
-                                    <div class="partsPrice"><a>240,000</a></div>
-                                </div>
-                                <hr>
-                                <div id="cart-emptyMessage">
-                                    <span>장바구니에 담긴 상품이 없습니다.</span>
-                                    <hr>
+                                <div class="count"><span>1</span></div>
+                                <div class="seller"><span>GOJIN</span></div>
+                                <div class="price"><span>240,000원</span></div>
+                                <div class="action">
+                                    <button class="order-btn nBtn">주문하기</button>
+                                    <button class="delte-btn dBtn">삭제</button>
                                 </div>
                             </div>
+                            <div class="cart-emptyMessage">
+                                <span>장바구니에 담긴 상품이 없습니다.</span>
+                            </div>
                         </div>
-                        <div id="cart-total">
+                        <div class="action-box">
+                            <button class="all-btn nBtn" onclick="setCheckBoxAll()">전체 선택</button>
+                            <button class="delete-btn dBtn">선택 목록 삭제</button>
+                            <button class="order-btn pBtn">전체 주문</button>
+                            <button class="selectOrder-btn pBtn">선택 목록 주문</button>
+                        </div>
+                        <div class="totalPrice">
                             <span>주문 합계</span>
-                            <span id="cart-totalPrice">40,000원</span>
+                            <span class="cart-totalPrice">240,000</span>
+                            <span>원</span>
                         </div>
-                    </div>
-                    <div id="cart-function">
-                        <button class="all-select-btn" onclick="setCheckBoxAll()">전체 선택</button>
-                        <button class="list-delete-btn">선택 목록 삭제</button>
-                        <button class="all-order-btn">전체 주문</button>
-                        <button class="list-order-btn">선택 목록 주문</button>
                     </div>
 				</div>
 			</div>

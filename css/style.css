@@ -1,3 +1,39 @@
+.board-head {
+  overflow: auto;
+  overflow-y: hidden;
+  border-top: 2px solid #428bca; }
+  .board-head > div {
+    height: 37px;
+    max-height: 37px;
+    min-height: 37px;
+    float: left;
+    border-bottom: 1px solid #999;
+    text-align: center;
+    vertical-align: middle;
+    padding: 7px 0px; }
+    .board-head > div span {
+      display: block;
+      color: #00509d;
+      border-right: 1px solid #bbb; }
+  .board-head > div:last-child > span {
+    border-right: 0px; }
+
+.board-body {
+  overflow: auto;
+  overflow-y: hidden;
+  border-bottom: 1px solid #ccc; }
+  .board-body div {
+    overflow: auto; }
+    .board-body div div {
+      float: left;
+      border-bottom: 1px solid #ccc;
+      text-align: center;
+      vertical-align: middle;
+      padding: 5px 10px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap; }
+
 /*   Porter HTML Stylesheet  v 1.0  */
 /* ---------- GENERAL ---------- */
 html {
@@ -113,11 +149,12 @@ iframe {
     font-weight: bolder;
     margin-left: 10px;
     color: #fff; }
+  #fixedMenu > div > span {
+    display: block;
+    color: #fff; }
   #fixedMenu .option-select-box {
     display: block;
     margin: 15px; }
-    #fixedMenu .option-select-box > span {
-      display: block; }
     #fixedMenu .option-select-box > select {
       width: 150px;
       max-width: 150px;
@@ -332,6 +369,7 @@ iframe {
     border-top: none; }
 
 .pBtn {
+  padding: 2px 6px;
   font-size: 13px;
   font-weight: normal;
   text-align: center;
@@ -351,6 +389,7 @@ iframe {
   background-color: #00509d; }
 
 .dBtn {
+  padding: 2px 6px;
   font-size: 13px;
   font-weight: normal;
   text-align: center;
@@ -370,6 +409,7 @@ iframe {
   background-color: #ed0000; }
 
 .nBtn {
+  padding: 2px 6px;
   font-size: 13px;
   font-weight: normal;
   text-align: center;
@@ -387,4 +427,4 @@ iframe {
   border: 1px solid #000; }
 
 .nBtn:hover {
-  background-color: #ccc; }
+  background-color: #eee; }
