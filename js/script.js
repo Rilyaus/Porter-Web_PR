@@ -288,6 +288,17 @@ function changeParentPage(link) {
     window.top.location.href = link;
 }
 
+function popupPage(link, type) {
+    var popOption;
+    if( type == 'delivery' ) {
+        popOption = "width=500, height=320, top=260, left=500, resizable=no, scrollbars=no, status=no;";
+    } else if( type == 'bank' ) {
+        popOption = "width=350, height=228, top=260, left=500, resizable=no, scrollbars=no, status=no;";
+    }
+
+    window.open(link,"",popOption);
+}
+
 /* 상품 등록 이미지 미리보기 */
 function previewImage(targetObj, previewId) {
     var preview = document.getElementById(previewId); //div id

@@ -476,6 +476,63 @@ $porter-red-hover : #ED0000;
     }
 }
 
+#address-add {
+    background-color: #fff;
+    @include fixWidth(500px);
+    padding: 10px 20px;
+    font-family: 'NanumGothic';
+
+    > span { display: block; font-size: 20px; margin-bottom: 5px; }
+    .address-main {
+        border-top: 2px solid $porter-blue;
+        border-bottom: 1px solid #ccc;
+        overflow: auto;
+
+        > div {
+            overflow: auto;
+            border-bottom: 1px solid #ccc;
+
+            > div { float: left; font-size: 12px; padding: 0px 12px; @include fixHeight(37px); }
+            .pHead {
+                line-height: 37px;
+                font-size: 14px;
+                @include fixWidth(125px);
+                background-color: #eee;
+            }
+            .pBody { padding-top: 7px; overflow-y: hidden; }
+        }
+        .name-box, .receiver-box { div > input { @include fixHeight(22px); @include fixWidth(120px); } }
+        .address-box {
+            > div { @include fixHeight(90px); }
+            .pHead { line-height: 90px; }
+            .pBody {
+                .postal-btn {
+                    font-size: 10px;
+                    @include Button(#fff, #000, 11px);
+                    border: 1px solid #000;
+                    margin-left: 5px;
+                    @include fixHeight(20px);
+                }
+                .postal-btn:hover { background-color: #eee; }
+                .postal-front, .postal-end { @include fixWidth(40px); @include fixHeight(22px); }
+                .address-front, .address-end { margin-top: 5px; @include fixWidth(310px); @include fixHeight(22px); }
+                .blank { @include fixHeight(0px); @include fixWidth(100%); }
+            }
+        }
+        .phone-box {
+            .pBody {
+                input { @include fixWidth(40px); @include fixHeight(22px); }
+            }
+        }
+    }
+    .action-box {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        padding-left: 165px;
+        > button { padding: 4px 17px; margin-left: 5px; }
+    }
+}
+
 #member-account {
     margin: 0 auto;
 
@@ -510,6 +567,48 @@ $porter-red-hover : #ED0000;
     }
 }
 
+#account-add {
+    background-color: #fff;
+    @include fixWidth(350px);
+    padding: 10px 20px;
+    font-family: 'NanumGothic';
+
+    > span { display: block; font-size: 20px; margin-bottom: 5px; }
+    .account-main {
+        border-top: 2px solid $porter-blue;
+        border-bottom: 1px solid #ccc;
+        overflow: auto;
+
+        > div {
+            overflow: auto;
+            border-bottom: 1px solid #ccc;
+
+            > div { float: left; font-size: 12px; padding: 0px 12px; @include fixHeight(37px); }
+            .pHead {
+                line-height: 37px;
+                font-size: 14px;
+                @include fixWidth(125px);
+                background-color: #eee;
+            }
+            .pBody { padding-top: 7px; overflow-y: hidden; }
+        }
+        .name-box, { .pBody > input { @include fixHeight(22px); @include fixWidth(120px); } }
+        .bank-box {
+            .pBody > select { @include fixHeight(22px); }
+        }
+        .account-box {
+            .pBody {
+                input { @include fixWidth(160px); @include fixHeight(22px); }
+            }
+        }
+    }
+    .action-box {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        padding-left: 85px;
+        > button { padding: 4px 17px; margin-left: 5px; }
+    }
+}
 /*---------- NOTICE BOARD ----------*/
 
 #notice-board {

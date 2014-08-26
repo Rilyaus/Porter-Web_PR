@@ -516,6 +516,115 @@
   #member-address .address-main .action-box .add-btn {
     float: right; }
 
+#address-add {
+  background-color: #fff;
+  width: 500px;
+  max-width: 500px;
+  min-width: 500px;
+  padding: 10px 20px;
+  font-family: 'NanumGothic'; }
+  #address-add > span {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 5px; }
+  #address-add .address-main {
+    border-top: 2px solid #428bca;
+    border-bottom: 1px solid #ccc;
+    overflow: auto; }
+    #address-add .address-main > div {
+      overflow: auto;
+      border-bottom: 1px solid #ccc; }
+      #address-add .address-main > div > div {
+        float: left;
+        font-size: 12px;
+        padding: 0px 12px;
+        height: 37px;
+        max-height: 37px;
+        min-height: 37px; }
+      #address-add .address-main > div .pHead {
+        line-height: 37px;
+        font-size: 14px;
+        width: 125px;
+        max-width: 125px;
+        min-width: 125px;
+        background-color: #eee; }
+      #address-add .address-main > div .pBody {
+        padding-top: 7px;
+        overflow-y: hidden; }
+    #address-add .address-main .name-box div > input, #address-add .address-main .receiver-box div > input {
+      height: 22px;
+      max-height: 22px;
+      min-height: 22px;
+      width: 120px;
+      max-width: 120px;
+      min-width: 120px; }
+    #address-add .address-main .address-box > div {
+      height: 90px;
+      max-height: 90px;
+      min-height: 90px; }
+    #address-add .address-main .address-box .pHead {
+      line-height: 90px; }
+    #address-add .address-main .address-box .pBody .postal-btn {
+      font-size: 10px;
+      padding: 2px 6px;
+      font-size: 11px;
+      font-weight: normal;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      color: black;
+      background-color: white;
+      border: 1px solid #000;
+      margin-left: 5px;
+      height: 20px;
+      max-height: 20px;
+      min-height: 20px; }
+    #address-add .address-main .address-box .pBody .postal-btn:hover {
+      background-color: #eee; }
+    #address-add .address-main .address-box .pBody .postal-front, #address-add .address-main .address-box .pBody .postal-end {
+      width: 40px;
+      max-width: 40px;
+      min-width: 40px;
+      height: 22px;
+      max-height: 22px;
+      min-height: 22px; }
+    #address-add .address-main .address-box .pBody .address-front, #address-add .address-main .address-box .pBody .address-end {
+      margin-top: 5px;
+      width: 310px;
+      max-width: 310px;
+      min-width: 310px;
+      height: 22px;
+      max-height: 22px;
+      min-height: 22px; }
+    #address-add .address-main .address-box .pBody .blank {
+      height: 0px;
+      max-height: 0px;
+      min-height: 0px;
+      width: 100%;
+      max-width: 100%;
+      min-width: 100%; }
+    #address-add .address-main .phone-box .pBody input {
+      width: 40px;
+      max-width: 40px;
+      min-width: 40px;
+      height: 22px;
+      max-height: 22px;
+      min-height: 22px; }
+  #address-add .action-box {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-left: 165px; }
+    #address-add .action-box > button {
+      padding: 4px 17px;
+      margin-left: 5px; }
+
 #member-account {
   margin: 0 auto; }
   #member-account > span {
@@ -585,6 +694,67 @@
     margin-top: 10px; }
     #member-account .account-main .action-box .add-btn {
       float: right; }
+
+#account-add {
+  background-color: #fff;
+  width: 350px;
+  max-width: 350px;
+  min-width: 350px;
+  padding: 10px 20px;
+  font-family: 'NanumGothic'; }
+  #account-add > span {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 5px; }
+  #account-add .account-main {
+    border-top: 2px solid #428bca;
+    border-bottom: 1px solid #ccc;
+    overflow: auto; }
+    #account-add .account-main > div {
+      overflow: auto;
+      border-bottom: 1px solid #ccc; }
+      #account-add .account-main > div > div {
+        float: left;
+        font-size: 12px;
+        padding: 0px 12px;
+        height: 37px;
+        max-height: 37px;
+        min-height: 37px; }
+      #account-add .account-main > div .pHead {
+        line-height: 37px;
+        font-size: 14px;
+        width: 125px;
+        max-width: 125px;
+        min-width: 125px;
+        background-color: #eee; }
+      #account-add .account-main > div .pBody {
+        padding-top: 7px;
+        overflow-y: hidden; }
+    #account-add .account-main .name-box .pBody > input {
+      height: 22px;
+      max-height: 22px;
+      min-height: 22px;
+      width: 120px;
+      max-width: 120px;
+      min-width: 120px; }
+    #account-add .account-main .bank-box .pBody > select {
+      height: 22px;
+      max-height: 22px;
+      min-height: 22px; }
+    #account-add .account-main .account-box .pBody input {
+      width: 160px;
+      max-width: 160px;
+      min-width: 160px;
+      height: 22px;
+      max-height: 22px;
+      min-height: 22px; }
+  #account-add .action-box {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-left: 85px; }
+    #account-add .action-box > button {
+      padding: 4px 17px;
+      margin-left: 5px; }
 
 /*---------- NOTICE BOARD ----------*/
 #notice-board {

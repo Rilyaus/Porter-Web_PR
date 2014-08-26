@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Porter - Vehicle Parts Store</title>
+
+		<!-- CSS Link -->
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="css/main.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen" />
+
+		<!-- Javascript Link -->
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+	</head>
+
+    <body>
+        <div id="address-add">
+            <span>배송지 추가 / 수정</span>
+            <div class="address-main">
+                <div class="name-box">
+                    <div class="nameH pHead">배송지 이름</div>
+                    <div class="name pBody"><input type="text"/></div>
+                </div>
+                <div class="receiver-box">
+                    <div class="receiverH pHead">받는 사람</div>
+                    <div class="receiver pBody"><input type="text"/></div>
+                </div>
+                <div class="address-box">
+                    <div class="addressH pHead">주소</div>
+                    <div class="address pBody">
+                        <input class="postal-front" type="text" readonly="true" />
+                        <span>-</span>
+                        <input class="postal-end" type="text" readonly="true" />
+                        <button class="postal-btn" onclick="openDaumPostcode()">우편번호 찾기</button>
+                        <div class="blank"></div>
+                        <input class="address-front" type="text" readonly="true" />
+                        <div class="blank"></div>
+                        <input class="address-end" type="text"/>
+                    </div>
+                </div>
+                <div class="phone-box">
+                    <div class="phoneH pHead">연락처</div>
+                    <div class="phone pBody">
+                        <select class="phone-front">
+                            <option value="010">010</option>
+                            <option value="010">011</option>
+                            <option value="010">016</option>
+                            <option value="010">017</option>
+                            <option value="010">018</option>
+                            <option value="010">019</option>
+                        </select>
+                        <span>-</span>
+                        <input class="phone-middle" type="text" onkeypress="inputOnlyPhone(this)" onkeyup="inputOnlyNum(this)" onblur="inputOnlyNum(this)" />
+                        <span>-</span>
+                        <input class="phone-end" type="text" onkeypress="inputOnlyPhone(this)" onkeyup="inputOnlyNum(this)" onblur="inputOnlyNum(this)" />
+                    </div>
+                </div>
+            </div>
+            <div class="action-box">
+                <button class="add-btn pBtn">추가</button>
+                <button class="cancel-btn dBtn" onclick="window.close()">취소</button>
+            </div>
+        </div>
+    </body>
+</html>
